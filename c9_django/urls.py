@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^house/', include('buildings.urls')),
     url(r'^agent/', include('agents.urls')),
+    url(r'^auth/',  include('authentication.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

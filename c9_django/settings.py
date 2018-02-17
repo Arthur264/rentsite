@@ -36,6 +36,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 INSTALLED_APPS = [
     'buildings',
     'authentication',
+    'agents',
+    'userProfile',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,7 +63,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            PROJECT_DIR.child('templates'),
+            PROJECT_DIR.parent.child('templates'),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -125,7 +127,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+# STATIC_ROOT = PROJECT_DIR.parent.child('static')
+# print(STATIC_ROOT)
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'

@@ -1,5 +1,4 @@
 from __future__ import unicode_literals
-import datetime 
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
@@ -20,12 +19,12 @@ class House(models.Model):
         db_table = "house"
         
     def __str__(self): #nice view
-        return self.name
+        return self.title
         
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(House, self).save(*args, **kwargs)
-        
+
 
 
 

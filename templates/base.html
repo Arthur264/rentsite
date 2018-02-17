@@ -125,49 +125,6 @@
                     <!-- End Main Menu -->
 
                     <div class="rh_menu__user">
-
-                        <div class="rh_menu__user_phone">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
-<g>
-	<g>
-		<path d="M91.8,198.9c35.7,71.4,96.9,130.05,168.3,168.3L316.2,311.1c7.649-7.649,17.85-10.199,25.5-5.1
-			c28.05,10.2,58.649,15.3,91.8,15.3c15.3,0,25.5,10.2,25.5,25.5v86.7c0,15.3-10.2,25.5-25.5,25.5C193.8,459,0,265.2,0,25.5
-			C0,10.2,10.2,0,25.5,0h89.25c15.3,0,25.5,10.2,25.5,25.5c0,30.6,5.1,61.2,15.3,91.8c2.55,7.65,0,17.85-5.1,25.5L91.8,198.9z"/>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-</svg>
-                            <a href="tel:1-800-555-1234" class="contact-number">1-800-555-1234</a>
-                        </div>
                         <!-- /.rh_menu__user_phone -->
 
                         <div class="rh_menu__user_profile">
@@ -253,13 +210,10 @@
 
                                         <h3>Register</h3>
 
-                                        <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" id="rh_modal__register_form" method="post" enctype="multipart/form-data">
+                                        <form action="" id="rh_modal__register_form" method="post" enctype="multipart/form-data">
+                                             {% csrf_token %}
                                             <input id="register_username" name="register_username" type="text" placeholder="Username" title="* Provide user name!" required />
                                             <input id="register_email" name="register_email" type="text" placeholder="Email" title="* Provide valid email address!" required />
-                                            <input type="hidden" name="user-cookie" value="1" />
-                                            <input type="hidden" name="action" value="inspiry_ajax_register" />
-                                            <input type="hidden" id="inspiry-secure-register" name="inspiry-secure-register" value="450ec3ec0d" /><input type="hidden" name="_wp_http_referer" value="/" /> <input type="hidden" name="redirect_to" value="
-							http://realhomes-modern.inspirythemes.biz/							" />
                                             <button type="submit" id="register-button" name="user-submit">Register</button>
                                         </form>
 
@@ -314,7 +268,7 @@
                         <!-- /.rh_menu__user_profile -->
 
                         <div class="rh_menu__user_submit">
-                            <a href="submit-property/index.html">Submit</a>
+                            <a href="submit-property/index.html">Profile</a>
                         </div>
                         <!-- /.rh_menu__user_submit -->
 
