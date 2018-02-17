@@ -3,14 +3,14 @@ from django.http import HttpResponse, Http404
 from .models import House
 # Create your views here.
 def index(request):
-    houses = House.objects.all();
+    houses = House.objects.all()
     args = {}
     args["houses"] = houses
     return render(request, 'home.html', args)
 
-def details(request, house_id):
+def details(request, slug):
     try:
-        house = House.objsect.get(pk=house_id)
+        house = House.objects.get(slug=slug)
         args = {}
         args["house"] = house
     except:

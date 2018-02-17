@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Django settings for c9_django project.
 
@@ -11,7 +12,12 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import sys
 from unipath import Path
+reload(sys)  # Reload does the trick!
+# sys.setdefaultencoding('UTF8')
+
+
 
 PROJECT_DIR = Path(__file__).parent
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -91,7 +97,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
@@ -132,6 +137,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-
-MEDIA_ROOT = "/home/ubuntu/workspace/buildings/media"
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
