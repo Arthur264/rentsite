@@ -17,8 +17,9 @@ class House(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     class Meta: 
         db_table = "house"
-        
-    def __str__(self): #nice view
+
+    # nice view
+    def __str__(self):
         return self.title
         
     def save(self, *args, **kwargs):
@@ -29,7 +30,7 @@ class House(models.Model):
 
 
 class HouseImage(models.Model):
-    house_id = models.OneToOneField(House)
+    house_id = models.ForeignKey(House, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image_url = models.ImageField()
     class Meta: 
@@ -38,8 +39,15 @@ class HouseImage(models.Model):
   
   
 class HouseDetails(models.Model):
-    house = models.OneToOneField(House)
+    house_id = models.OneToOneField(House, unique=True)
     text = models.TextField()
     garage = models.SmallIntegerField()
+    year_built = models.DateField()
     class Meta: 
-        db_table = "houses_details" 
+        db_table = 'houses_details'
+class HouseVisited(models.Model):
+    house_id = models.ForeignKey(House, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'houses_visited'
