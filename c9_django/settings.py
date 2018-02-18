@@ -15,7 +15,7 @@ import os
 import sys
 from unipath import Path
 reload(sys)  # Reload does the trick!
-# sys.setdefaultencoding('UTF8')
+sys.setdefaultencoding('UTF8')
 
 
 

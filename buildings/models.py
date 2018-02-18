@@ -29,7 +29,7 @@ class House(models.Model):
 
 
 class HouseImage(models.Model):
-    house = models.OneToOneField(House)
+    house_id = models.OneToOneField(House)
     title = models.CharField(max_length=200)
     image_url = models.ImageField()
     class Meta: 

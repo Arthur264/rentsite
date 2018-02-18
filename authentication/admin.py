@@ -3,13 +3,13 @@ from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 from models import UserProfile
 # Register your models here.
-class UserProfileAdmin(admin.StackedInline):
+class UserProfileInline(admin.StackedInline):
     model = UserProfile
     can_delete = False
     fk_name = 'user_id'
   
 class CustomUser(UserAdmin):
-    inlines = (UserProfileAdmin,)
+    inlines = (UserProfileInline,)
     def get_inline_instances(self, request, obj=None):
         if not obj:
             return list()
