@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mapwidgets'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -132,7 +133,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-# STATIC_ROOT = PROJECT_DIR.parent.child('static')
+STATIC_ROOT = PROJECT_DIR.parent.child('static')
 # print(STATIC_ROOT)
 STATIC_URL = '/static/'
 

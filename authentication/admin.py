@@ -6,7 +6,7 @@ from models import UserProfile
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
     can_delete = False
-    fk_name = 'user_id'
+    fk_name = 'user'
   
 class CustomUser(UserAdmin):
     inlines = (UserProfileInline,)
