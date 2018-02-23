@@ -4,6 +4,7 @@ from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 
 # Create your models here.
+
 class House(models.Model):
     title = models.CharField(max_length=200)
     discription = models.CharField(max_length=200)
@@ -15,6 +16,7 @@ class House(models.Model):
     area = models.SmallIntegerField(blank=True, null=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     class Meta: 
         db_table = "house"
 
@@ -33,6 +35,7 @@ class HouseImage(models.Model):
     house = models.ForeignKey(House, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image_url = models.ImageField()
+
     class Meta: 
         db_table = "houses_image"
     
@@ -42,8 +45,10 @@ class HouseDetails(models.Model):
     text = models.TextField()
     garage = models.SmallIntegerField()
     year_built = models.DateField()
+
     class Meta: 
         db_table = 'houses_details'
+
 class HouseVisited(models.Model):
     house = models.ForeignKey(House, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

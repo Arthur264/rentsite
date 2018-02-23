@@ -477,12 +477,12 @@
         </div>
         <!-- /.rh_label -->
         <figure class="rh_prop_card__thumbnail">
-            <a href="{{item.slug}}">
+            <a href="{% url 'house:details' item.slug %}">
 			<img width="680" height="510" src="{{item.image_url.url}}" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" alt="" />		</a>
 
             <div class="rh_overlay"></div>
             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                <a href="{{item.slug}}">View Property</a>
+                <a href="{% url 'house:details' item.slug %}">View Property</a>
             </div>
             <!-- /.rh_overlay__contents -->
 
@@ -510,7 +510,7 @@
         <div class="rh_prop_card__details">
 
             <h3>
-                <a href="{% url 'details' slug=item.slug %}">{{item.title}} </a>
+                <a href="{% url 'house:details' item.slug %}">{{item.title}} </a>
             </h3>
             <p class="rh_prop_card__excerpt">{{item.description}} </p>
             <!-- /.rh_prop_card__excerpt -->

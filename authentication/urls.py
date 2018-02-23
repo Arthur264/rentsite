@@ -17,7 +17,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
-
+from . import views
+app_name = 'auth'
 urlpatterns = [
     # url(r'^$/', admin.site.urls),
+    url(r'^singin/', views.singin,  name='singin'),
 ]
