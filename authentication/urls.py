@@ -21,5 +21,5 @@ from . import views
 app_name = 'auth'
 urlpatterns = [
     # url(r'^$/', admin.site.urls),
-    url(r'^singin/', views.singin,  name='singin'),
+    url(r'^singin/', views.singin,  name='singup'),
 ]

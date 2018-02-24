@@ -1117,7 +1117,7 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .rh_modal .rh_modal__wrap .rh_modal__msg{margin-bottom:1rem;font-size:1.4rem;line-height:1.5}
 .rh_modal .rh_modal__wrap .rh_modal__login_wrap{padding:2.5rem}
 .rh_modal .rh_modal__wrap h3{font-weight:500;margin:0 0 1rem 0;text-align:left}
-.rh_modal .rh_modal__wrap input{background:#fff;font-size:1.5rem;padding:1.5rem;width:100%;border-bottom:2px solid #f7f7f7}
+.rh_modal .rh_modal__wrap input{margin-bottom: 10px; background:#fff;font-size:1.5rem;padding:1.5rem;width:100%;border-bottom:2px solid #f7f7f7}
 .rh_modal .rh_modal__wrap button{width:100%;padding:1.5rem;cursor:pointer;margin:0;margin-bottom:1.5rem;-webkit-transition:.2s background linear;transition:.2s background linear}
 .rh_modal .rh_modal__wrap button:hover{background:#1c9d92;-webkit-transition:.2s background linear;transition:.2s background linear}
 .rh_modal .rh_modal__wrap a{display:inline-block;font-size:1.5rem;font-weight:500;margin-bottom:1rem}
@@ -4555,7 +4555,7 @@ ul.rh_menu__main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;di
 .rh_menu__user .rh_menu__user_phone .contact-number{margin:0 0 0 1rem}
 .rh_menu__user .rh_menu__user_profile{padding:0 0 0 1rem}
 .rh_menu__user .rh_menu__user_submit a{display:inline-block;padding:1.4rem 2rem}
-.rh_modal{width:260px}
+.rh_modal{width:400px}
 .rh_prop_search--page{padding-bottom:5rem}
 .rh_prop_search__form{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;margin-top:-4.75rem}
 .rh_prop_search__form .rh_prop_search__fields{width:80%}

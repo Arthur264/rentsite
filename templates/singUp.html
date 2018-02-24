@@ -1,0 +1,12 @@
+ <form action="{% url 'auth:singup' %}" id="rh_modal__register_form" method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+     <input id="username" name="username" type="text" placeholder="Username"
+           title="* Provide user name!" required/>
+    <input id="email" name="email" type="text" placeholder="Email"
+           title="* Provide valid email address!" required/>
+     <input id="password1" name="password1" type="password" placeholder="Password"
+           title="* Provide valid email address!" required/>
+     <input id="password2" name="password2" type="password" placeholder="Confirm password"
+           title="* Provide valid email address!" />
+    <button type="submit" id="register-button">Register</button>
+</form>

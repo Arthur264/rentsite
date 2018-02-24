@@ -1,5 +1,6 @@
-{% load admin_urls %} 
-{% load staticfiles%}
+{% load admin_urls %}
+{% load staticfiles %}
+
 
 <!doctype html>
 <html>
@@ -168,12 +169,7 @@
 
                                         <h3>Register</h3>
 
-                                        <form action="" id="rh_modal__register_form" method="post" enctype="multipart/form-data">
-                                             {% csrf_token %}
-                                            <input id="register_username" name="register_username" type="text" placeholder="Username" title="* Provide user name!" required />
-                                            <input id="register_email" name="register_email" type="text" placeholder="Email" title="* Provide valid email address!" required />
-                                            <button type="submit" id="register-button" name="user-submit">Register</button>
-                                        </form>
+                                        {% include "singUp.html" %}
 
                                         <div>
                                             <p id="register-message" class="rh_modal__msg"></p>

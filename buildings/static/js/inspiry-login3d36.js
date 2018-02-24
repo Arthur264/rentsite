@@ -107,7 +107,7 @@
                 beforeSubmit: function () {
                     progress_bar.set(0);
                     progress_bar.animate(1);
-                    registerButton.attr('disabled', 'disabled');
+//                    registerButton.attr('disabled', 'disabled');
                     // registerAjaxLoader.fadeIn('fast');
                     registerMessage.fadeOut('fast');
                     registerError.fadeOut('fast');
@@ -132,12 +132,18 @@
 
             $('#rh_modal__register_form').validate({
                 rules: {
-                    register_username: {
+                    username: {
                         required: true
                     },
-                    register_email: {
+                    email: {
                         required: true,
                         email: true
+                    },
+                    last_name: {
+                        required: true
+                    },
+                    first_name: {
+                        required: true
                     }
                 },
                 submitHandler: function ( form ) {

@@ -1,16 +1,22 @@
-from django.shortcuts import render, get_object_or_404, get_list_or_404
+from django.shortcuts import get_list_or_404
 from .models import House, HouseImage
-# Create your views here.
-def index(request):
-    houses = House.objects.all()
-    args = {}
-    args["houses"] = houses
-    return render(request, 'home.html', args)
+from django.views.generic import CreateView, DeleteView, ListView
 
-def details(request, slug):
-    house = get_object_or_404(House, slug=slug)
-    imagehouse = get_list_or_404(HouseImage, house=house.pk)
-    args = {}
-    args["house"] = house
-    args["imagehouse"] = imagehouse
-    return render(request, 'details.html', args)
+# Create your views here.
+
+
+class IndexView(ListView):
+    template_name = 'home.html'
+
+    def get_queryset(self):
+        return House.objects.all()
+
+
+class DetailsViews(DeleteView):
+    template_name = 'details.html'
+    model = House
+
+    def get_context_data(self, **kwargs):
+        content = super(DetailsViews, self).get_context_data(**kwargs)
+        content['imagehouse'] = get_list_or_404(HouseImage, house=content["house"].pk)
+        return content

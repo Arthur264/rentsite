@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load staticfiles%}
+{% load staticfiles %}
+{% load filter %}
 {% block content %}
 <section class="rh_banner rh_banner__default"></section>
 <!-- /.rh_banner -->
@@ -194,7 +195,7 @@
 			For Sale		</p>
 		<!-- /.status -->
 		<p class="price">
-			{{house.price}} 		</p>
+			{{house.price|price}} 		</p>
 		<!-- /.price -->
 	</div>
 	<!-- /.rh_page__property_price -->
