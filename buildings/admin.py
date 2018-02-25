@@ -1,27 +1,33 @@
 from django.contrib import admin
 from django.contrib.gis.db import models
-from mapwidgets.widgets import GooglePointFieldInlineWidget
+from mapwidgets.widgets import GooglePointFieldInlineWidget, GooglePointFieldWidget
 from models import House, HouseImage, HouseDetails
 # Register your models here.
+
+
 class DistrictAdminInline(admin.TabularInline):
     model = HouseDetails
     extra = 3
+
 
 class HouseImageInline(admin.StackedInline):
     model = HouseImage
     can_delete = False
     fk_name = 'house'
+
+
 class HouseDetailsInline(admin.StackedInline):
     model = HouseDetails
     can_delete = False
     fk_name = 'house'
     formfield_overrides = {
-        models.PointField: {"widget": GooglePointFieldInlineWidget}
+        models.PointField: {"widget": GooglePointFieldWidget}
     }
+
 
 class HouseAdmin(admin.ModelAdmin):
     model = House
-    inlines = (HouseDetailsInline, HouseImageInline, DistrictAdminInline)
+    inlines = (HouseDetailsInline, HouseImageInline)
     fields = ('title', 'discription', 'image_url', 'price', 'bedrooms', 'bathrooms', 'area', 'user')
 
     # On create field HouseImage not show.

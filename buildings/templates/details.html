@@ -4,312 +4,388 @@
 {% block content %}
 <section class="rh_banner rh_banner__default"></section>
 <!-- /.rh_banner -->
-	<section class="rh_prop_search rh_wrap--padding">
+<section class="rh_prop_search rh_wrap--padding">
 
-	<form class="rh_prop_search__form advance-search-form" action="http://realhomes-modern.inspirythemes.biz/properties-search/" method="get">
+    <form class="rh_prop_search__form advance-search-form"
+          action="http://realhomes-modern.inspirythemes.biz/properties-search/" method="get">
 
-		<div class="rh_prop_search__fields">
+        <div class="rh_prop_search__fields">
 
-			<div class="rh_prop_search__wrap">
-					<div class="rh_prop_search__option rh_prop_search__select">
-		<label for="location">
-			Main Location		</label>
-		<span class="rh_prop_search__selectwrap">
+            <div class="rh_prop_search__wrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="location">
+                        Main Location </label>
+                    <span class="rh_prop_search__selectwrap">
 			<select name="location" id="location" class="rh_select2"></select>
 		</span>
-	</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select">
-	<label for="select-status">
-		Property Status	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="select-status">
+                        Property Status </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="status" id="select-status" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="for-rent">For Rent</option><option value="for-sale">For Sale</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="for-rent">For Rent</option><option
+                value="for-sale">For Sale</option>		</select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select">
-	<label for="select-property-type">
-		Property Type	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="select-property-type">
+                        Property Type </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="type" id="select-property-type" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="commercial"> Commercial</option><option value="office">-  Office</option><option value="shop">-  Shop</option><option value="residential"> Residential</option><option value="apartment">-  Apartment</option><option value="apartment-building">-  Apartment Building</option><option value="condominium">-  Condominium</option><option value="single-family">-  Single Family</option><option value="villa">-  Villa</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="commercial"> Commercial</option><option
+                value="office">-  Office</option><option value="shop">-  Shop</option><option value="residential"> Residential</option><option
+                value="apartment">-  Apartment</option><option value="apartment-building">-  Apartment Building</option><option
+                value="condominium">-  Condominium</option><option value="single-family">-  Single Family</option><option
+                value="villa">-  Villa</option>		</select>
 	</span>
-</div>
-	       	</div>
-			<!-- /.rh_prop_search__wrap -->
+                </div>
+            </div>
+            <!-- /.rh_prop_search__wrap -->
 
-	       	<div class="rh_prop_search__dropdown" id="rh_prop_search__dropdown">
+            <div class="rh_prop_search__dropdown" id="rh_prop_search__dropdown">
 
-				<div class="rh_prop_search__option">
-	<label for="property-id-txt">
-		Property ID	</label>
-	<input type="text" name="property-id" id="property-id-txt"
-	       value=""
-	       placeholder="Any" />
-</div>
+                <div class="rh_prop_search__option">
+                    <label for="property-id-txt">
+                        Property ID </label>
+                    <input type="text" name="property-id" id="property-id-txt"
+                           value=""
+                           placeholder="Any"/>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select">
-	<label for="select-bedrooms">
-		Min Beds	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="select-bedrooms">
+                        Min Beds </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="bedrooms" id="select-bedrooms" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
+                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
+                value="7">7</option><option value="8">8</option><option value="9">9</option><option
+                value="10">10</option>		</select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select">
-	<label for="select-bathrooms">
-		Min Baths	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="select-bathrooms">
+                        Min Baths </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="bathrooms" id="select-bathrooms" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
+                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
+                value="7">7</option><option value="8">8</option><option value="9">9</option><option
+                value="10">10</option>		</select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select">
-	<label for="select-garages">
-		Min Garages	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select">
+                    <label for="select-garages">
+                        Min Garages </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="garages" id="select-garages" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
+                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
+                value="7">7</option><option value="8">8</option><option value="9">9</option><option
+                value="10">10</option>		</select>
 	</span>
-</div>
-<div class="rh_prop_search__option rh_prop_search__select price-for-others">
-	<label for="select-min-price">
-		Min Price	</label>
-	<span class="rh_prop_search__selectwrap">
+                </div>
+                <div class="rh_prop_search__option rh_prop_search__select price-for-others">
+                    <label for="select-min-price">
+                        Min Price </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="min-price" id="select-min-price" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option value="5000">$5,000</option><option value="10000">$10,000</option><option value="50000">$50,000</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option
+                value="5000">$5,000</option><option value="10000">$10,000</option><option value="50000">$50,000</option><option
+                value="100000">$100,000</option><option value="200000">$200,000</option><option
+                value="300000">$300,000</option><option value="400000">$400,000</option><option
+                value="500000">$500,000</option><option value="600000">$600,000</option><option
+                value="700000">$700,000</option><option value="800000">$800,000</option><option
+                value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option
+                value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option>		</select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select price-for-others">
-	<label for="select-max-price">
-		Max Price	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select price-for-others">
+                    <label for="select-max-price">
+                        Max Price </label>
+                    <span class="rh_prop_search__selectwrap">
 		<select name="max-price" id="select-max-price" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="5000">$5,000</option><option value="10000">$10,000</option><option value="50000">$50,000</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option>		</select>
+			<option value="any" selected="selected">Any</option><option value="5000">$5,000</option><option
+                value="10000">$10,000</option><option value="50000">$50,000</option><option
+                value="100000">$100,000</option><option value="200000">$200,000</option><option
+                value="300000">$300,000</option><option value="400000">$400,000</option><option
+                value="500000">$500,000</option><option value="600000">$600,000</option><option
+                value="700000">$700,000</option><option value="800000">$800,000</option><option
+                value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option
+                value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option><option
+                value="10000000">$10,000,000</option>		</select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
-	<label for="select-min-price-for-rent">
-		Min Price	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
+                    <label for="select-min-price-for-rent">
+                        Min Price </label>
+                    <span class="rh_prop_search__selectwrap">
 	    <select name="min-price" id="select-min-price-for-rent" class="rh_select2" disabled="disabled">
-	        <option value="any" selected="selected">Any</option><option value="500">$500</option><option value="1000">$1,000</option><option value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="40000">$40,000</option><option value="50000">$50,000</option><option value="75000">$75,000</option><option value="100000">$100,000</option>	    </select>
+	        <option value="any" selected="selected">Any</option><option value="500">$500</option><option value="1000">$1,000</option><option
+                value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option
+                value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option
+                value="15000">$15,000</option><option value="20000">$20,000</option><option
+                value="25000">$25,000</option><option value="30000">$30,000</option><option
+                value="40000">$40,000</option><option value="50000">$50,000</option><option
+                value="75000">$75,000</option><option value="100000">$100,000</option>	    </select>
 	</span>
-</div>
+                </div>
 
-<div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
-	<label for="select-max-price-for-rent">
-		Max Price	</label>
-	<span class="rh_prop_search__selectwrap">
+                <div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
+                    <label for="select-max-price-for-rent">
+                        Max Price </label>
+                    <span class="rh_prop_search__selectwrap">
 	    <select name="max-price" id="select-max-price-for-rent" class="rh_select2" disabled="disabled">
-	        <option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="40000">$40,000</option><option value="50000">$50,000</option><option value="75000">$75,000</option><option value="100000">$100,000</option><option value="150000">$150,000</option>	    </select>
+	        <option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option
+                value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option
+                value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option
+                value="15000">$15,000</option><option value="20000">$20,000</option><option
+                value="25000">$25,000</option><option value="30000">$30,000</option><option
+                value="40000">$40,000</option><option value="50000">$50,000</option><option
+                value="75000">$75,000</option><option value="100000">$100,000</option><option
+                value="150000">$150,000</option>	    </select>
 	</span>
-</div>
-<div class="rh_prop_search__option">
-	<label for="min-area">
+                </div>
+                <div class="rh_prop_search__option">
+                    <label for="min-area">
 		<span class="label">
 			Min Area	    </span>
-		<span class="unit">
+                        <span class="unit">
 			(sq ft)	    </span>
-	</label>
-	<input type="text" name="min-area" id="min-area" pattern="[0-9]+"
-	       value=""
-	       placeholder="Any"
-	       title="Only provide digits!" />
-</div>
+                    </label>
+                    <input type="text" name="min-area" id="min-area" pattern="[0-9]+"
+                           value=""
+                           placeholder="Any"
+                           title="Only provide digits!"/>
+                </div>
 
-<div class="rh_prop_search__option">
-	<label for="max-area">
+                <div class="rh_prop_search__option">
+                    <label for="max-area">
 		<span class="label">
 			Max Area	    </span>
-		<span class="unit">
+                        <span class="unit">
 			(sq ft)		</span>
-	</label>
-	<input type="text" name="max-area" id="max-area" pattern="[0-9]+"
-	       value=""
-	       placeholder="Any"
-	       title="Only provide digits!" />
-</div>
+                    </label>
+                    <input type="text" name="max-area" id="max-area" pattern="[0-9]+"
+                           value=""
+                           placeholder="Any"
+                           title="Only provide digits!"/>
+                </div>
 
-			</div>
-	       	<!-- /.rh_prop_search__dropdown -->
+            </div>
+            <!-- /.rh_prop_search__dropdown -->
 
-		</div>
-		<!-- /.rh_prop_search__fields -->
+        </div>
+        <!-- /.rh_prop_search__fields -->
 
-		<div class="rh_prop_search__buttons">
+        <div class="rh_prop_search__buttons">
 
-<div class="rh_prop_search__btnWrap clearfix">
+            <div class="rh_prop_search__btnWrap clearfix">
 
-	<div class="rh_prop_search__advance">
-		<a href="#" id="rh_prop_search__advance">
-			<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.icon-search-plus{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}</style></defs><g data-name="137-Zoom" id="_137-Zoom"><circle class="icon-search-plus" cx="12" cy="12" r="11"/><line class="icon-search-plus" x1="20" x2="31" y1="20" y2="31"/><line id="rh_icon__search" class="icon-search-plus" x1="12" x2="12" y1="6" y2="18"/><line class="icon-search-plus" x1="18" x2="6" y1="12" y2="12"/></g></svg>
-		</a>
-	</div>
-	<div class="rh_prop_search__searchBtn">
-				<button class="rh_btn rh_btn__prop_search" type="submit">
-			<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.icon-search{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}</style></defs><g data-name="32-Search" id="_32-Search"><circle class="icon-search" cx="12" cy="12" r="11"/><line class="icon-search" x1="20" x2="31" y1="20" y2="31"/></g></svg>
-			<span>
+                <div class="rh_prop_search__advance">
+                    <a href="#" id="rh_prop_search__advance">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <style>
+                                    .icon-search-plus{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}
+                                </style>
+                            </defs>
+                            <g data-name="137-Zoom" id="_137-Zoom">
+                                <circle class="icon-search-plus" cx="12" cy="12" r="11"/>
+                                <line class="icon-search-plus" x1="20" x2="31" y1="20" y2="31"/>
+                                <line id="rh_icon__search" class="icon-search-plus" x1="12" x2="12" y1="6" y2="18"/>
+                                <line class="icon-search-plus" x1="18" x2="6" y1="12" y2="12"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="rh_prop_search__searchBtn">
+                    <button class="rh_btn rh_btn__prop_search" type="submit">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <style>.icon-search{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}
+                                </style>
+                            </defs>
+                            <g data-name="32-Search" id="_32-Search">
+                                <circle class="icon-search" cx="12" cy="12" r="11"/>
+                                <line class="icon-search" x1="20" x2="31" y1="20" y2="31"/>
+                            </g>
+                        </svg>
+                        <span>
 				Search			</span>
-		</button>
-	</div>
+                    </button>
+                </div>
 
-</div>
-<!-- /.rh_prop_search__btnWrap -->
-		</div>
-		<!-- /.rh_prop_search__buttons -->
+            </div>
+            <!-- /.rh_prop_search__btnWrap -->
+        </div>
+        <!-- /.rh_prop_search__buttons -->
 
-	</form>
-	<!-- /.rh_prop_search__form -->
+    </form>
+    <!-- /.rh_prop_search__form -->
 
-		</section>
-	<!-- /.rh_prop_search -->
+</section>
+<!-- /.rh_prop_search -->
 
 <section class="rh_section rh_wrap--padding rh_wrap--topPadding">
 
 
+    <div class="rh_page rh_page--fullWidth">
 
 
+        <div class="rh_page__head rh_page__property">
 
-				<div class="rh_page rh_page--fullWidth">
+            <div class="rh_page__property_title">
 
+                <h1 class="rh_page__title">
+                    {{house.title}} </h1>
+                <!-- /.rh_page__title -->
 
-<div class="rh_page__head rh_page__property">
+            </div>
+            <!-- /.rh_page__property_title -->
 
-	<div class="rh_page__property_title">
+            <div class="rh_page__property_price">
+                <p class="status">
+                    For Sale </p>
+                <!-- /.status -->
+                <p class="price">
+                    $ {{house.price|price}} </p>
+                <!-- /.price -->
+            </div>
+            <!-- /.rh_page__property_price -->
 
-		<h1 class="rh_page__title">
-			{{house.title}}	</h1>
-		<!-- /.rh_page__title -->
+        </div>
+        <!-- /.rh_page__head -->
 
-	</div>
-	<!-- /.rh_page__property_title -->
+        <div class="rh_property">
+            <div id="property-detail-flexslider" class="clearfix">
+                <div class="flexslider">
+                    <ul class="slides">
+                        {% for item in imagehouse %}
+                        <li><a href="{{ item.image_url.url }}" class="swipebox" rel="gallery_real_homes"><img
+                                src="{{ item.image_url.url }}" alt="property-02-exterior"/></a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div id="property-featured-image" class="clearfix only-for-print">
+                <img src="{{house.image_url.url}}" alt="Villa in Coral Gables"/></div>
 
-	<div class="rh_page__property_price">
-		<p class="status">
-			For Sale		</p>
-		<!-- /.status -->
-		<p class="price">
-			{{house.price|price}} 		</p>
-		<!-- /.price -->
-	</div>
-	<!-- /.rh_page__property_price -->
+            <div class="rh_property__wrap rh_property--padding">
+                <div class="rh_property__main">
 
-</div>
-<!-- /.rh_page__head -->
+                    <div class="rh_property__content">
 
-					<div class="rh_property">
-							<div id="property-detail-flexslider" class="clearfix">
-		<div class="flexslider">
-			<ul class="slides">
-				{% for item in imagehouse %}
-				<li><a href="{{ item.image_url.url }}" class="swipebox" rel="gallery_real_homes" ><img src="{{ item.image_url.url }}" alt="property-02-exterior" /></a></li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-		<div id="property-featured-image" class="clearfix only-for-print">
-			<img src="{{house.image_url.url}}" alt="Villa in Coral Gables" />		</div>
+                        <div class="rh_property__row rh_property__meta rh_property--borderBottom">
 
-						<div class="rh_property__wrap rh_property--padding">
-							<div class="rh_property__main">
+                            <div class="rh_property__id">
+                                <p class="title">Property ID :</p>
+                                <!-- /.title -->
+                                <p class="id">{{house.id}}</p>
+                                <!-- /.id -->
+                            </div>
+                            <!-- /.rh_property__id -->
 
-<div class="rh_property__content">
+                            <div class="rh_property__print">
+                                <div id="share-button-title" class="hide">Share</div>
+                                <div class="share-this"></div>
 
-	<div class="rh_property__row rh_property__meta rh_property--borderBottom">
-
-		<div class="rh_property__id">
-			<p class="title">Property ID :</p>
-			<!-- /.title -->
-							<p class="id">{{house.id}}</p>
-				<!-- /.id -->
-					</div>
-		<!-- /.rh_property__id -->
-
-		<div class="rh_property__print">
-			<div id="share-button-title" class="hide">Share</div>
-			<div class="share-this"></div>
-
-								<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
-						<input type="hidden" name="property_id" value="101" />
-						<input type="hidden" name="action" value="add_to_favorite" />
-					</form>
-					<span class="favorite-placeholder highlight__red hide">
+                                <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
+                                      method="post" class="add-to-favorite-form">
+                                    <input type="hidden" name="property_id" value="101"/>
+                                    <input type="hidden" name="action" value="add_to_favorite"/>
+                                </form>
+                                <span class="favorite-placeholder highlight__red hide">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
 						<span class="rh_tooltip">
 							<p class="label">
 								Added to Favorite							</p>
-							<!-- /.label -->
+                            <!-- /.label -->
 						</span>
 					</span>
-					<a href="#" class="favorite add-to-favorite">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
-</svg>
-						<span class="rh_tooltip">
+                                <a href="#" class="favorite add-to-favorite">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+                                        <path class="rh_svg"
+                                              d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                              transform="translate(-1077 -1922)"/>
+                                    </svg>
+                                    <span class="rh_tooltip">
 							<p class="label">
 								Favorite							</p>
-							<!-- /.label -->
+                                        <!-- /.label -->
 						</span>
-					</a>
+                                </a>
 
-			<a href="javascript:window.print()" class="print">
-				<svg height="24px" version="1.1" viewBox="0 0 16 16" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink">
-	<title/><defs/>
-	<g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
-		<g fill="#000000" transform="translate(-672.000000, -48.000000)"><path d="M672,54 C672,53 673,52 674,52 L675,52 L675,54 L675,55 L685,55 L685,54 L685,52 L686,52 C687,52 688,53 688,54 L688,59 C688,60 687,61 686,61 L685,61 L685,59 L685,58 L675,58 L675,59 L675,61 L674,61 C673,61 672,60 672,59 L672,54 L672,54 Z M676,61 L676,59 L684,59 L684,61 L684,64 L676,64 L676,61 L676,61 Z M684,52 L684,54 L676,54 L676,52 L676,49 L684,49 L684,52 L684,52 Z M677,60 L677,61 L683,61 L683,60 L677,60 L677,60 Z M677,62 L677,63 L683,63 L683,62 L677,62 L677,62 Z M677,62" />
-		</g>
-	</g>
-</svg>
-				<span class="rh_tooltip">
+                                <a href="javascript:window.print()" class="print">
+                                    <svg height="24px" version="1.1" viewBox="0 0 16 16" width="24px"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <title/>
+                                        <defs/>
+                                        <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                                            <g fill="#000000" transform="translate(-672.000000, -48.000000)">
+                                                <path d="M672,54 C672,53 673,52 674,52 L675,52 L675,54 L675,55 L685,55 L685,54 L685,52 L686,52 C687,52 688,53 688,54 L688,59 C688,60 687,61 686,61 L685,61 L685,59 L685,58 L675,58 L675,59 L675,61 L674,61 C673,61 672,60 672,59 L672,54 L672,54 Z M676,61 L676,59 L684,59 L684,61 L684,64 L676,64 L676,61 L676,61 Z M684,52 L684,54 L676,54 L676,52 L676,49 L684,49 L684,52 L684,52 Z M677,60 L677,61 L683,61 L683,60 L677,60 L677,60 Z M677,62 L677,63 L683,63 L683,62 L677,62 L677,62 Z M677,62"/>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <span class="rh_tooltip">
 					<p class="label">
 						Print					</p>
 				</span>
-			</a>
-		</div>
-		<!-- /.rh_property__print -->
+                                </a>
+                            </div>
+                            <!-- /.rh_property__print -->
 
-	</div>
-	<!-- /.rh_property__wrap -->
+                        </div>
+                        <!-- /.rh_property__wrap -->
 
 
-<div class="rh_property__row rh_property__meta_wrap">
+                        <div class="rh_property__row rh_property__meta_wrap">
 
-			<div class="rh_property__meta">
-			<h4>Bedrooms</h4>
-			<div>
-				<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
- <defs>
-  </defs>
-  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
-</svg>
-				<span class="figure">{{house.bedrooms}}</span>
-			</div>
-		</div>
-		<!-- /.rh_property__meta -->
+                            <div class="rh_property__meta">
+                                <h4>Bedrooms</h4>
+                                <div>
+                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24">
+                                        <defs>
+                                        </defs>
+                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                              transform="translate(-1108 -593)"/>
+                                    </svg>
+                                    <span class="figure">{{house.bedrooms}}</span>
+                                </div>
+                            </div>
+                            <!-- /.rh_property__meta -->
 
-			<div class="rh_property__meta">
-			<h4>Bathrooms</h4>
-			<div>
-				<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
-  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
-</svg>
-				<span class="figure">{{house.bathrooms}}</span>
-			</div>
-		</div>
-		<!-- /.rh_property__meta -->
+                            <div class="rh_property__meta">
+                                <h4>Bathrooms</h4>
+                                <div>
+                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24"
+                                         viewBox="0 0 23.69 24">
+                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                              transform="translate(-1196.31 -593)"/>
+                                    </svg>
+                                    <span class="figure">{{house.bathrooms}}</span>
+                                </div>
+                            </div>
+                            <!-- /.rh_property__meta -->
 
-			<div class="rh_property__meta">
-			<h4>Garage</h4>
-			<div>
-				<svg class="rh_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <div class="rh_property__meta">
+                                <h4>Garage</h4>
+                                <div>
+                                    <svg class="rh_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<path d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
@@ -323,16 +399,16 @@
 	<path d="M18,7H6C5.448,7,5,7.448,5,8s0.448,1,1,1h12c0.553,0,1-0.448,1-1S18.553,7,18,7z"/>
 </g>
 </svg>
-				<span class="figure">
+                                    <span class="figure">
 					2				</span>
-			</div>
-		</div>
-		<!-- /.rh_property__meta -->
+                                </div>
+                            </div>
+                            <!-- /.rh_property__meta -->
 
-			<div class="rh_property__meta">
-			<h4>Area</h4>
-			<div>
-				<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <div class="rh_property__meta">
+                                <h4>Area</h4>
+                                <div>
+                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
@@ -348,16 +424,16 @@
 <path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
 	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
 </svg>
-				<span class="figure">
+                                    <span class="figure">
 					{{house.area}}			</span>
-							</div>
-		</div>
-		<!-- /.rh_property__meta -->
+                                </div>
+                            </div>
+                            <!-- /.rh_property__meta -->
 
-			<div class="rh_property__meta">
-			<h4>Year Built</h4>
-			<div>
-				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <div class="rh_property__meta">
+                                <h4>Year Built</h4>
+                                <div>
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g class="rh_svg">
 	<path d="M20,2h-1V1c0-0.552-0.447-1-1-1s-1,0.448-1,1v1H7V1c0-0.552-0.447-1-1-1S5,0.448,5,1v1H4C1.794,2,0,3.794,0,6v14
@@ -371,102 +447,87 @@
 	<circle cx="12" cy="18" r="2"/>
 </g>
 </svg>
-				<span class="figure">
-					2017				</span>
-			</div>
-		</div>
-		<!-- /.rh_property__meta -->
+                                    <span class="figure">
+					{{housedetails.year_built}}				</span>
+                                </div>
+                            </div>
+                            <!-- /.rh_property__meta -->
 
 
-</div>
-<!-- /.rh_property__row rh_property__meta -->
+                        </div>
+                        <!-- /.rh_property__row rh_property__meta -->
 
-	<h4 class="rh_property__heading">Description</h4>
-	<!-- /.rh_property__heading -->
+                        <h4 class="rh_property__heading">Description</h4>
+                        <!-- /.rh_property__heading -->
 
-	<div class="rh_content">
-        <p>{{house.discription}}</p></div>
-	<!-- /.rh_content -->
+                        <div class="rh_content">
+                            <p>{{house.discription}}</p></div>
+                        <!-- /.rh_content -->
 
-	<h4 class="rh_property__heading rh_property__additional_details">Additional Details</h4><ul class="rh_property__additional clearfix">	    <li>
-	        <span class="title">Built In:</span>
-	        <span class="value">2003</span>
-	    </li>
-	    	    <li>
-	        <span class="title">Waterfront:</span>
-	        <span class="value">Yes</span>
-	    </li>
-	    	    <li>
-	        <span class="title">Flooring:</span>
-	        <span class="value">Ceramic Floor,Other</span>
-	    </li>
-	    	    <li>
-	        <span class="title">Waterfront Description::</span>
-	        <span class="value">Intracoastal Front,Ocean Access</span>
-	    </li>
-	    	    <li>
-	        <span class="title">View:</span>
-	        <span class="value">Intracoastal View,Direct Ocean,Ocean View</span>
-	    </li>
-	    	    <li>
-	        <span class="title">Pets:</span>
-	        <span class="value">Allowed</span>
-	    </li>
-	    	    <li>
-	        <span class="title">Parking:</span>
-	        <span class="value">2 Or More Spaces,Covered Parking,Valet Parking</span>
-	    </li>
-	    </ul>
-		    <div class="rh_property__common_note">
-	        <h4 class="rh_property__heading">Common Note</h4><p></p>	    </div>
+                        <h4 class="rh_property__heading rh_property__additional_details">Additional Details</h4>
+                        <ul class="rh_property__additional clearfix">
+                            <li>
+                                <span class="title">Built In:</span>
+                                <span class="value">2003</span>
+                            </li>
+                            <li>
+                                <span class="title">Waterfront:</span>
+                                <span class="value">Yes</span>
+                            </li>
+                            <li>
+                                <span class="title">Flooring:</span>
+                                <span class="value">Ceramic Floor,Other</span>
+                            </li>
+                            <li>
+                                <span class="title">Waterfront Description::</span>
+                                <span class="value">Intracoastal Front,Ocean Access</span>
+                            </li>
+                            <li>
+                                <span class="title">View:</span>
+                                <span class="value">Intracoastal View,Direct Ocean,Ocean View</span>
+                            </li>
+                            <li>
+                                <span class="title">Pets:</span>
+                                <span class="value">Allowed</span>
+                            </li>
+                            <li>
+                                <span class="title">Parking:</span>
+                                <span class="value">2 Or More Spaces,Covered Parking,Valet Parking</span>
+                            </li>
+                        </ul>
+                        <div class="rh_property__features_wrap">
+                            <h4 class="rh_property__heading">Features</h4>
+                            <ul class="rh_property__features arrow-bullet-list">
+                                <li class="rh_property__feature" id="rh_property__feature_17"><a
+                                        href="../../property-feature/2-stories/index.html">2 Stories</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_19"><a
+                                        href="../../property-feature/bike-path/index.html">Bike Path</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_20"><a
+                                        href="../../property-feature/central-cooling/index.html">Central Cooling</a>
+                                </li>
+                                <li class="rh_property__feature" id="rh_property__feature_32"><a
+                                        href="../../property-feature/jog-path/index.html">Jog Path</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_34"><a
+                                        href="../../property-feature/lawn/index.html">Lawn</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_43"><a
+                                        href="../../property-feature/swimming-pool/index.html">Swimming Pool</a></li>
+                            </ul>
+                        </div>
 
-		<div class="rh_property__features_wrap">
-	    <h4 class="rh_property__heading">Features</h4>	    <ul class="rh_property__features arrow-bullet-list">
-		    <li class="rh_property__feature" id="rh_property__feature_17"><a href="../../property-feature/2-stories/index.html">2 Stories</a></li><li class="rh_property__feature" id="rh_property__feature_19"><a href="../../property-feature/bike-path/index.html">Bike Path</a></li><li class="rh_property__feature" id="rh_property__feature_20"><a href="../../property-feature/central-cooling/index.html">Central Cooling</a></li><li class="rh_property__feature" id="rh_property__feature_32"><a href="../../property-feature/jog-path/index.html">Jog Path</a></li><li class="rh_property__feature" id="rh_property__feature_34"><a href="../../property-feature/lawn/index.html">Lawn</a></li><li class="rh_property__feature" id="rh_property__feature_43"><a href="../../property-feature/swimming-pool/index.html">Swimming Pool</a></li>	    </ul>
-	</div>
-
-
-		<div class="rh_property__floor_plans floor-plans">
-
-		<h3 class="rh_property__heading floor-plans-label">Floor Plans</h3>
-
-		<div class="floor-plans-accordions">
-	        				<div class="floor-plan">
-					<div class="floor-plan-title">
-						<div class="title">
-							<i class="fa fa-plus"></i>
-							<h3>Ground Floor</h3>
-						</div>
-						<div class="floor-plan-meta">
-							<p>4800 sq ft</p><p>3 Bedrooms</p><p>3 Bathrooms</p><p class="floor-price"><span class="floor-price-value">$6,570</span> Per Month</p>						</div>
-					</div>
-					<div class="floor-plan-content">
-
-	                    	                        <div class="floor-plan-desc">
-	                            <p>This is sample description of a demo floor plan. This is sample description of a demo floor plan. This is sample description of a demo floor plan. This is sample description of a demo floor plan.</p>
-	                        </div>
-
-	                    	                    <div class="floor-plan-map">
-	                        <a href="../../wp-content/uploads/2015/07/inspiry-0-ground-floor.jpg" class="swipebox" rel="gallery_floor_plans">
-	                            <img src="../../wp-content/uploads/2015/07/inspiry-0-ground-floor.jpg" alt="Ground Floor" >
-	                        </a>
-	                    </div>
-	                    					</div>
-				</div>
-	            		</div>
-	</div>
-
-		    <div class="rh_property__video">
-	        <h4 class="rh_property__heading">Property Video</h4>	        <a href="https://www.youtube.com/watch?v=ktOvf_vNGAE" class="pretty-photo">
-	            <div class="play-btn"></div>
-	            <img src="../../wp-content/uploads/2015/07/property-02-exterior-818x417.jpg" alt="Villa in Coral Gables">	        </a>
-	    </div>
-		<div class="rh_property__map_wrap">
-	    <h4 class="rh_property__heading">Property on Map</h4>	        <div id="property_map"></div>
-			<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuxwopJTfSvqu4jurlUSnxyyYvCR69ME">
-    </script>
-	        <script>
+                        <div class="rh_property__video">
+                            <h4 class="rh_property__heading">Property Video</h4>            <a
+                                href="{{housedetails.video}}" class="pretty-photo">
+                            <div class="play-btn"></div>
+                            <img src="{{house.image_url.url}}"
+                                 alt="Villa in Coral Gables"> </a>
+                        </div>
+                        <div class="rh_property__map_wrap">
+                            <h4 class="rh_property__heading">Property on Map</h4>
+                            <div id="property_map"></div>
+                            <script async defer
+                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuxwopJTfSvqu4jurlUSnxyyYvCR69ME">
+                            </script>
+                            <script>
 	            /* Property Detail Page - Google Map for Property Location */
 
 	            function initialize_property_map() {
@@ -654,96 +715,115 @@
 	            }
 
 	            window.onload = initialize_property_map();
-	        </script>
+
+                            </script>
 
 
-	</div>
+                        </div>
 
 
+                    </div>
+                    <!-- /.rh_property__content -->
+
+                    <section class="rh_property__similar_properties">
+                        <h3 class="rh_property__heading">Similar Properties</h3>
+                        <div class="rh_property__container">
+
+                            <article
+                                    class="rh_prop_card rh_prop_card--similar post-94 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-laundry-room property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
+
+                                <div class="rh_prop_card__wrap">
+
+                                    <figure class="rh_prop_card__thumbnail">
+                                        <a href="../villa-on-hollywood-boulevard/index.html">
+                                            <img width="680" height="510"
+                                                 src="../../wp-content/uploads/2015/07/property-03-exterior-680x510.jpg"
+                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
+                                                 alt=""
+                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-400x300.jpg 400w"
+                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
+
+                                        <div class="rh_overlay"></div>
+                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+                                            <a href="../villa-on-hollywood-boulevard/index.html">View Property</a>
+                                        </div>
+                                        <!-- /.rh_overlay__contents -->
 
 
-
-</div>
-<!-- /.rh_property__content -->
-
-		<section class="rh_property__similar_properties">
-			<h3 class="rh_property__heading">Similar Properties</h3>		    <div class="rh_property__container">
-
-<article class="rh_prop_card rh_prop_card--similar post-94 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-laundry-room property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
-
-	<div class="rh_prop_card__wrap">
-
-		<figure class="rh_prop_card__thumbnail">
-			<a href="../villa-on-hollywood-boulevard/index.html">
-		        <img width="680" height="510" src="../../wp-content/uploads/2015/07/property-03-exterior-680x510.jpg" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-400x300.jpg 400w" sizes="(max-width: 680px) 100vw, 680px" />		    </a>
-
-		    <div class="rh_overlay"></div>
-		    <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-		    	<a href="../villa-on-hollywood-boulevard/index.html">View Property</a>
-		    </div>
-		    <!-- /.rh_overlay__contents -->
-
-
-		    <div class="rh_prop_card__btns">
-		    			            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
-		                <input type="hidden" name="property_id" value="94" />
-		                <input type="hidden" name="action" value="add_to_favorite" />
-		            </form>
-		            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+                                        <div class="rh_prop_card__btns">
+                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
+                                                  method="post" class="add-to-favorite-form">
+                                                <input type="hidden" name="property_id" value="94"/>
+                                                <input type="hidden" name="action" value="add_to_favorite"/>
+                                            </form>
+                                            <span class="favorite-placeholder highlight__red hide"
+                                                  data-tooltip="Added to favorites">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
 					</span>
-		            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
-</svg>
-					</a>
-		            		    </div>
-		    <!-- /.rh_prop_card__btns -->
-		</figure>
-		<!-- /.rh_prop_card__thumbnail -->
+                                            <a href="#" class="favorite add-to-favorite"
+                                               data-tooltip="Add to favorites">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+                                                    <path class="rh_svg"
+                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                                          transform="translate(-1077 -1922)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- /.rh_prop_card__btns -->
+                                    </figure>
+                                    <!-- /.rh_prop_card__thumbnail -->
 
-		<div class="rh_prop_card__details">
+                                    <div class="rh_prop_card__details">
 
-			<h3>
-				<a href="../villa-on-hollywood-boulevard/index.html">Villa on Hollywood Boulevard</a>
-			</h3>
-			<p class="rh_prop_card__excerpt">The very best waterfront location in Harbor Islands complete with&hellip;</p>
-			<!-- /.rh_prop_card__excerpt -->
+                                        <h3>
+                                            <a href="../villa-on-hollywood-boulevard/index.html">Villa on Hollywood
+                                                Boulevard</a>
+                                        </h3>
+                                        <p class="rh_prop_card__excerpt">The very best waterfront location in Harbor
+                                            Islands complete with&hellip;</p>
+                                        <!-- /.rh_prop_card__excerpt -->
 
-			<div class="rh_prop_card__meta_wrap">
+                                        <div class="rh_prop_card__meta_wrap">
 
-									<div class="rh_prop_card__meta">
-						<h4>Bedrooms</h4>
-						<div>
-							<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
- <defs>
-  </defs>
-  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
-</svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">3</span>
-						</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bedrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                         height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                        </defs>
+                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                              transform="translate(-1108 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">3</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									<div class="rh_prop_card__meta">
-						<h4>Bathrooms</h4>
-						<div>
-							<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
-  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
-</svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">4</span>
-						</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bathrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
+                                                         height="24" viewBox="0 0 23.69 24">
+                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                              transform="translate(-1196.31 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">4</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									<div class="rh_prop_card__meta">
-						<h4>Area</h4>
-						<div>
-							<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Area</h4>
+                                                <div>
+                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
@@ -759,114 +839,133 @@
 <path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
 	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
 </svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">
 								4530							</span>
-															<span class="label">
+                                                    <span class="label">
 									Sq Ft								</span>
-													</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-			</div>
-			<!-- /.rh_prop_card__meta_wrap -->
+                                        </div>
+                                        <!-- /.rh_prop_card__meta_wrap -->
 
-			<div class="rh_prop_card__priceLabel">
+                                        <div class="rh_prop_card__priceLabel">
 
-				<h4 class="rh_prop_card__status">
-					For Sale				</h4>
-				<!-- /.rh_prop_card__type -->
-				<p class="rh_prop_card__price">
-					$740,000 				</p>
-				<!-- /.rh_prop_card__price -->
+                                            <h4 class="rh_prop_card__status">
+                                                For Sale </h4>
+                                            <!-- /.rh_prop_card__type -->
+                                            <p class="rh_prop_card__price">
+                                                $740,000 </p>
+                                            <!-- /.rh_prop_card__price -->
 
-			</div>
-			<!-- /.rh_prop_card__priceLabel -->
+                                        </div>
+                                        <!-- /.rh_prop_card__priceLabel -->
 
-		</div>
-		<!-- /.rh_prop_card__details -->
+                                    </div>
+                                    <!-- /.rh_prop_card__details -->
 
-	</div>
-	<!-- /.rh_prop_card__wrap -->
+                                </div>
+                                <!-- /.rh_prop_card__wrap -->
 
-</article>
-<!-- /.rh_prop_card -->
+                            </article>
+                            <!-- /.rh_prop_card -->
 
-<article class="rh_prop_card rh_prop_card--similar post-91 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-marble-floors property-feature-swimming-pool property-type-villa property-city-miami property-status-for-rent">
+                            <article
+                                    class="rh_prop_card rh_prop_card--similar post-91 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-marble-floors property-feature-swimming-pool property-type-villa property-city-miami property-status-for-rent">
 
-	<div class="rh_prop_card__wrap">
+                                <div class="rh_prop_card__wrap">
 
-		<figure class="rh_prop_card__thumbnail">
-			<a href="../villa-on-grand-avenue/index.html">
-		        <img width="680" height="510" src="../../wp-content/uploads/2015/07/property-05-exterior-680x510.jpg" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-400x300.jpg 400w" sizes="(max-width: 680px) 100vw, 680px" />		    </a>
+                                    <figure class="rh_prop_card__thumbnail">
+                                        <a href="../villa-on-grand-avenue/index.html">
+                                            <img width="680" height="510"
+                                                 src="../../wp-content/uploads/2015/07/property-05-exterior-680x510.jpg"
+                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
+                                                 alt=""
+                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-400x300.jpg 400w"
+                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
 
-		    <div class="rh_overlay"></div>
-		    <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-		    	<a href="../villa-on-grand-avenue/index.html">View Property</a>
-		    </div>
-		    <!-- /.rh_overlay__contents -->
+                                        <div class="rh_overlay"></div>
+                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+                                            <a href="../villa-on-grand-avenue/index.html">View Property</a>
+                                        </div>
+                                        <!-- /.rh_overlay__contents -->
 
 
-		    <div class="rh_prop_card__btns">
-		    			            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
-		                <input type="hidden" name="property_id" value="91" />
-		                <input type="hidden" name="action" value="add_to_favorite" />
-		            </form>
-		            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+                                        <div class="rh_prop_card__btns">
+                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
+                                                  method="post" class="add-to-favorite-form">
+                                                <input type="hidden" name="property_id" value="91"/>
+                                                <input type="hidden" name="action" value="add_to_favorite"/>
+                                            </form>
+                                            <span class="favorite-placeholder highlight__red hide"
+                                                  data-tooltip="Added to favorites">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
 					</span>
-		            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
-</svg>
-					</a>
-		            		    </div>
-		    <!-- /.rh_prop_card__btns -->
-		</figure>
-		<!-- /.rh_prop_card__thumbnail -->
+                                            <a href="#" class="favorite add-to-favorite"
+                                               data-tooltip="Add to favorites">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+                                                    <path class="rh_svg"
+                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                                          transform="translate(-1077 -1922)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- /.rh_prop_card__btns -->
+                                    </figure>
+                                    <!-- /.rh_prop_card__thumbnail -->
 
-		<div class="rh_prop_card__details">
+                                    <div class="rh_prop_card__details">
 
-			<h3>
-				<a href="../villa-on-grand-avenue/index.html">Villa on Grand Avenue</a>
-			</h3>
-			<p class="rh_prop_card__excerpt">Spacious and fabulous home in prime location. This executive style&hellip;</p>
-			<!-- /.rh_prop_card__excerpt -->
+                                        <h3>
+                                            <a href="../villa-on-grand-avenue/index.html">Villa on Grand Avenue</a>
+                                        </h3>
+                                        <p class="rh_prop_card__excerpt">Spacious and fabulous home in prime location.
+                                            This executive style&hellip;</p>
+                                        <!-- /.rh_prop_card__excerpt -->
 
-			<div class="rh_prop_card__meta_wrap">
+                                        <div class="rh_prop_card__meta_wrap">
 
-									<div class="rh_prop_card__meta">
-						<h4>Bedrooms</h4>
-						<div>
-							<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
- <defs>
-  </defs>
-  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
-</svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">4</span>
-						</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bedrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                         height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                        </defs>
+                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                              transform="translate(-1108 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">4</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									<div class="rh_prop_card__meta">
-						<h4>Bathrooms</h4>
-						<div>
-							<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
-  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
-</svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">4</span>
-						</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bathrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
+                                                         height="24" viewBox="0 0 23.69 24">
+                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                              transform="translate(-1196.31 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">4</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									<div class="rh_prop_card__meta">
-						<h4>Area</h4>
-						<div>
-							<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Area</h4>
+                                                <div>
+                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
@@ -882,118 +981,132 @@
 <path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
 	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
 </svg>
-							<!-- <img src="php" alt="" /> -->
-							<span class="figure">
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">
 								9350							</span>
-															<span class="label">
+                                                    <span class="label">
 									Sq Ft								</span>
-													</div>
-					</div>
-					<!-- /.rh_prop_card__meta -->
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-			</div>
-			<!-- /.rh_prop_card__meta_wrap -->
+                                        </div>
+                                        <!-- /.rh_prop_card__meta_wrap -->
 
-			<div class="rh_prop_card__priceLabel">
+                                        <div class="rh_prop_card__priceLabel">
 
-				<h4 class="rh_prop_card__status">
-					For Rent				</h4>
-				<!-- /.rh_prop_card__type -->
-				<p class="rh_prop_card__price">
-					$4,750 Monthly				</p>
-				<!-- /.rh_prop_card__price -->
+                                            <h4 class="rh_prop_card__status">
+                                                For Rent </h4>
+                                            <!-- /.rh_prop_card__type -->
+                                            <p class="rh_prop_card__price">
+                                                $4,750 Monthly </p>
+                                            <!-- /.rh_prop_card__price -->
 
-			</div>
-			<!-- /.rh_prop_card__priceLabel -->
+                                        </div>
+                                        <!-- /.rh_prop_card__priceLabel -->
 
-		</div>
-		<!-- /.rh_prop_card__details -->
+                                    </div>
+                                    <!-- /.rh_prop_card__details -->
 
-	</div>
-	<!-- /.rh_prop_card__wrap -->
+                                </div>
+                                <!-- /.rh_prop_card__wrap -->
 
-</article>
-<!-- /.rh_prop_card -->
-		    </div>
-			<!-- /.rh_property__container -->
-		</section>
-		<!-- /.rh_property__similar -->
+                            </article>
+                            <!-- /.rh_prop_card -->
+                        </div>
+                        <!-- /.rh_property__container -->
+                    </section>
+                    <!-- /.rh_property__similar -->
 
-<section class="rh_property__comments">
-	</section>
-<!-- /.rh_property__comments -->
-							</div>
-							<!-- /.rh_property__main -->
+                    <section class="rh_property__comments">
+                    </section>
+                    <!-- /.rh_property__comments -->
+                </div>
+                <!-- /.rh_property__main -->
 
-							<div class="rh_property__sidebar">
-																	<aside class="rh_sidebar">
-											<section class="widget rh_property_agent ">
-						<a class="agent-image" href="../../agent/nathan-james/index.html">
-					<img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-3-210x210.jpg" class="attachment-agent-image size-agent-image wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3.jpg 220w" sizes="(max-width: 210px) 100vw, 210px" />				</a>
-									<h3 class="rh_property_agent__title">Agent Nathan James</h3>
-					<div class="rh_property_agent__agent_info">
-							<p class="contact office">
-					Office : <span class="value">1-222-333-4444</span>
-				</p>
-								<p class="contact mobile">
-					Mobile : <span class="value">1-234-456-7893</span>
-				</p>
-								<p class="contact fax">
-					Fax : <span class="value">1-333-444-5555</span>
-				</p>
-								<p class="contact whatsapp">
-					WhatsApp : <span class="value">1-234-456-7894</span>
-				</p>
-								<p class="contact email">
-					Email : <a href="mailto:r&#111;b&#111;t&#064;ins&#112;ir&#121;&#116;&#104;em&#101;&#115;&#046;&#099;&#111;&#109;" class="value">robo&#116;&#064;i&#110;&#115;piryt&#104;&#101;me&#115;.c&#111;&#109;</a>
-				</p>
-						</div>
-					<a class="rh_btn rh_btn--primary rh_property_agent__link" href="../../agent/nathan-james/index.html">View My Listings</a>
+                <div class="rh_property__sidebar">
+                    <aside class="rh_sidebar">
+                        <section class="widget rh_property_agent ">
+                            <a class="agent-image" href="../../agent/nathan-james/index.html">
+                                <img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-3-210x210.jpg"
+                                     class="attachment-agent-image size-agent-image wp-post-image" alt=""
+                                     srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3.jpg 220w"
+                                     sizes="(max-width: 210px) 100vw, 210px"/> </a>
+                            <h3 class="rh_property_agent__title">Agent Nathan James</h3>
+                            <div class="rh_property_agent__agent_info">
+                                <p class="contact office">
+                                    Office : <span class="value">1-222-333-4444</span>
+                                </p>
+                                <p class="contact mobile">
+                                    Mobile : <span class="value">1-234-456-7893</span>
+                                </p>
+                                <p class="contact fax">
+                                    Fax : <span class="value">1-333-444-5555</span>
+                                </p>
+                                <p class="contact whatsapp">
+                                    WhatsApp : <span class="value">1-234-456-7894</span>
+                                </p>
+                                <p class="contact email">
+                                    Email : <a
+                                        href="mailto:r&#111;b&#111;t&#064;ins&#112;ir&#121;&#116;&#104;em&#101;&#115;&#046;&#099;&#111;&#109;"
+                                        class="value">robo&#116;&#064;i&#110;&#115;piryt&#104;&#101;me&#115;.c&#111;&#109;</a>
+                                </p>
+                            </div>
+                            <a class="rh_btn rh_btn--primary rh_property_agent__link"
+                               href="../../agent/nathan-james/index.html">View My Listings</a>
 
-						<div class="rh_property_agent__enquiry_form">
-					<form id="agent-form-id57" class="rh_widget_form agent-form" method="post" action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
-						<p class="rh_widget_form__row">
-							<label for="name">Name</label>
-							<input type="text" name="name" placeholder="Name" class="required" title="* Please provide your name" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="email">Email</label>
-							<input type="text" name="email" placeholder="Email" class="required" title="* Please provide valid email address" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="phone">Phone</label>
-							<input type="text" name="phone" placeholder="Phone" class="required" title="* Please provide valid phone number" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="message">Message</label>
-							<textarea cols="40" rows="6" type="text" name="message" placeholder="Message" class="required" title="* Please provide your message"></textarea>
-						</p>
-						<!-- /.rh_widget_form__row -->
+                            <div class="rh_property_agent__enquiry_form">
+                                <form id="agent-form-id57" class="rh_widget_form agent-form" method="post"
+                                      action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+                                    <p class="rh_widget_form__row">
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name" placeholder="Name" class="required"
+                                               title="* Please provide your name"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" placeholder="Email" class="required"
+                                               title="* Please provide valid email address"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" name="phone" placeholder="Phone" class="required"
+                                               title="* Please provide valid phone number"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="message">Message</label>
+                                        <textarea cols="40" rows="6" type="text" name="message" placeholder="Message"
+                                                  class="required" title="* Please provide your message"></textarea>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
 
-						<input type="hidden" name="nonce" value="dda96e7baf"/>
-						<input type="hidden" name="target" value="&#114;&#111;&#098;&#111;t&#064;in&#115;&#112;&#105;ryt&#104;e&#109;&#101;&#115;.c&#111;&#109;">
-						<input type="hidden" name="action" value="send_message_to_agent"/>
-						<input type="hidden" name="property_title" value="Villa in Coral Gables"/>
-						<input type="hidden" name="property_permalink" value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
+                                    <input type="hidden" name="nonce" value="dda96e7baf"/>
+                                    <input type="hidden" name="target"
+                                           value="&#114;&#111;&#098;&#111;t&#064;in&#115;&#112;&#105;ryt&#104;e&#109;&#101;&#115;.c&#111;&#109;">
+                                    <input type="hidden" name="action" value="send_message_to_agent"/>
+                                    <input type="hidden" name="property_title" value="Villa in Coral Gables"/>
+                                    <input type="hidden" name="property_permalink"
+                                           value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
 
-						<input type="submit" value="Send Message" name="submit" class="rh_btn rh_btn--primary rh_widget_form__submit">
+                                    <input type="submit" value="Send Message" name="submit"
+                                           class="rh_btn rh_btn--primary rh_widget_form__submit">
 
-						<span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
+                                    <span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
 </span>
 
-						<div class="error-container"></div>
-						<!-- /.error-container -->
-						<div class="message-container"></div>
-						<!-- /.message-container -->
+                                    <div class="error-container"></div>
+                                    <!-- /.error-container -->
+                                    <div class="message-container"></div>
+                                    <!-- /.message-container -->
 
-					</form>
-				</div>
-				<!-- /.rh_property_agent__enquiry_form -->
+                                </form>
+                            </div>
+                            <!-- /.rh_property_agent__enquiry_form -->
 
-				<script type="text/javascript">
+                            <script type="text/javascript">
 					( function( $ ) {
 						"use strict";
 
@@ -1038,75 +1151,91 @@
 							} );
 						}
 					} )( jQuery );
-				</script>
-						</section>
-		<section class="widget rh_property_agent multiple-agent">
-						<a class="agent-image" href="../../agent/melissa-william/index.html">
-					<img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-2-210x210.jpg" class="attachment-agent-image size-agent-image wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2.jpg 220w" sizes="(max-width: 210px) 100vw, 210px" />				</a>
-									<h3 class="rh_property_agent__title">Agent Melissa William</h3>
-					<div class="rh_property_agent__agent_info">
-							<p class="contact office">
-					Office : <span class="value">1-222-333-4444</span>
-				</p>
-								<p class="contact mobile">
-					Mobile : <span class="value">1-234-456-7892</span>
-				</p>
-								<p class="contact fax">
-					Fax : <span class="value">1-333-444-5555</span>
-				</p>
-								<p class="contact whatsapp">
-					WhatsApp : <span class="value">1-234-456-7895</span>
-				</p>
-								<p class="contact email">
-					Email : <a href="mailto:r&#111;bot&#064;&#105;ns&#112;&#105;&#114;y&#116;h&#101;&#109;&#101;s&#046;c&#111;&#109;" class="value">&#114;o&#098;ot&#064;&#105;ns&#112;&#105;ryt&#104;emes.c&#111;m</a>
-				</p>
-						</div>
-					<a class="rh_btn rh_btn--primary rh_property_agent__link" href="../../agent/melissa-william/index.html">View My Listings</a>
 
-						<div class="rh_property_agent__enquiry_form">
-					<form id="agent-form-id54" class="rh_widget_form agent-form" method="post" action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
-						<p class="rh_widget_form__row">
-							<label for="name">Name</label>
-							<input type="text" name="name" placeholder="Name" class="required" title="* Please provide your name" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="email">Email</label>
-							<input type="text" name="email" placeholder="Email" class="required" title="* Please provide valid email address" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="phone">Phone</label>
-							<input type="text" name="phone" placeholder="Phone" class="required" title="* Please provide valid phone number" />
-						</p>
-						<!-- /.rh_widget_form__row -->
-						<p class="rh_widget_form__row">
-							<label for="message">Message</label>
-							<textarea cols="40" rows="6" type="text" name="message" placeholder="Message" class="required" title="* Please provide your message"></textarea>
-						</p>
-						<!-- /.rh_widget_form__row -->
+                            </script>
+                        </section>
+                        <section class="widget rh_property_agent multiple-agent">
+                            <a class="agent-image" href="../../agent/melissa-william/index.html">
+                                <img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-2-210x210.jpg"
+                                     class="attachment-agent-image size-agent-image wp-post-image" alt=""
+                                     srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2.jpg 220w"
+                                     sizes="(max-width: 210px) 100vw, 210px"/> </a>
+                            <h3 class="rh_property_agent__title">Agent Melissa William</h3>
+                            <div class="rh_property_agent__agent_info">
+                                <p class="contact office">
+                                    Office : <span class="value">1-222-333-4444</span>
+                                </p>
+                                <p class="contact mobile">
+                                    Mobile : <span class="value">1-234-456-7892</span>
+                                </p>
+                                <p class="contact fax">
+                                    Fax : <span class="value">1-333-444-5555</span>
+                                </p>
+                                <p class="contact whatsapp">
+                                    WhatsApp : <span class="value">1-234-456-7895</span>
+                                </p>
+                                <p class="contact email">
+                                    Email : <a
+                                        href="mailto:r&#111;bot&#064;&#105;ns&#112;&#105;&#114;y&#116;h&#101;&#109;&#101;s&#046;c&#111;&#109;"
+                                        class="value">
+                                    &#114;o&#098;ot&#064;&#105;ns&#112;&#105;ryt&#104;emes.c&#111;m</a>
+                                </p>
+                            </div>
+                            <a class="rh_btn rh_btn--primary rh_property_agent__link"
+                               href="../../agent/melissa-william/index.html">View My Listings</a>
 
-						<input type="hidden" name="nonce" value="dda96e7baf"/>
-						<input type="hidden" name="target" value="&#114;&#111;bot&#064;&#105;&#110;&#115;p&#105;&#114;&#121;t&#104;&#101;&#109;&#101;s&#046;&#099;&#111;m">
-						<input type="hidden" name="action" value="send_message_to_agent"/>
-						<input type="hidden" name="property_title" value="Villa in Coral Gables"/>
-						<input type="hidden" name="property_permalink" value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
+                            <div class="rh_property_agent__enquiry_form">
+                                <form id="agent-form-id54" class="rh_widget_form agent-form" method="post"
+                                      action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+                                    <p class="rh_widget_form__row">
+                                        <label for="name">Name</label>
+                                        <input type="text" name="name" placeholder="Name" class="required"
+                                               title="* Please provide your name"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" placeholder="Email" class="required"
+                                               title="* Please provide valid email address"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" name="phone" placeholder="Phone" class="required"
+                                               title="* Please provide valid phone number"/>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
+                                    <p class="rh_widget_form__row">
+                                        <label for="message">Message</label>
+                                        <textarea cols="40" rows="6" type="text" name="message" placeholder="Message"
+                                                  class="required" title="* Please provide your message"></textarea>
+                                    </p>
+                                    <!-- /.rh_widget_form__row -->
 
-						<input type="submit" value="Send Message" name="submit" class="rh_btn rh_btn--primary rh_widget_form__submit">
+                                    <input type="hidden" name="nonce" value="dda96e7baf"/>
+                                    <input type="hidden" name="target"
+                                           value="&#114;&#111;bot&#064;&#105;&#110;&#115;p&#105;&#114;&#121;t&#104;&#101;&#109;&#101;s&#046;&#099;&#111;m">
+                                    <input type="hidden" name="action" value="send_message_to_agent"/>
+                                    <input type="hidden" name="property_title" value="Villa in Coral Gables"/>
+                                    <input type="hidden" name="property_permalink"
+                                           value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
 
-						<span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
+                                    <input type="submit" value="Send Message" name="submit"
+                                           class="rh_btn rh_btn--primary rh_widget_form__submit">
+
+                                    <span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
 </span>
 
-						<div class="error-container"></div>
-						<!-- /.error-container -->
-						<div class="message-container"></div>
-						<!-- /.message-container -->
+                                    <div class="error-container"></div>
+                                    <!-- /.error-container -->
+                                    <div class="message-container"></div>
+                                    <!-- /.message-container -->
 
-					</form>
-				</div>
-				<!-- /.rh_property_agent__enquiry_form -->
+                                </form>
+                            </div>
+                            <!-- /.rh_property_agent__enquiry_form -->
 
-				<script type="text/javascript">
+                            <script type="text/javascript">
 					( function( $ ) {
 						"use strict";
 
@@ -1151,118 +1280,147 @@
 							} );
 						}
 					} )( jQuery );
-				</script>
-						</section>
-	<section id="mortgage-calculator-2" class="widget clearfix widget_mortgage-calculator"><h3 class="title">Mortgage Calculator</h3>        <div class="mc-wrapper clearfx">
-            <form id="mc-form" action="#mc-form">
-                <p>
-                    <label for="mc-total-amount">Total Amount</label>
-                    <input type="number" name="mc_total_amount_label" id="mc-total-amount" min="1" class="required" placeholder="$" value="825000"/>
-                </p>
-                <p>
-                    <label for="mc-down-payment">Down Payment</label>
-                    <input type="number" name="mc_down_payment_label" id="mc-down-payment" min="1" class="required" placeholder="$">
-                </p>
-                <p>
-                    <label for="mc-interest-rate">Interest %age</label>
-                    <input type="number" name="mc_interest_rate_label" id="mc-interest-rate" min="1" class="required" placeholder="%">
-                </p>
-                <p>
-                    <label for="mc-mortgage-period">Number of Years</label>
-                    <input type="number" name="mc_mortgage_period_label" id="mc-mortgage-period" class="required" placeholder="Years">
-                </p>
-                <p>
-                    <input type="submit" id="mc-submit" value="Calculate Mortgage">
-                </p>
-            </form>
 
-            <!-- This div is holding output values-->
-            <div id="mc-output" class="clearfix"></div>
-        </div>
+                            </script>
+                        </section>
+                        <section id="mortgage-calculator-2" class="widget clearfix widget_mortgage-calculator"><h3
+                                class="title">Mortgage Calculator</h3>
+                            <div class="mc-wrapper clearfx">
+                                <form id="mc-form" action="#mc-form">
+                                    <p>
+                                        <label for="mc-total-amount">Total Amount</label>
+                                        <input type="number" name="mc_total_amount_label" id="mc-total-amount" min="1"
+                                               class="required" placeholder="$" value="825000"/>
+                                    </p>
+                                    <p>
+                                        <label for="mc-down-payment">Down Payment</label>
+                                        <input type="number" name="mc_down_payment_label" id="mc-down-payment" min="1"
+                                               class="required" placeholder="$">
+                                    </p>
+                                    <p>
+                                        <label for="mc-interest-rate">Interest %age</label>
+                                        <input type="number" name="mc_interest_rate_label" id="mc-interest-rate" min="1"
+                                               class="required" placeholder="%">
+                                    </p>
+                                    <p>
+                                        <label for="mc-mortgage-period">Number of Years</label>
+                                        <input type="number" name="mc_mortgage_period_label" id="mc-mortgage-period"
+                                               class="required" placeholder="Years">
+                                    </p>
+                                    <p>
+                                        <input type="submit" id="mc-submit" value="Calculate Mortgage">
+                                    </p>
+                                </form>
 
-        </section><section id="featured_properties_widget-5" class="widget clearfix Featured_Properties_Widget"><h3 class="title">Featured Properties</h3>
-						<article class="rh_prop_card rh_prop_card--block post-42 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-heating property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-lawn property-feature-marble-floors property-feature-swimming-pool property-type-single-family property-city-miami property-status-for-sale">
+                                <!-- This div is holding output values-->
+                                <div id="mc-output" class="clearfix"></div>
+                            </div>
 
-							<div class="rh_prop_card__wrap">
+                        </section>
+                        <section id="featured_properties_widget-5" class="widget clearfix Featured_Properties_Widget">
+                            <h3 class="title">Featured Properties</h3>
+                            <article
+                                    class="rh_prop_card rh_prop_card--block post-42 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-heating property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-lawn property-feature-marble-floors property-feature-swimming-pool property-type-single-family property-city-miami property-status-for-sale">
 
-																	<div class="rh_label rh_label__featured_widget">
-										<div class="rh_label__wrap">
-											Featured											<span></span>
-										</div>
-									</div>
-									<!-- /.rh_label -->
+                                <div class="rh_prop_card__wrap">
 
-								<figure class="rh_prop_card__thumbnail">
-									<a href="../home-in-coral-gables/index.html">
-										<img width="680" height="510" src="../../wp-content/uploads/2015/07/property-08-exterior-680x510.jpg" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-400x300.jpg 400w" sizes="(max-width: 680px) 100vw, 680px" />									</a>
+                                    <div class="rh_label rh_label__featured_widget">
+                                        <div class="rh_label__wrap">
+                                            Featured <span></span>
+                                        </div>
+                                    </div>
+                                    <!-- /.rh_label -->
 
-									<div class="rh_overlay"></div>
-									<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-										<a href="../home-in-coral-gables/index.html">View Property</a>
-									</div>
-									<!-- /.rh_overlay__contents -->
+                                    <figure class="rh_prop_card__thumbnail">
+                                        <a href="../home-in-coral-gables/index.html">
+                                            <img width="680" height="510"
+                                                 src="../../wp-content/uploads/2015/07/property-08-exterior-680x510.jpg"
+                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
+                                                 alt=""
+                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-400x300.jpg 400w"
+                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
+
+                                        <div class="rh_overlay"></div>
+                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+                                            <a href="../home-in-coral-gables/index.html">View Property</a>
+                                        </div>
+                                        <!-- /.rh_overlay__contents -->
 
 
-									<div class="rh_prop_card__btns">
-																					<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
-												<input type="hidden" name="property_id" value="42" />
-												<input type="hidden" name="action" value="add_to_favorite" />
-											</form>
-											<span href="#" class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+                                        <div class="rh_prop_card__btns">
+                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
+                                                  method="post" class="add-to-favorite-form">
+                                                <input type="hidden" name="property_id" value="42"/>
+                                                <input type="hidden" name="action" value="add_to_favorite"/>
+                                            </form>
+                                            <span href="#" class="favorite-placeholder highlight__red hide"
+                                                  data-tooltip="Added to favorites">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
 											</span>
-											<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
-</svg>
-											</a>
-																				</div>
-									<!-- /.rh_prop_card__btns -->
-								</figure>
-								<!-- /.rh_prop_card__thumbnail -->
+                                            <a href="#" class="favorite add-to-favorite"
+                                               data-tooltip="Add to favorites">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+                                                    <path class="rh_svg"
+                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                                          transform="translate(-1077 -1922)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- /.rh_prop_card__btns -->
+                                    </figure>
+                                    <!-- /.rh_prop_card__thumbnail -->
 
-								<div class="rh_prop_card__details">
+                                    <div class="rh_prop_card__details">
 
-									<h3>
-										<a href="../home-in-coral-gables/index.html">Home in Coral Gables</a>
-									</h3>
-									<p class="rh_prop_card__excerpt">Elegant retreat in a quiet Coral Gables setting. This home&hellip;</p>
-									<!-- /.rh_prop_card__excerpt -->
+                                        <h3>
+                                            <a href="../home-in-coral-gables/index.html">Home in Coral Gables</a>
+                                        </h3>
+                                        <p class="rh_prop_card__excerpt">Elegant retreat in a quiet Coral Gables
+                                            setting. This home&hellip;</p>
+                                        <!-- /.rh_prop_card__excerpt -->
 
-									<div class="rh_prop_card__meta_wrap">
+                                        <div class="rh_prop_card__meta_wrap">
 
-																					<div class="rh_prop_card__meta">
-												<h4>Bedrooms</h4>
-												<div>
-													<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
- <defs>
-  </defs>
-  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
-</svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">4</span>
-												</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bedrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                         height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                        </defs>
+                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                              transform="translate(-1108 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">4</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-																					<div class="rh_prop_card__meta">
-												<h4>Bathrooms</h4>
-												<div>
-													<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
-  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
-</svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">4.5</span>
-												</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bathrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
+                                                         height="24" viewBox="0 0 23.69 24">
+                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                              transform="translate(-1196.31 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">4.5</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-																					<div class="rh_prop_card__meta">
-												<h4>Area</h4>
-												<div>
-													<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Area</h4>
+                                                <div>
+                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
@@ -1278,121 +1436,142 @@
 <path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
 	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
 </svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">
 														3800													</span>
-																											<span class="label">
+                                                    <span class="label">
 															Sq Ft														</span>
-																									</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									</div>
-									<!-- /.rh_prop_card__meta_wrap -->
+                                        </div>
+                                        <!-- /.rh_prop_card__meta_wrap -->
 
-									<div class="rh_prop_card__priceLabel">
+                                        <div class="rh_prop_card__priceLabel">
 
-										<h4 class="rh_prop_card__status">
-											<figcaption class="for-sale">For Sale</figcaption>										</h4>
-										<!-- /.rh_prop_card__type -->
-										<p class="rh_prop_card__price">
-											$850,000 										</p>
-										<!-- /.rh_prop_card__price -->
+                                            <h4 class="rh_prop_card__status">
+                                                <figcaption class="for-sale">For Sale</figcaption>
+                                            </h4>
+                                            <!-- /.rh_prop_card__type -->
+                                            <p class="rh_prop_card__price">
+                                                $850,000 </p>
+                                            <!-- /.rh_prop_card__price -->
 
-									</div>
-									<!-- /.rh_prop_card__priceLabel -->
+                                        </div>
+                                        <!-- /.rh_prop_card__priceLabel -->
 
-								</div>
-								<!-- /.rh_prop_card__details -->
+                                    </div>
+                                    <!-- /.rh_prop_card__details -->
 
-							</div>
-							<!-- /.rh_prop_card__wrap -->
+                                </div>
+                                <!-- /.rh_prop_card__wrap -->
 
-						</article>
-						<!-- /.rh_prop_card -->
+                            </article>
+                            <!-- /.rh_prop_card -->
 
-						<article class="rh_prop_card rh_prop_card--block post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale">
+                            <article
+                                    class="rh_prop_card rh_prop_card--block post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale">
 
-							<div class="rh_prop_card__wrap">
+                                <div class="rh_prop_card__wrap">
 
-																	<div class="rh_label rh_label__featured_widget">
-										<div class="rh_label__wrap">
-											Featured											<span></span>
-										</div>
-									</div>
-									<!-- /.rh_label -->
+                                    <div class="rh_label rh_label__featured_widget">
+                                        <div class="rh_label__wrap">
+                                            Featured <span></span>
+                                        </div>
+                                    </div>
+                                    <!-- /.rh_label -->
 
-								<figure class="rh_prop_card__thumbnail">
-									<a href="../home-in-merrick-way/index.html">
-										<img width="680" height="510" src="../../wp-content/uploads/2017/06/property-01-exterior-680x510.jpg" class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image" alt="" srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-400x300.jpg 400w" sizes="(max-width: 680px) 100vw, 680px" />									</a>
+                                    <figure class="rh_prop_card__thumbnail">
+                                        <a href="../home-in-merrick-way/index.html">
+                                            <img width="680" height="510"
+                                                 src="../../wp-content/uploads/2017/06/property-01-exterior-680x510.jpg"
+                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
+                                                 alt=""
+                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-400x300.jpg 400w"
+                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
 
-									<div class="rh_overlay"></div>
-									<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-										<a href="../home-in-merrick-way/index.html">View Property</a>
-									</div>
-									<!-- /.rh_overlay__contents -->
+                                        <div class="rh_overlay"></div>
+                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+                                            <a href="../home-in-merrick-way/index.html">View Property</a>
+                                        </div>
+                                        <!-- /.rh_overlay__contents -->
 
 
-									<div class="rh_prop_card__btns">
-																					<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
-												<input type="hidden" name="property_id" value="45" />
-												<input type="hidden" name="action" value="add_to_favorite" />
-											</form>
-											<span href="#" class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+                                        <div class="rh_prop_card__btns">
+                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
+                                                  method="post" class="add-to-favorite-form">
+                                                <input type="hidden" name="property_id" value="45"/>
+                                                <input type="hidden" name="action" value="add_to_favorite"/>
+                                            </form>
+                                            <span href="#" class="favorite-placeholder highlight__red hide"
+                                                  data-tooltip="Added to favorites">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
 											</span>
-											<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
-</svg>
-											</a>
-																				</div>
-									<!-- /.rh_prop_card__btns -->
-								</figure>
-								<!-- /.rh_prop_card__thumbnail -->
+                                            <a href="#" class="favorite add-to-favorite"
+                                               data-tooltip="Add to favorites">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 21">
+                                                    <path class="rh_svg"
+                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                                          transform="translate(-1077 -1922)"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <!-- /.rh_prop_card__btns -->
+                                    </figure>
+                                    <!-- /.rh_prop_card__thumbnail -->
 
-								<div class="rh_prop_card__details">
+                                    <div class="rh_prop_card__details">
 
-									<h3>
-										<a href="../home-in-merrick-way/index.html">Home in Merrick Way</a>
-									</h3>
-									<p class="rh_prop_card__excerpt">Enchanting three bedroom, three bath home with spacious one bedroom,&hellip;</p>
-									<!-- /.rh_prop_card__excerpt -->
+                                        <h3>
+                                            <a href="../home-in-merrick-way/index.html">Home in Merrick Way</a>
+                                        </h3>
+                                        <p class="rh_prop_card__excerpt">Enchanting three bedroom, three bath home with
+                                            spacious one bedroom,&hellip;</p>
+                                        <!-- /.rh_prop_card__excerpt -->
 
-									<div class="rh_prop_card__meta_wrap">
+                                        <div class="rh_prop_card__meta_wrap">
 
-																					<div class="rh_prop_card__meta">
-												<h4>Bedrooms</h4>
-												<div>
-													<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
- <defs>
-  </defs>
-  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
-</svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">3</span>
-												</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bedrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
+                                                         height="24" viewBox="0 0 24 24">
+                                                        <defs>
+                                                        </defs>
+                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
+                                                              transform="translate(-1108 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">3</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-																					<div class="rh_prop_card__meta">
-												<h4>Bathrooms</h4>
-												<div>
-													<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
-  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
-</svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">3</span>
-												</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Bathrooms</h4>
+                                                <div>
+                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
+                                                         height="24" viewBox="0 0 23.69 24">
+                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
+                                                              transform="translate(-1196.31 -593)"/>
+                                                    </svg>
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">3</span>
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-																					<div class="rh_prop_card__meta">
-												<h4>Area</h4>
-												<div>
-													<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            <div class="rh_prop_card__meta">
+                                                <h4>Area</h4>
+                                                <div>
+                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
@@ -1408,48 +1587,50 @@
 <path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
 	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
 </svg>
-													<!-- <img src="php" alt="" /> -->
-													<span class="figure">
+                                                    <!-- <img src="php" alt="" /> -->
+                                                    <span class="figure">
 														4300													</span>
-																											<span class="label">
+                                                    <span class="label">
 															Sq Ft														</span>
-																									</div>
-											</div>
-											<!-- /.rh_prop_card__meta -->
+                                                </div>
+                                            </div>
+                                            <!-- /.rh_prop_card__meta -->
 
-									</div>
-									<!-- /.rh_prop_card__meta_wrap -->
+                                        </div>
+                                        <!-- /.rh_prop_card__meta_wrap -->
 
-									<div class="rh_prop_card__priceLabel">
+                                        <div class="rh_prop_card__priceLabel">
 
-										<h4 class="rh_prop_card__status">
-											<figcaption class="for-sale">For Sale</figcaption>										</h4>
-										<!-- /.rh_prop_card__type -->
-										<p class="rh_prop_card__price">
-											$540,000 										</p>
-										<!-- /.rh_prop_card__price -->
+                                            <h4 class="rh_prop_card__status">
+                                                <figcaption class="for-sale">For Sale</figcaption>
+                                            </h4>
+                                            <!-- /.rh_prop_card__type -->
+                                            <p class="rh_prop_card__price">
+                                                $540,000 </p>
+                                            <!-- /.rh_prop_card__price -->
 
-									</div>
-									<!-- /.rh_prop_card__priceLabel -->
+                                        </div>
+                                        <!-- /.rh_prop_card__priceLabel -->
 
-								</div>
-								<!-- /.rh_prop_card__details -->
+                                    </div>
+                                    <!-- /.rh_prop_card__details -->
 
-							</div>
-							<!-- /.rh_prop_card__wrap -->
+                                </div>
+                                <!-- /.rh_prop_card__wrap -->
 
-						</article>
-						<!-- /.rh_prop_card -->
-						</section>					                	</aside>
-										<!-- /.rh_sidebar -->
-																</div>
-							<!-- /.rh_property__sidebar -->
-						</div>
-						<!-- /.rh_property__wrap -->
-					</div>
-					<!-- /.rh_property -->
+                            </article>
+                            <!-- /.rh_prop_card -->
+                        </section>
+                    </aside>
+                    <!-- /.rh_sidebar -->
+                </div>
+                <!-- /.rh_property__sidebar -->
+            </div>
+            <!-- /.rh_property__wrap -->
+        </div>
+        <!-- /.rh_property -->
 
-				</div>
-				<!-- /.rh_page -->
+    </div>
+    <!-- /.rh_page -->
 </section>
 {% endblock %}
