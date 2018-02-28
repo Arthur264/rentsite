@@ -69,7 +69,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             PROJECT_DIR.parent.child('templates'),
-            Path(BASE_DIR).child('authentication').child('templates')
+            Path(BASE_DIR).child('authentication').child('templates'),
+            Path(BASE_DIR).child('properties').child('templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -80,7 +81,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages'
             ],
-            'libraries':{
+            'libraries': {
                 'filter': 'buildings.templatetags.filter'
             }
         },
@@ -89,6 +90,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'c9_django.wsgi.application'
 
+MAP_WIDGETS = {
+    "GooglePointFieldWidget": (
+        ("zoom", 15),
+        ("mapCenterLocation", [57.7177013, -16.6300491]),
+    ),
+    "GOOGLE_MAP_API_KEY": "AIzaSyAjcteQtuViPWUqxlrQX_hGHzMPkTJhkPM"
+}
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 

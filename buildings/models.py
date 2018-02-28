@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
-
+from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
 
 
@@ -45,6 +45,7 @@ class HouseDetails(models.Model):
     garage = models.SmallIntegerField()
     year_built = models.DateField()
     video = models.URLField(blank=True, null=True)
+    location = models.CharField(widget=GooglePointFieldWidget)
 
     class Meta:
         db_table = 'houses_details'
