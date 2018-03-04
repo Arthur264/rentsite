@@ -137,7 +137,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+SITE_URL = "http://127.0.0.1:8000"
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'Artyr2643@gmail.com'

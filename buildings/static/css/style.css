@@ -5370,3 +5370,6 @@ border-left-color:#ea723d;
     text-align: left;
     color: red;
 }
+.rh_logo .logo{
+    max-width: 40px;
+}

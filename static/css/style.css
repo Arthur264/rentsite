@@ -1399,7 +1399,7 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .info{background:#303030;color:#fff;padding:1.5rem 3rem 1.5rem 2rem;position:relative;-webkit-transition:.2s all linear;transition:.2s all linear}
 .tip{background:#ea723d;color:#fff;padding:1.5rem 3rem 1.5rem 2rem;position:relative;-webkit-transition:.2s all linear;transition:.2s all linear}
 .success{background:#1ea69a;color:#fff;padding:1.5rem 3rem 1.5rem 2rem;position:relative;-webkit-transition:.2s all linear;transition:.2s all linear}
-.error{color:#fff;padding:1.5rem 3rem 1.5rem 2rem;position:relative;-webkit-transition:.2s all linear;transition:.2s all linear}
+.error{color:black;padding:1.5rem 3rem 1.5rem 2rem;position:relative;-webkit-transition:.2s all linear;transition:.2s all linear}
 .icon-remove{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.8rem;color:#fff;position:absolute;top:2rem;right:1.5rem;cursor:pointer}
 .icon-remove:before{content:"\f00d"}
 .row-fluid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 -1rem}
@@ -5360,4 +5360,16 @@ background:#ea723d;
 
 .rh_slide__desc .rh_label span{
 border-left-color:#ea723d;
+}
+.rh_modal .rh_modal__wrap label.error{
+    color: red;
+    font-size: 12px;
+    line-height: 12px;
+}
+#register-error{
+    text-align: left;
+    color: red;
+}
+.rh_logo .logo{
+    max-width: 40px;
 }
