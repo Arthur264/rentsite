@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
-from mapwidgets.widgets import GooglePointFieldWidget
+# from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
 
 

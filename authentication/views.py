@@ -48,3 +48,7 @@ class SingIn(View):
             return JsonResponse({"success": 1, "message": []})
         else:
             return JsonResponse({"success": 0, "message": user})
+
+class Activate(View):
+    def get(self, request):
+        pass
