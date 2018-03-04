@@ -139,15 +139,8 @@
                                     <div class="rh_modal__login_wrap modal">
 
                                         <h3>Login</h3>
+                                        {% include "singIn.html" %}
 
-                                        <form id="rh_modal__login_form" action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="POST" enctype="multipart/form-data">
-                                            <input name="log" id="username" type="text" placeholder="Username" title="* Provide user name!" required />
-                                            <input name="pwd" id="password" type="password" placeholder="Password" title="* Provide password!" required />
-                                            <input type="hidden" name="action" value="inspiry_ajax_login" />
-                                            <input type="hidden" id="inspiry-secure-login" name="inspiry-secure-login" value="63086c7632" /><input type="hidden" name="_wp_http_referer" value="/" /> <input type="hidden" name="redirect_to" value="
-						http://realhomes-modern.inspirythemes.biz/						" />
-                                            <button id="login-button" type="submit">Login</button>
-                                        </form>
 
                                         <div>
                                             <p id="login-message" class="rh_modal__msg"></p>
@@ -157,7 +150,7 @@
                                         <div class="switch">
                                             <a href="#" data-switch="forgot" class="rh-forgot-password">Forgot Password</a>
                                             <br />
-                                            <a href="#" data-switch="register" class="rh-register">New User? Register Now</a>
+                                            <a href="#" data-switch="register" class="rh-register">Register Now</a>
                                         </div>
                                         <!-- /.switch -->
 

@@ -5,6 +5,7 @@ from models import UserProfile
 # Register your models here.
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
+    extra = 1
     can_delete = False
     fk_name = 'user'
   

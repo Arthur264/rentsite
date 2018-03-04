@@ -45,7 +45,6 @@ class HouseDetails(models.Model):
     garage = models.SmallIntegerField()
     year_built = models.DateField()
     video = models.URLField(blank=True, null=True)
-    location = models.CharField(widget=GooglePointFieldWidget)
 
     class Meta:
         db_table = 'houses_details'

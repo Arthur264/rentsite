@@ -1,0 +1,6 @@
+<form id="rh_modal__login_form" action="{% url 'auth:singIn' %}" method="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+    <input name="username" id="id_username" type="text" placeholder="Login" title="* Provide login!" required/>
+    <input name="password" id="id_password" type="password" placeholder="Password" title="* Provide password!" required/>
+    <button id="login-button" type="submit">Login</button>
+</form>
