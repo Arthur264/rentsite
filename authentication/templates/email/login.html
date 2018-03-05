@@ -22,7 +22,7 @@
 								<tr>
 									<td style="color: #153643; font-family: Arial, sans-serif; font-size: 24px;">
 										<b>{{message}}</b>
-										<a href="{{ domain }}{% url 'activate' uidb64=uid token=token %}">{{ domain }}{% url 'activate' uidb64=uid token=token %}</a>
+										<a href="{{ domain }}{% url 'auth:activate' token=token %}">{{ domain }}{% url 'auth:activate' token=token %}</a>
 									</td>
 								</tr>
 							</table>
