@@ -22,5 +22,7 @@ urlpatterns = [
     # url(r'^$/', admin.site.urls),
     url(r'^singUp/', views.SingUp.as_view(), name='singUp'),
     url(r'^singIn/', views.SingIn.as_view(), name='singIn'),
-    url(r'^activate/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.Activate.as_view(), name='activate'),
+    url(r'^activate/(?P<userId>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', views.Activate.as_view(), name='activate'),
+    url(r'^reset', views.Reset.as_view(), name="reset"),
+    url(r'^logout', views.Logout.as_view(), name="logout")
 ]
