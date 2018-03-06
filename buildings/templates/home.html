@@ -588,28 +588,28 @@
 
     <div class="rh_section__agents_wrap">
 
-
+  {% for agent in agents %}
         <article class="rh_agent post-57 agent type-agent status-publish has-post-thumbnail hentry">
 
             <div class="rh_agent__wrap">
 
                 <div class="rh_agent__thumbnail">
                     <a href="agent/nathan-james/index.html">
-                        <img width="210" height="210" src="{% static 'img/agent-3-210x210.jpg'%}"
+                        <img width="210" height="210" src="{{agent.avatar.url }}"
                              class="attachment-agent-image size-agent-image " alt=""/> </a>
                 </div>
                 <!-- /.rh_agent__thumbnail -->
 
                 <div class="rh_agent__details">
 
-                    <h3><a href="agent/nathan-james/index.html">Nathan James</a></h3>
+                    <h3><a href="agent/nathan-james/index.html">{{agent.user.first_name}} {{agent.user.last_name}}</a></h3>
 
                     <p class="rh_agent__phone">1-234-456-7893</p>
                     <!-- /.rh_agent__phone -->
 
                     <a href="mailto:&#114;o&#098;ot&#064;&#105;ns&#112;&#105;r&#121;t&#104;&#101;&#109;es.&#099;om"
                        class="rh_agent__email">
-                        rob&#111;t&#064;&#105;ns&#112;&#105;ry&#116;he&#109;es.&#099;o&#109;                </a>
+                       {{agent.user.email}}              </a>
                     <!-- /.rh_agent__email -->
 
                     <div class="rh_agent__listed">
@@ -668,252 +668,9 @@
             <!-- /.rh_agent__wrap -->
 
         </article>
+        {% endfor %}
         <!-- /.rh_agent -->
 
-
-        <article class="rh_agent post-54 agent type-agent status-publish has-post-thumbnail hentry">
-
-            <div class="rh_agent__wrap">
-
-                <div class="rh_agent__thumbnail">
-                    <a href="agent/melissa-william/index.html">
-                        <img width="210" height="210" src="{% static 'img/agent-2-210x210.jpg'%}"
-                             class="attachment-agent-image size-agent-image wp-post-image" alt=""/> </a>
-                </div>
-                <!-- /.rh_agent__thumbnail -->
-
-                <div class="rh_agent__details">
-
-                    <h3><a href="agent/melissa-william/index.html">Melissa William</a></h3>
-
-                    <p class="rh_agent__phone">1-234-456-7892</p>
-                    <!-- /.rh_agent__phone -->
-
-                    <a href="mailto:&#114;&#111;&#098;&#111;t&#064;i&#110;&#115;p&#105;&#114;ythe&#109;es&#046;com"
-                       class="rh_agent__email">
-                        r&#111;b&#111;t&#064;&#105;n&#115;&#112;i&#114;y&#116;&#104;&#101;&#109;&#101;&#115;.c&#111;m </a>
-                    <!-- /.rh_agent__email -->
-
-                    <div class="rh_agent__listed">
-                        <p class="figure">5</p>
-                        <!-- /.figure -->
-                        <p class="heading">Listed Properties</p>
-                        <!-- /.heading -->
-                    </div>
-                    <!-- /.rh_agent__listed -->
-
-                    <span class="rh_agent__arrow">
-				<a href="agent/melissa-william/index.html">
-					<svg class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         width="71" height="71" viewBox="0 0 71 71">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ea723d;
-        filter: url(#filter);
-      }
-
-      .cls-2 {
-        fill: #fff;
-        fill-rule: evenodd;
-        filter: url(#filter-2);
-      }
-    </style>
-    <filter id="filter" x="0" y="0" width="71" height="71" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="4" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="3.464"/>
-      <feFlood result="flood" flood-opacity="0.06"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-    <filter id="filter-2" x="828" y="5055" width="25" height="21" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="2" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="2"/>
-      <feFlood result="flood" flood-opacity="0.1"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <circle data-name="Ellipse 7 copy 2" class="cls-1" cx="35" cy="31" r="24"/>
-  <path data-name="Ellipse 6 copy 24" class="cls-2"
-        d="M832.5,5064.55l7.5,0.78V5070l9-7-9-7v4.67l-7.5.77A1.472,1.472,0,0,0,831,5063,1.5,1.5,0,0,0,832.5,5064.55Z"
-        transform="translate(-805 -5032)"/>
-</svg>
-				</a>
-			</span>
-                    <!-- /.rh_agent__arrow -->
-
-                </div>
-                <!-- /.rh_agent__details -->
-
-            </div>
-            <!-- /.rh_agent__wrap -->
-
-        </article>
-        <!-- /.rh_agent -->
-
-
-        <article class="rh_agent post-51 agent type-agent status-publish has-post-thumbnail hentry">
-
-            <div class="rh_agent__wrap">
-
-                <div class="rh_agent__thumbnail">
-                    <a href="agent/alice-brian/index.html">
-                        <img width="210" height="210" src="{% static 'img/agent-4-210x210.jpg'%}"
-                             class="attachment-agent-image size-agent-image wp-post-image" alt=""/> </a>
-                </div>
-                <!-- /.rh_agent__thumbnail -->
-
-                <div class="rh_agent__details">
-
-                    <h3><a href="agent/alice-brian/index.html">Alice Brian</a></h3>
-
-                    <p class="rh_agent__phone">1-234-456-7891</p>
-                    <!-- /.rh_agent__phone -->
-
-                    <a href="mailto:&#114;&#111;&#098;&#111;t&#064;&#105;&#110;s&#112;&#105;r&#121;t&#104;&#101;&#109;&#101;&#115;.&#099;&#111;m"
-                       class="rh_agent__email">
-                        &#114;o&#098;ot&#064;i&#110;s&#112;irythe&#109;e&#115;&#046;&#099;o&#109;                </a>
-                    <!-- /.rh_agent__email -->
-
-                    <div class="rh_agent__listed">
-                        <p class="figure">2</p>
-                        <!-- /.figure -->
-                        <p class="heading">Listed Properties</p>
-                        <!-- /.heading -->
-                    </div>
-                    <!-- /.rh_agent__listed -->
-
-                    <span class="rh_agent__arrow">
-				<a href="agent/alice-brian/index.html">
-					<svg class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         width="71" height="71" viewBox="0 0 71 71">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ea723d;
-        filter: url(#filter);
-      }
-
-      .cls-2 {
-        fill: #fff;
-        fill-rule: evenodd;
-        filter: url(#filter-2);
-      }
-    </style>
-    <filter id="filter" x="0" y="0" width="71" height="71" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="4" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="3.464"/>
-      <feFlood result="flood" flood-opacity="0.06"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-    <filter id="filter-2" x="828" y="5055" width="25" height="21" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="2" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="2"/>
-      <feFlood result="flood" flood-opacity="0.1"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <circle data-name="Ellipse 7 copy 2" class="cls-1" cx="35" cy="31" r="24"/>
-  <path data-name="Ellipse 6 copy 24" class="cls-2"
-        d="M832.5,5064.55l7.5,0.78V5070l9-7-9-7v4.67l-7.5.77A1.472,1.472,0,0,0,831,5063,1.5,1.5,0,0,0,832.5,5064.55Z"
-        transform="translate(-805 -5032)"/>
-</svg>
-				</a>
-			</span>
-                    <!-- /.rh_agent__arrow -->
-
-                </div>
-                <!-- /.rh_agent__details -->
-
-            </div>
-            <!-- /.rh_agent__wrap -->
-
-        </article>
-        <!-- /.rh_agent -->
-
-
-        <article class="rh_agent post-48 agent type-agent status-publish has-post-thumbnail hentry">
-
-            <div class="rh_agent__wrap">
-
-                <div class="rh_agent__thumbnail">
-                    <a href="agent/john-david/index.html">
-                        <img width="210" height="210" src="{% static 'img/agent-1-210x210.jpg'%}"
-                             class="attachment-agent-image size-agent-image wp-post-image" alt=""/> </a>
-                </div>
-                <!-- /.rh_agent__thumbnail -->
-
-                <div class="rh_agent__details">
-
-                    <h3><a href="agent/john-david/index.html">John David</a></h3>
-
-                    <p class="rh_agent__phone">1-234-456-7890</p>
-                    <!-- /.rh_agent__phone -->
-
-                    <a href="mailto:&#114;ob&#111;&#116;&#064;i&#110;&#115;p&#105;r&#121;&#116;&#104;&#101;mes.&#099;&#111;&#109;"
-                       class="rh_agent__email">
-                        &#114;o&#098;&#111;&#116;&#064;&#105;&#110;&#115;&#112;&#105;r&#121;t&#104;e&#109;e&#115;.&#099;o&#109;                </a>
-                    <!-- /.rh_agent__email -->
-
-                    <div class="rh_agent__listed">
-                        <p class="figure">2</p>
-                        <!-- /.figure -->
-                        <p class="heading">Listed Properties</p>
-                        <!-- /.heading -->
-                    </div>
-                    <!-- /.rh_agent__listed -->
-
-                    <span class="rh_agent__arrow">
-				<a href="agent/john-david/index.html">
-					<svg class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         width="71" height="71" viewBox="0 0 71 71">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #ea723d;
-        filter: url(#filter);
-      }
-
-      .cls-2 {
-        fill: #fff;
-        fill-rule: evenodd;
-        filter: url(#filter-2);
-      }
-    </style>
-    <filter id="filter" x="0" y="0" width="71" height="71" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="4" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="3.464"/>
-      <feFlood result="flood" flood-opacity="0.06"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-    <filter id="filter-2" x="828" y="5055" width="25" height="21" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dy="2" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="2"/>
-      <feFlood result="flood" flood-opacity="0.1"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <circle data-name="Ellipse 7 copy 2" class="cls-1" cx="35" cy="31" r="24"/>
-  <path data-name="Ellipse 6 copy 24" class="cls-2"
-        d="M832.5,5064.55l7.5,0.78V5070l9-7-9-7v4.67l-7.5.77A1.472,1.472,0,0,0,831,5063,1.5,1.5,0,0,0,832.5,5064.55Z"
-        transform="translate(-805 -5032)"/>
-</svg>
-				</a>
-			</span>
-                    <!-- /.rh_agent__arrow -->
-
-                </div>
-                <!-- /.rh_agent__details -->
-
-            </div>
-            <!-- /.rh_agent__wrap -->
-
-        </article>
         <!-- /.rh_agent -->
 
 

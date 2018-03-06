@@ -121,6 +121,7 @@
                     if (response.success) {
                         registerMessage.html(response.message).fadeIn('fast');
                         $form.resetForm();
+                        window.location.reload(true);
                     } else {
                         var list = document.createElement("ul");
                         for (var prop in response.message) {

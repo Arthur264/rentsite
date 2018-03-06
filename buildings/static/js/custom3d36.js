@@ -32,14 +32,14 @@
         /*-----------------------------------------------------------------------------------*/
         /*  Login Modal
          /*-----------------------------------------------------------------------------------*/
-        $('.rh_menu__user_profile .user-icon').click(function () {
+        $('.rh_menu__user_profile .user-icon, .rh_menu__user_profile .avatar').click(function () {
             $(this).toggleClass('rh_modal__user_icon');
             var modal = $(this).parent().find('div.rh_modal');
             $(modal).toggleClass('rh_modal--display');
         });
 
         $( '#rh_login__trigger_modal' ).click( function () {
-            $('.rh_menu__user_profile .user-icon').toggleClass('rh_modal__user_icon');
+            $('.rh_menu__user_profile .user-icon, .rh_menu__user_profile .avatar').toggleClass('rh_modal__user_icon');
             var modal = $('.rh_menu__user_profile .user-icon').parent().find('div.rh_modal');
             $(modal).toggleClass('rh_modal--display');
         } );

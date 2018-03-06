@@ -94,10 +94,10 @@
 
                 <div class="rh_menu__user">
                     <!-- /.rh_menu__user_phone -->
-                    {% if user.is_authenticated %}
-                    user logined
-                    {% endif %}
                     <div class="rh_menu__user_profile">
+                        {% if user.is_authenticated %}
+                        <img  class="avatar" src="{% static 'img/man.png' %}" alt="">
+                        {% else %}
                         <svg version="1.1" class="user-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
 <g>
 	<g id="account-circle">
@@ -137,7 +137,7 @@
 <g>
 </g>
 </svg>
-
+                        {% endif %}
 
                         <div class="rh_modal">
 
@@ -223,10 +223,11 @@
                         <!-- /.rh_menu__modal -->
                     </div>
                     <!-- /.rh_menu__user_profile -->
-
+                    {% if user.is_authenticated %}
                     <div class="rh_menu__user_submit">
                         <a href="submit-property/index.html">Profile</a>
                     </div>
+                    {% endif %}
                     <!-- /.rh_menu__user_submit -->
 
                 </div>
