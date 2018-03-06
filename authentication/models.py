@@ -20,7 +20,6 @@ class UserProfile(models.Model):
     avatar = models.ImageField(blank=True, null=True)
     text = models.TextField(blank=True, null=True)
     user_role = models.ForeignKey(Role, blank=True, null=True, default="1")
-
     class Meta:
         db_table = "user_profile"
 

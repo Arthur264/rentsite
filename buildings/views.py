@@ -16,9 +16,9 @@ class IndexView(ListView):
     def get_context_data(self, **kwargs):
         content = super(IndexView, self).get_context_data(**kwargs)
         content['agents'] = filter_or_None(UserProfile, user_role=Role.objects.get(name="Agent").pk)
-        content['agents']['tex'] = "dsfh"
-        for item in  content['agents']:
-            print (get_or_None(User, pk= str(item.user_id)))
+        # content['agents']['tex'] = "dsfh"
+        # for item in  content['agents']:
+        #     print (get_or_None(User, pk= str(item.user_id)))
         return content
 
 
