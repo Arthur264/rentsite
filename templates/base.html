@@ -27,10 +27,19 @@
     <link rel='stylesheet' id='realhomes-rubik-font-css'
           href='../fonts.googleapis.com/cssef0d.css?family=Rubik%3A400%2C400i%2C500%2C500i%2C700%2C700i&amp;subset=latin%2Clatin-ext&amp;ver=3.3.1'
           type='text/css' media='all'/>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY2hARIGyfi3QVsYIzDK5mAGvam-i8Qp4" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY2hARIGyfi3QVsYIzDK5mAGvam-i8Qp4"
+            type="text/javascript"></script>
     <script type='text/javascript' src="{% static 'js/jquery/jqueryb8ff.js'%}"></script>
     <script type='text/javascript' src="{% static 'js/jquery/jquery-migrate.min330a.js' %}"></script>
     <script type='text/javascript' src="{% static 'js/vendors/realhomes-common-scripts3d36.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/vendors/markerclusterere1fc.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/vendors/infoboxc5c9.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/vendors/oms.min3019.js' %}"></script>
+    <script>
+        window.token = "{{ csrf_token }}"
+
+
+    </script>
 </head>
 
 <body class="home">
@@ -69,25 +78,20 @@
                             <li><a href="{% url 'properties:index' %}">Properties</a>
                             </li>
                             <li><a href="news/index.html">News</a></li>
-                            <li><a href="our-agents/index.html">Agents</a></li>
+                            <li><a href="{% url 'agent:index'%}">Agents</a></li>
                             <li><a href="gallery-3-columns/index.html">Gallery</a>
                             </li>
                             <li><a href="contact/index.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="menu-main-menu-container">
-                        <ul id="menu-main-menu-1" class="rh_menu__responsive clearfix">
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4403">
-                                <a href="index.html">Home</a></li>
-                            <li class="menu-item   menu-item-has-children menu-item-4411"><a
-                                    href="list-layout/index.html">Properties</a>
-                            </li>
-                            <li class="menu-item   menu-item-4395"><a href="news/index.html">News</a></li>
-                            <li class="menu-item   menu-item-4443"><a href="our-agents/index.html">Agents</a></li>
-                            <li class="menu-item   menu-item-has-children menu-item-4439"><a
-                                    href="gallery-3-columns/index.html">Gallery</a>
-                            </li>
-                            <li class="menu-item   menu-item-4399"><a href="contact/index.html">Contact</a></li>
+                        <ul class="rh_menu__responsive clearfix">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="list-layout/index.html">Properties</a></li>
+                            <li><a href="news/index.html">News</a></li>
+                            <li><a href="our-agents/index.html">Agents</a></li>
+                            <li><a href="gallery-3-columns/index.html">Gallery</a></li>
+                            <li><a href="contact/index.html">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -97,7 +101,7 @@
                     <!-- /.rh_menu__user_phone -->
                     <div class="rh_menu__user_profile">
                         {% if user.is_authenticated %}
-                        <img  class="avatar" src="{% static 'img/man.png' %}" alt="">
+                        <img class="avatar" src="{% static 'img/man.png' %}" alt="">
                         {% else %}
                         <svg version="1.1" class="user-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
 <g>
@@ -141,22 +145,149 @@
                         {% endif %}
 
                         <div class="rh_modal">
-
                             <div class="rh_modal__corner"></div>
                             <!-- /.rh_modal__corner -->
-
                             <div class="rh_modal__wrap">
+                                {% if user.is_authenticated %}
+                                <div class="rh_user">
+                                    <div class="rh_user__avatar">
+                                        <img src="http://www.gravatar.com/avatar/8d04fbd04f1bc73df9380182c8274029?s=150">
+                                    </div>
+                                    <!-- /.rh_user__avatar -->
+                                    <div class="rh_user__details">
+                                        <p class="rh_user__msg">Welcome</p>
+                                        <!-- /.rh_user__msg -->
+                                        <h3 class="rh_user__name">
+                                            test123 </h3>
+                                    </div>
+                                    <!-- /.rh_user__details -->
+                                </div>
+                                <!-- /.rh_user -->
 
+                                <div class="rh_modal__dashboard">
 
+                                    <a href="http://realhomes-modern.inspirythemes.biz/edit-profile/"
+                                       class="rh_modal__dash_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                             viewBox="0 0 12 16">
+                                            <defs>
+                                                <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+                                                </style>
+                                            </defs>
+                                            <path d="M1181,190a1,1,0,0,0,1-1v-4a4,4,0,0,0-4-4h-4a4,4,0,0,0-4,4v4a1,1,0,0,0,1,1h0a1.035,1.035,0,0,0,1-1,46.313,46.313,0,0,1,1-5h0v6h6v-6h0l1,5a0.979,0.979,0,0,0,1,1h0Zm-4.99-16a2.951,2.951,0,0,1,3,2.981,3.115,3.115,0,0,1-3,3.018A3,3,0,1,1,1176.01,174Z"
+                                                  transform="translate(-1170 -174)"></path>
+                                        </svg>
+                                        <span>Profile</span>
+                                    </a>
+                                    <a href="http://realhomes-modern.inspirythemes.biz/my-properties/"
+                                       class="rh_modal__dash_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10"
+                                             viewBox="0 0 16 10">
+                                            <defs>
+                                                <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+                                                </style>
+                                            </defs>
+                                            <path d="M1167.01,221a1.959,1.959,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,221Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,221Zm-5.99,6a1.96,1.96,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,227Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,227Z"
+                                                  transform="translate(-1165 -221)"></path>
+                                        </svg>
+                                        <span>My Properties</span>
+                                    </a>
+                                    <a href="http://realhomes-modern.inspirythemes.biz/favorites/"
+                                       class="rh_modal__dash_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14"
+                                             viewBox="0 0 16 14">
+                                            <defs>
+                                                <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+                                                </style>
+                                            </defs>
+                                            <path d="M1172.32,262.318a4.5,4.5,0,0,1,6.36,6.364L1172,275l-6.68-6.318a4.5,4.5,0,0,1,6.36-6.364A0.425,0.425,0,0,0,1172.32,262.318Z"
+                                                  transform="translate(-1164 -261)"></path>
+                                        </svg>
+                                        <span>Favorites</span>
+                                    </a>
+                                    <a href="http://realhomes-modern.inspirythemes.biz/compare-properties/"
+                                       class="rh_modal__dash_link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24">
+                                            <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
+                                                  transform="translate(-1121 -1922)"></path>
+                                        </svg>
+                                        <span>Compare</span>
+                                    </a>
+
+                                    <a href="http://realhomes-modern.inspirythemes.biz/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Frealhomes-modern.inspirythemes.biz&amp;_wpnonce=3417f4527f"
+                                       class="rh_modal__dash_link">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path d="M349.85,62.196c-10.797-4.717-23.373,0.212-28.09,11.009c-4.717,10.797,0.212,23.373,11.009,28.09
+				c69.412,30.324,115.228,98.977,115.228,176.035c0,106.034-85.972,192-192,192c-106.042,0-192-85.958-192-192
+				c0-77.041,45.8-145.694,115.192-176.038c10.795-4.72,15.72-17.298,10.999-28.093c-4.72-10.795-17.298-15.72-28.093-10.999
+				C77.306,99.275,21.331,183.181,21.331,277.329c0,129.606,105.061,234.667,234.667,234.667
+				c129.592,0,234.667-105.068,234.667-234.667C490.665,183.159,434.667,99.249,349.85,62.196z"></path>
+			<path d="M255.989,234.667c11.782,0,21.333-9.551,21.333-21.333v-192C277.323,9.551,267.771,0,255.989,0
+				c-11.782,0-21.333,9.551-21.333,21.333v192C234.656,225.115,244.207,234.667,255.989,234.667z"></path>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+                                        <span>Log Out</span>
+                                    </a>
+
+                                </div>
+                                <!-- /.rh_modal__dashboard -->
+
+                                <!--{% include "logout.html" %}-->
+                                {% else %}
                                 <div class="rh_modal__login_wrap modal">
-                                    {% if user.is_authenticated %}
-                                    <h3>Logout</h3>
-                                    {% include "logout.html" %}
-                                    {% else %}
                                     <h3>Login</h3>
                                     {% include "singIn.html" %}
-
-
                                     <div>
                                         <p id="login-message" class="rh_modal__msg"></p>
                                         <p id="login-error" class="rh_modal__msg"></p>
@@ -167,12 +298,10 @@
                                         <br/>
                                         <a href="#" data-switch="register" class="rh-register">Register Now</a>
                                     </div>
-                                    {% endif %}
-                                    <!-- /.switch -->
-
                                 </div>
+                                {% endif %}
+                                <!-- /.switch -->
                                 <!-- /.rh_modal__login_wrap -->
-
                                 {% if user.is_anonymous %}
                                 <div class="rh_modal__register_wrap modal">
 
@@ -226,7 +355,7 @@
                     <!-- /.rh_menu__user_profile -->
                     {% if user.is_authenticated %}
                     <div class="rh_menu__user_submit">
-                        <a href="submit-property/index.html">Profile</a>
+                        <a href="{% url 'profile:index' %}">Profile</a>
                     </div>
                     {% endif %}
                     <!-- /.rh_menu__user_submit -->

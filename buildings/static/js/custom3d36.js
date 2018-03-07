@@ -205,10 +205,24 @@
         }
 
         $('#sort-properties').on('change', function () {
-            var key = 'sortby';
-            var value = $(this).val();
-            insertParam(key, value);
+            var params = {
+                sortby: $(this).val()
+            }
+//            insertParam(key, value);
+            sortby(params, "/properties/card/")
         });
+
+        function sortby(params, url){
+        console.log(params, window.location.origin + url)
+            $.ajax({
+                url: window.location.origin + url,
+                method: "GET",
+                data: params,
+                success: function(data){
+                    $(".rh_page__listing").html(data)
+                }
+            })
+        }
 
         /*-----------------------------------------------------------------------------------*/
         /* Properties Listing Map Height Fix
@@ -591,7 +605,7 @@
         /*-----------------------------------------------------------------------------------*/
         /* Add to favorites
          /*-----------------------------------------------------------------------------------*/
-        $('a.add-to-favorite').click(function (e) {
+        $(document).on("click", "a.add-to-favorite", function (e) {
             e.preventDefault();
             var favorite_link = $(this);
             var span_favorite = $(this).parent().find('span.favorite-placeholder');
@@ -602,9 +616,13 @@
                 beforeSubmit: function () {
 
                 },  // pre-submit callback
-                success: function () {
-                    $(favorite_link).addClass('hide');
-                    $(span_favorite).delay(200).removeClass('hide');
+                success: function (data) {
+                    if(data.success){
+                        $(favorite_link).addClass('hide');
+                        $(span_favorite).delay(200).removeClass('hide');
+                    }else{
+                        console.error("false")
+                    }
                 }
             };
 
@@ -699,7 +717,64 @@
                 post_nav.fadeOut( 'fast' );
             } );
         } );
-
+        (function(){
+            if($("#ajax-load-card").length){
+                $.ajax({
+                    url: window.location.origin + "/properties/card/",
+                    method: "GET",
+                    success: function(data){
+                        $("#ajax-load-card").html(data)
+                    }
+                })
+            }
+        })();
+        (function(){
+            if($(".rh_page__favorites").length){
+                $.ajax({
+                    url: window.location.origin + "/house/favorites/",
+                    method: "GET",
+                    success: function(data){
+                        $(".rh_page__favorites").html(data)
+                    }
+                })
+            }
+        })();
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        (function(){
+            $(document).on('click', ".remove-from-favorite", function(e){
+                var self = $(this);
+                e.preventDefault()
+                $.ajax({
+                    url: window.location.origin + "/house/favorites/",
+                    type: "DELETE",
+                    data: {
+                        house: self.data("house-id")
+                    },
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                    },
+                    success: function(data){
+                        if(data.success){
+                            self.closest(".rh_prop_card").remove();
+                        }
+                    }
+                })
+            })
+        })();
     });
 
     $(window).load(function () {
@@ -725,7 +800,6 @@
         $('.rh_prop_compare__details .rh_prop_compare__column > .property-thumbnail').css({
             height: rowHeight
         });
-
     });
 
 })(jQuery);

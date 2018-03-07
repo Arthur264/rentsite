@@ -8,7 +8,8 @@ def price(val):
     val = str(val)
     result = []
     while(len(val)):
-        result.append(val[0:3])
-        val = val[3:]
+        result.append(val[-3:])
+        val = val[0:-3]
+    result.reverse()
     return ",".join(result)
 

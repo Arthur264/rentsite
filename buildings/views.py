@@ -1,9 +1,10 @@
 from helpers.objects import get_or_None, filter_or_None
 from .models import House, HouseImage, HouseDetails
-from authentication.models import User, UserProfile, Role
-from django.views.generic import CreateView, DeleteView, ListView
-
-
+from authentication.models import User, UserProfile, Role, UserFavorites
+from django.views.generic import CreateView, DeleteView, ListView, View, TemplateView, DetailView
+from django.http import HttpResponse, JsonResponse, QueryDict
+from django.db import IntegrityError
+from django.shortcuts import render
 # Create your views here.
 
 
@@ -22,7 +23,7 @@ class IndexView(ListView):
         return content
 
 
-class DetailsViews(DeleteView):
+class DetailsViews(DetailView):
     template_name = 'details.html'
     model = House
 
@@ -31,3 +32,33 @@ class DetailsViews(DeleteView):
         content['imagehouse'] = filter_or_None(HouseImage, house=content["house"].pk)
         content['housedetails'] = get_or_None(HouseDetails, house=content["house"].pk)
         return content
+
+
+class FavoritesView(View):
+    def post(self, request):
+        try:
+            favorite = UserFavorites(user_id=int(request.user.id), house_id=int(request.POST["house"]))
+            favorite.save()
+            return JsonResponse({'success': 1})
+        except IntegrityError:
+            return JsonResponse({'success': 0})
+
+    def get(self, request):
+        # try:
+        favorite = UserFavorites.objects.filter(user_id=int(request.user.id))
+        return render(request, "cardTemplate.html", {'favorites': favorite})
+        # except Exception as e:
+        #     return HttpResponse(e)
+
+    def delete(self, request):
+        try:
+            params = QueryDict(request.body)
+            print(params["house"], request.user.id)
+            favorite = UserFavorites.objects.get(user_id=int(request.user.id), house_id=int(params["house"]))
+            favorite.delete()
+            return JsonResponse({'success': 1})
+        except Exception as e:
+            print(e)
+            return JsonResponse({'success': 0})
+
+

@@ -1,6 +1,7 @@
 from django.views.generic import DeleteView, ListView, View
 from buildings.models import House
 from django.shortcuts import render
+from django.utils.datastructures import MultiValueDictKeyError
 # Create your views here.
 
 
@@ -14,9 +15,10 @@ class IndexView(ListView):
 
 class Card(View):
     def get(self, request):
-        template_name = "houseTemplate.html"
-        card = House.objects.all()
-
-        print(request.GET["search"])
+        try:
+            sortby = request.GET['sortby']
+            card = House.objects.order_by(sortby)
+        except MultiValueDictKeyError:
+            card = House.objects.all()
         return render(request, "houseTemplate.html", {'card': card})
 

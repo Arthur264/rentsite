@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
+from django.db  import IntegrityError
 # from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
 
@@ -55,4 +56,15 @@ class HouseVisited(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
+        unique_together = ('user', 'house')
         db_table = 'houses_visited'
+
+    def add(self, uid, hid):
+        try:
+            visited = HouseVisited(user=uid, house=hid)
+            visited.save()
+            return True
+        except IntegrityError:
+            return False
+
+

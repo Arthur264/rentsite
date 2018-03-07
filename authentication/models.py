@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
-
+from django.template.defaultfilters import slugify
 from django.db import models
 from django.contrib.auth.models import User
+from buildings.models import House
 
 
 # Create your models here.
@@ -20,6 +21,7 @@ class UserProfile(models.Model):
     avatar = models.ImageField(blank=True, null=True)
     text = models.TextField(blank=True, null=True)
     user_role = models.ForeignKey(Role, blank=True, null=True, default="1")
+
     class Meta:
         db_table = "user_profile"
 
@@ -41,3 +43,13 @@ class UserPhone(models.Model):
 
     class Meta:
         db_table = "user_phone"
+
+
+
+class UserFavorites(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    house = models.ForeignKey(House, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('user', 'house')
+        db_table = "user_favorites"

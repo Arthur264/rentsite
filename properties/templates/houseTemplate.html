@@ -1,3 +1,4 @@
+{% load filter %}
 {% for item in card %}
 <article class="rh_list_card ">
 
@@ -11,25 +12,24 @@
             </div>
             <!-- /.rh_label -->
 
-            <a href="../property/home-in-merrick-way/index.html">
+            <a href="{% url 'house:details' item.slug %}">
                 <div class="post_thumbnail"
-                     style="background: url('../wp-content/uploads/2017/06/property-01-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+                     style="background: url('{{ item.image_url.url }}') 50% 50% no-repeat; background-size: cover;"></div>
                 <!-- /.post_thumbnail -->
             </a>
 
             <div class="rh_overlay"></div>
             <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                <a href="../property/home-in-merrick-way/index.html">View Property</a>
+                <a href="{% url 'house:details' item.slug %}">View Property</a>
             </div>
             <!-- /.rh_overlay__contents -->
 
 
             <div class="rh_list_card__btns">
 
-                <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post"
-                      class="add-to-favorite-form">
-                    <input type="hidden" name="property_id" value="45"/>
-                    <input type="hidden" name="action" value="add_to_favorite"/>
+                <form action="{% url 'house:favorites' %}" method="post" class="add-to-favorite-form">
+                      {% csrf_token %}
+                    <input type="hidden" name="house" value="{{item.id}}"/>
                 </form>
                 <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
@@ -71,9 +71,8 @@
             <div class="rh_list_card__details">
 
                 <h3>
-                    <a href="{% url 'house:details' item.slug %}">Home in Merrick Way</a>
+                    <a href="{% url 'house:details' item.slug %}">{{item.title}}</a>
                 </h3>
-                <p class="rh_list_card__excerpt">Enchanting three bedroom, three bath&hellip;</p>
                 <!-- /.rh_list_card__excerpt -->
 
                 <div class="rh_list_card__meta_wrap">
@@ -150,7 +149,7 @@
                     <!-- /.rh_prop_card__type -->
 
                     <p class="price">
-                        ${{item.price}}</p>
+                        ${{item.price|price}}</p>
                     <!-- /.price -->
                 </div>
                 <!-- /.rh_list_card__price -->
@@ -172,3 +171,4 @@
     <!-- /.rh_list_card__wrap -->
 
 </article>
+{% endfor %}

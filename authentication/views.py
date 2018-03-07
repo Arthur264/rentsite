@@ -14,7 +14,6 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from .token import account_activation_token
 from c9_django.settings import SITE_URL
 from datetime import datetime
-from django.core.urlresolvers import reverse
 
 
 # Create your views here.

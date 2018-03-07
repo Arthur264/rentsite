@@ -7,6 +7,6 @@ def get_or_None(classmodel, **kwargs):
 def filter_or_None(classmodel, **kwargs):
 
     try:
-        return classmodel.objects.filter(**kwargs)
+        return list(classmodel.objects.filter(**kwargs))
     except classmodel.DoesNotExist:
         return None
