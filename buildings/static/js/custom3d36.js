@@ -260,7 +260,7 @@
                     errorContainer.fadeOut('fast');
                 },
                 success: function (ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON(ajax_response);
+                    var response = ajax_response;
                     ajaxLoader.fadeOut('fast');
                     submitButton.removeAttr('disabled');
                     if (response.success) {

@@ -12,4 +12,3 @@ def price(val):
         val = val[0:-3]
     result.reverse()
     return ",".join(result)
-

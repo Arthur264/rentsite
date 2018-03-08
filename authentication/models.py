@@ -20,10 +20,15 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     avatar = models.ImageField(blank=True, null=True)
     text = models.TextField(blank=True, null=True)
+    slug = models.SlugField()
     user_role = models.ForeignKey(Role, blank=True, null=True, default="1")
 
     class Meta:
         db_table = "user_profile"
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.user.first_name + "-" + self.user.lat_name)
+        super(UserProfile, self).save(*args, **kwargs)
 
 
 class Phone(models.Model):
@@ -43,7 +48,6 @@ class UserPhone(models.Model):
 
     class Meta:
         db_table = "user_phone"
-
 
 
 class UserFavorites(models.Model):

@@ -35,7 +35,7 @@
                     <div class="rh_agent_card__head">
 
                         <figure class="rh_agent_card__dp">
-                            <a title="Nathan James" href="{{item.user.username}}">
+                            <a title="Nathan James" href="{% url 'agent:details' item.slug %}">
                                 <img width="210" height="210" src="{{item.avatar.url}}"
                                      class="attachment-agent-image " alt=""/> </a>
                         </figure>
@@ -43,7 +43,7 @@
 
                         <div class="rh_agent_card__name">
 
-                            <h4 class="name"><a href="{{item.user.username}}">{{item.user.first_name}} {{item.user.last_name}}</a></h4>
+                            <h4 class="name"><a href="{% url 'agent:details' item.slug %}">{{item.user.first_name}} {{item.user.last_name}}</a></h4>
                             <!-- /.name -->
                         </div>
                         <!-- /.rh_agent_card__name -->
@@ -75,7 +75,7 @@
                                     {{item.user.email}}</a>
                                 </p></div>
                             <!-- /.rh_agent_card__contact_wrap -->
-                            <a href="{{item.user.username}}" class="rh_agent_card__link">
+                            <a href="{% url 'agent:details' item.user.username|lower %}" class="rh_agent_card__link">
                                 <p>View My Listings</p>
                                 <i class="fa fa-angle-right"></i>
                             </a>
