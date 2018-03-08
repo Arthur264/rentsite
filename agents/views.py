@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView, View
 from authentication.models import UserProfile, Role, UserPhone
+from buildings.models import House
 from helpers.objects import filter_or_None
 from django.http import JsonResponse
 from .form import ContactForm
@@ -25,9 +26,8 @@ class DetailsViews(DetailView):
 
     def get_context_data(self, **kwargs):
         content = super(DetailsViews, self).get_context_data(**kwargs)
-        print(content)
-        print(type(content))
         content["userprofile"].phone = UserPhone.objects.filter(user=content["userprofile"].user.pk)
+        content["house"] = House.objects.filter(user=content["userprofile"].user.pk)
         return content
 
 

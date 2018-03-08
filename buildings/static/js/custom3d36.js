@@ -775,6 +775,15 @@
                 })
             })
         })();
+        (function(){
+            $.ajax({
+                url: window.location.origin + "/house/popular/",
+                method: "GET",
+                success: function(data){
+                    console.log(JSON.parse(data.test))
+                }
+            })
+        })();
     });
 
     $(window).load(function () {

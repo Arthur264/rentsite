@@ -59,12 +59,5 @@ class HouseVisited(models.Model):
         unique_together = ('user', 'house')
         db_table = 'houses_visited'
 
-    def add(self, uid, hid):
-        try:
-            visited = HouseVisited(user=uid, house=hid)
-            visited.save()
-            return True
-        except IntegrityError:
-            return False
 
 

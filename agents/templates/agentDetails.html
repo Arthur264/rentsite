@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load filter %}
 {% block content %}
 <section class="rh_banner rh_banner__image"
          style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
@@ -173,9 +174,9 @@
         <!-- .rh_compare_section -->
 
         <div class="rh_page__section">
-
+            {% for item in house %}
             <article
-                    class="rh_list_card post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale">
+                    class="rh_list_card ">
 
                 <div class="rh_list_card__wrap">
 
@@ -187,15 +188,15 @@
                         </div>
                         <!-- /.rh_label -->
 
-                        <a href="../../property/home-in-merrick-way/index.html">
+                        <a href="{% url 'house:details' item.slug %}">
                             <div class="post_thumbnail"
-                                 style="background: url('../../wp-content/uploads/2017/06/property-01-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+                                 style="background: url('{{item.image_url.url}}') 50% 50% no-repeat; background-size: cover;"></div>
                             <!-- /.post_thumbnail -->
                         </a>
 
                         <div class="rh_overlay"></div>
                         <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                            <a href="../../property/home-in-merrick-way/index.html">View Property</a>
+                            <a href="{% url 'house:details' item.slug %}">View Property</a>
                         </div>
                         <!-- /.rh_overlay__contents -->
 
@@ -247,7 +248,7 @@
                         <div class="rh_list_card__details">
 
                             <h3>
-                                <a href="../../property/home-in-merrick-way/index.html">Home in Merrick Way</a>
+                                <a href="{% url 'house:details' item.slug %}">{{item.title}}</a>
                             </h3>
                             <p class="rh_list_card__excerpt">Enchanting three bedroom, three bath&hellip;</p>
                             <!-- /.rh_list_card__excerpt -->
@@ -265,7 +266,7 @@
                                                   transform="translate(-1108 -593)"/>
                                         </svg>
                                         <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">3</span>
+                                        <span class="figure">{{item.bedrooms}}</span>
                                     </div>
                                 </div>
                                 <!-- /.rh_list_card__meta -->
@@ -279,7 +280,7 @@
                                                   transform="translate(-1196.31 -593)"/>
                                         </svg>
                                         <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">3</span>
+                                        <span class="figure">{{item.bathrooms}}</span>
                                     </div>
                                 </div>
                                 <!-- /.rh_list_card__meta -->
@@ -305,7 +306,7 @@
 </svg>
                                         <!-- <img src="php" alt="" /> -->
                                         <span class="figure">
-									4300								</span>
+									{{item.area}}								</span>
                                         <span class="label">
 										Sq Ft									</span>
                                     </div>
@@ -326,14 +327,14 @@
                                 <!-- /.rh_prop_card__type -->
 
                                 <p class="price">
-                                    $540,000 </p>
+                                    ${{item.price|price}}</p>
                                 <!-- /.price -->
                             </div>
                             <!-- /.rh_list_card__price -->
 
                             <p class="rh_list_card__author">
                                 By <span class="author">
-						John Doe					</span>
+						{{item.user.first_name}} {{item.user.last_name}}					</span>
                                 <!-- /.name -->
                             </p>
                             <!-- /.rh_list_card__author -->
@@ -349,671 +350,7 @@
 
             </article>
             <!-- /.rh_list_card -->
-
-            <article
-                    class="rh_list_card post-101 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-bike-path property-feature-central-cooling property-feature-jog-path property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
-
-                <div class="rh_list_card__wrap">
-
-                    <figure class="rh_list_card__thumbnail">
-                        <div class="rh_label rh_label__list">
-                            <div class="rh_label__wrap">
-                                Featured <span></span>
-                            </div>
-                        </div>
-                        <!-- /.rh_label -->
-
-                        <a href="../../property/villa-in-coral-gables/index.html">
-                            <div class="post_thumbnail"
-                                 style="background: url('../../wp-content/uploads/2015/07/property-02-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
-                            <!-- /.post_thumbnail -->
-                        </a>
-
-                        <div class="rh_overlay"></div>
-                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                            <a href="../../property/villa-in-coral-gables/index.html">View Property</a>
-                        </div>
-                        <!-- /.rh_overlay__contents -->
-
-
-                        <div class="rh_list_card__btns">
-
-                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                  method="post" class="add-to-favorite-form">
-                                <input type="hidden" name="property_id" value="101"/>
-                                <input type="hidden" name="action" value="add_to_favorite"/>
-                            </form>
-                            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-                                    <path class="rh_svg"
-                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                          transform="translate(-1077 -1922)"/>
-                                </svg>
-                            </a>
-
-                            <span class="add-to-compare-span">
-			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</span>
-		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="101"
-           href="../../wp-admin/admin-ajax.html">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</a>
-		</span>
-                        </div>
-                        <!-- /.rh_list_card__btns -->
-                    </figure>
-                    <!-- /.rh_list_card__thumbnail -->
-
-                    <div class="rh_list_card__details_wrap">
-
-                        <div class="rh_list_card__details">
-
-                            <h3>
-                                <a href="../../property/villa-in-coral-gables/index.html">Villa in Coral Gables</a>
-                            </h3>
-                            <p class="rh_list_card__excerpt">Enjoy serenity of Deering Bay&hellip;</p>
-                            <!-- /.rh_list_card__excerpt -->
-
-                            <div class="rh_list_card__meta_wrap">
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bedrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24">
-                                            <defs>
-                                            </defs>
-                                            <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                  transform="translate(-1108 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">3</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bathrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24"
-                                             viewBox="0 0 23.69 24">
-                                            <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                  transform="translate(-1196.31 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">3.5</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Area</h4>
-                                    <div>
-                                        <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">
-									3500								</span>
-                                        <span class="label">
-										Sq Ft									</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                            </div>
-                            <!-- /.rh_list_card__meta_wrap -->
-
-                        </div>
-                        <!-- /.rh_list_card__details -->
-
-                        <div class="rh_list_card__priceLabel">
-
-                            <div class="rh_list_card__price">
-                                <h4 class="status">
-                                    For Sale </h4>
-                                <!-- /.rh_prop_card__type -->
-
-                                <p class="price">
-                                    $825,000 </p>
-                                <!-- /.price -->
-                            </div>
-                            <!-- /.rh_list_card__price -->
-
-                            <p class="rh_list_card__author">
-                                By <span class="author">
-						John Doe					</span>
-                                <!-- /.name -->
-                            </p>
-                            <!-- /.rh_list_card__author -->
-
-                        </div>
-                        <!-- /.rh_list_card__priceLabel -->
-
-                    </div>
-                    <!-- /.rh_list_card__details_wrap -->
-
-                </div>
-                <!-- /.rh_list_card__wrap -->
-
-            </article>
-            <!-- /.rh_list_card -->
-
-            <article
-                    class="rh_list_card post-98 property type-property status-publish has-post-thumbnail hentry property-type-shop property-city-miami property-status-for-rent">
-
-                <div class="rh_list_card__wrap">
-
-                    <figure class="rh_list_card__thumbnail">
-
-                        <a href="../../property/traditional-food-restaurant/index.html">
-                            <div class="post_thumbnail"
-                                 style="background: url('../../wp-content/uploads/2015/07/property-04-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
-                            <!-- /.post_thumbnail -->
-                        </a>
-
-                        <div class="rh_overlay"></div>
-                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                            <a href="../../property/traditional-food-restaurant/index.html">View Property</a>
-                        </div>
-                        <!-- /.rh_overlay__contents -->
-
-
-                        <div class="rh_list_card__btns">
-
-                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                  method="post" class="add-to-favorite-form">
-                                <input type="hidden" name="property_id" value="98"/>
-                                <input type="hidden" name="action" value="add_to_favorite"/>
-                            </form>
-                            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-                                    <path class="rh_svg"
-                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                          transform="translate(-1077 -1922)"/>
-                                </svg>
-                            </a>
-
-                            <span class="add-to-compare-span">
-			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</span>
-		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="98"
-           href="../../wp-admin/admin-ajax.html">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</a>
-		</span>
-                        </div>
-                        <!-- /.rh_list_card__btns -->
-                    </figure>
-                    <!-- /.rh_list_card__thumbnail -->
-
-                    <div class="rh_list_card__details_wrap">
-
-                        <div class="rh_list_card__details">
-
-                            <h3>
-                                <a href="../../property/traditional-food-restaurant/index.html">Traditional Food
-                                    Restaurant</a>
-                            </h3>
-                            <p class="rh_list_card__excerpt">We are an award winning&hellip;</p>
-                            <!-- /.rh_list_card__excerpt -->
-
-                            <div class="rh_list_card__meta_wrap">
-
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Area</h4>
-                                    <div>
-                                        <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">
-									950								</span>
-                                        <span class="label">
-										Sq Ft									</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                            </div>
-                            <!-- /.rh_list_card__meta_wrap -->
-
-                        </div>
-                        <!-- /.rh_list_card__details -->
-
-                        <div class="rh_list_card__priceLabel">
-
-                            <div class="rh_list_card__price">
-                                <h4 class="status">
-                                    For Rent </h4>
-                                <!-- /.rh_prop_card__type -->
-
-                                <p class="price">
-                                    $2,600 Monthly </p>
-                                <!-- /.price -->
-                            </div>
-                            <!-- /.rh_list_card__price -->
-
-                            <p class="rh_list_card__author">
-                                By <span class="author">
-						John Doe					</span>
-                                <!-- /.name -->
-                            </p>
-                            <!-- /.rh_list_card__author -->
-
-                        </div>
-                        <!-- /.rh_list_card__priceLabel -->
-
-                    </div>
-                    <!-- /.rh_list_card__details_wrap -->
-
-                </div>
-                <!-- /.rh_list_card__wrap -->
-
-            </article>
-            <!-- /.rh_list_card -->
-
-            <article
-                    class="rh_list_card post-66 property type-property status-publish has-post-thumbnail hentry property-feature-central-cooling property-feature-emergency-exit property-feature-fire-alarm property-type-condominium property-city-miami property-status-for-rent">
-
-                <div class="rh_list_card__wrap">
-
-                    <figure class="rh_list_card__thumbnail">
-
-                        <a href="../../property/condo-on-biscayne-boulevard/index.html">
-                            <div class="post_thumbnail"
-                                 style="background: url('../../wp-content/uploads/2015/07/property-07-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
-                            <!-- /.post_thumbnail -->
-                        </a>
-
-                        <div class="rh_overlay"></div>
-                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                            <a href="../../property/condo-on-biscayne-boulevard/index.html">View Property</a>
-                        </div>
-                        <!-- /.rh_overlay__contents -->
-
-
-                        <div class="rh_list_card__btns">
-
-                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                  method="post" class="add-to-favorite-form">
-                                <input type="hidden" name="property_id" value="66"/>
-                                <input type="hidden" name="action" value="add_to_favorite"/>
-                            </form>
-                            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-                                    <path class="rh_svg"
-                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                          transform="translate(-1077 -1922)"/>
-                                </svg>
-                            </a>
-
-                            <span class="add-to-compare-span">
-			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</span>
-		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="66"
-           href="../../wp-admin/admin-ajax.html">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</a>
-		</span>
-                        </div>
-                        <!-- /.rh_list_card__btns -->
-                    </figure>
-                    <!-- /.rh_list_card__thumbnail -->
-
-                    <div class="rh_list_card__details_wrap">
-
-                        <div class="rh_list_card__details">
-
-                            <h3>
-                                <a href="../../property/condo-on-biscayne-boulevard/index.html">Condo on Biscayne
-                                    Boulevard</a>
-                            </h3>
-                            <p class="rh_list_card__excerpt">A decent 2 bedrooms condo&hellip;</p>
-                            <!-- /.rh_list_card__excerpt -->
-
-                            <div class="rh_list_card__meta_wrap">
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bedrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24">
-                                            <defs>
-                                            </defs>
-                                            <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                  transform="translate(-1108 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">2</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bathrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24"
-                                             viewBox="0 0 23.69 24">
-                                            <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                  transform="translate(-1196.31 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">2</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Area</h4>
-                                    <div>
-                                        <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">
-									1500								</span>
-                                        <span class="label">
-										Sq Ft									</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                            </div>
-                            <!-- /.rh_list_card__meta_wrap -->
-
-                        </div>
-                        <!-- /.rh_list_card__details -->
-
-                        <div class="rh_list_card__priceLabel">
-
-                            <div class="rh_list_card__price">
-                                <h4 class="status">
-                                    For Rent </h4>
-                                <!-- /.rh_prop_card__type -->
-
-                                <p class="price">
-                                    $3,250 Monthly </p>
-                                <!-- /.price -->
-                            </div>
-                            <!-- /.rh_list_card__price -->
-
-                            <p class="rh_list_card__author">
-                                By <span class="author">
-						John Doe					</span>
-                                <!-- /.name -->
-                            </p>
-                            <!-- /.rh_list_card__author -->
-
-                        </div>
-                        <!-- /.rh_list_card__priceLabel -->
-
-                    </div>
-                    <!-- /.rh_list_card__details_wrap -->
-
-                </div>
-                <!-- /.rh_list_card__wrap -->
-
-            </article>
-            <!-- /.rh_list_card -->
-
-            <article
-                    class="rh_list_card post-42 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-heating property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-lawn property-feature-marble-floors property-feature-swimming-pool property-type-single-family property-city-miami property-status-for-sale">
-
-                <div class="rh_list_card__wrap">
-
-                    <figure class="rh_list_card__thumbnail">
-                        <div class="rh_label rh_label__list">
-                            <div class="rh_label__wrap">
-                                Featured <span></span>
-                            </div>
-                        </div>
-                        <!-- /.rh_label -->
-
-                        <a href="../../property/home-in-coral-gables/index.html">
-                            <div class="post_thumbnail"
-                                 style="background: url('../../wp-content/uploads/2015/07/property-08-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
-                            <!-- /.post_thumbnail -->
-                        </a>
-
-                        <div class="rh_overlay"></div>
-                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                            <a href="../../property/home-in-coral-gables/index.html">View Property</a>
-                        </div>
-                        <!-- /.rh_overlay__contents -->
-
-
-                        <div class="rh_list_card__btns">
-
-                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                  method="post" class="add-to-favorite-form">
-                                <input type="hidden" name="property_id" value="42"/>
-                                <input type="hidden" name="action" value="add_to_favorite"/>
-                            </form>
-                            <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                            <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-                                    <path class="rh_svg"
-                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                          transform="translate(-1077 -1922)"/>
-                                </svg>
-                            </a>
-
-                            <span class="add-to-compare-span">
-			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</span>
-		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="42"
-           href="../../wp-admin/admin-ajax.html">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z"
-        transform="translate(-1121 -1922)"/>
-</svg>
-		</a>
-		</span>
-                        </div>
-                        <!-- /.rh_list_card__btns -->
-                    </figure>
-                    <!-- /.rh_list_card__thumbnail -->
-
-                    <div class="rh_list_card__details_wrap">
-
-                        <div class="rh_list_card__details">
-
-                            <h3>
-                                <a href="../../property/home-in-coral-gables/index.html">Home in Coral Gables</a>
-                            </h3>
-                            <p class="rh_list_card__excerpt">Elegant retreat in a quiet&hellip;</p>
-                            <!-- /.rh_list_card__excerpt -->
-
-                            <div class="rh_list_card__meta_wrap">
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bedrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                             viewBox="0 0 24 24">
-                                            <defs>
-                                            </defs>
-                                            <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                  transform="translate(-1108 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">4</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Bathrooms</h4>
-                                    <div>
-                                        <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24"
-                                             viewBox="0 0 23.69 24">
-                                            <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                  transform="translate(-1196.31 -593)"/>
-                                        </svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">4.5</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                                <div class="rh_list_card__meta">
-                                    <h4>Area</h4>
-                                    <div>
-                                        <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                        <!-- <img src="php" alt="" /> -->
-                                        <span class="figure">
-									3800								</span>
-                                        <span class="label">
-										Sq Ft									</span>
-                                    </div>
-                                </div>
-                                <!-- /.rh_list_card__meta -->
-
-                            </div>
-                            <!-- /.rh_list_card__meta_wrap -->
-
-                        </div>
-                        <!-- /.rh_list_card__details -->
-
-                        <div class="rh_list_card__priceLabel">
-
-                            <div class="rh_list_card__price">
-                                <h4 class="status">
-                                    For Sale </h4>
-                                <!-- /.rh_prop_card__type -->
-
-                                <p class="price">
-                                    $850,000 </p>
-                                <!-- /.price -->
-                            </div>
-                            <!-- /.rh_list_card__price -->
-
-                            <p class="rh_list_card__author">
-                                By <span class="author">
-						John Doe					</span>
-                                <!-- /.name -->
-                            </p>
-                            <!-- /.rh_list_card__author -->
-
-                        </div>
-                        <!-- /.rh_list_card__priceLabel -->
-
-                    </div>
-                    <!-- /.rh_list_card__details_wrap -->
-
-                </div>
-                <!-- /.rh_list_card__wrap -->
-
-            </article>
-            <!-- /.rh_list_card -->
+            {% endfor %}
         </div>
         <!-- /.rh_page__section -->
 
