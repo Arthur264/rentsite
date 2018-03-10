@@ -5373,3 +5373,9 @@ border-left-color:#ea723d;
 .rh_logo .logo{
     max-width: 40px;
 }
+.avatar{
+    cursor: pointer;
+    max-height: 40px;
+    max-width: 40px;
+    border-radius: 50%
+}

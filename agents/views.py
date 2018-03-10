@@ -17,6 +17,7 @@ class IndexView(ListView):
         agents = filter_or_None(UserProfile, user_role=Role.objects.get(name="Agent").pk)
         for item in agents:
             item.phone = UserPhone.objects.filter(user=item.user.pk)
+            item.count = House.objects.filter(user=item.user.pk).count()
         return agents
 
 

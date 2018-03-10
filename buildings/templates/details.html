@@ -1,238 +1,7 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
-{% load filter %}
-{% block content %}
+{% extends 'base.html' %} {% load staticfiles %} {% load filter %} {% block content %}
 <section class="rh_banner rh_banner__default"></section>
 <!-- /.rh_banner -->
-<section class="rh_prop_search rh_wrap--padding">
-
-    <form class="rh_prop_search__form advance-search-form"
-          action="http://realhomes-modern.inspirythemes.biz/properties-search/" method="get">
-
-        <div class="rh_prop_search__fields">
-
-            <div class="rh_prop_search__wrap">
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="location">
-                        Main Location </label>
-                    <span class="rh_prop_search__selectwrap">
-			<select name="location" id="location" class="rh_select2"></select>
-		</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="select-status">
-                        Property Status </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="status" id="select-status" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="for-rent">For Rent</option><option
-                value="for-sale">For Sale</option>		</select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="select-property-type">
-                        Property Type </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="type" id="select-property-type" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="commercial"> Commercial</option><option
-                value="office">-  Office</option><option value="shop">-  Shop</option><option value="residential"> Residential</option><option
-                value="apartment">-  Apartment</option><option value="apartment-building">-  Apartment Building</option><option
-                value="condominium">-  Condominium</option><option value="single-family">-  Single Family</option><option
-                value="villa">-  Villa</option>		</select>
-	</span>
-                </div>
-            </div>
-            <!-- /.rh_prop_search__wrap -->
-
-            <div class="rh_prop_search__dropdown" id="rh_prop_search__dropdown">
-
-                <div class="rh_prop_search__option">
-                    <label for="property-id-txt">
-                        Property ID </label>
-                    <input type="text" name="property-id" id="property-id-txt"
-                           value=""
-                           placeholder="Any"/>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="select-bedrooms">
-                        Min Beds </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="bedrooms" id="select-bedrooms" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
-                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
-                value="7">7</option><option value="8">8</option><option value="9">9</option><option
-                value="10">10</option>		</select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="select-bathrooms">
-                        Min Baths </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="bathrooms" id="select-bathrooms" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
-                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
-                value="7">7</option><option value="8">8</option><option value="9">9</option><option
-                value="10">10</option>		</select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select">
-                    <label for="select-garages">
-                        Min Garages </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="garages" id="select-garages" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1">1</option><option value="2">2</option><option
-                value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option
-                value="7">7</option><option value="8">8</option><option value="9">9</option><option
-                value="10">10</option>		</select>
-	</span>
-                </div>
-                <div class="rh_prop_search__option rh_prop_search__select price-for-others">
-                    <label for="select-min-price">
-                        Min Price </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="min-price" id="select-min-price" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option
-                value="5000">$5,000</option><option value="10000">$10,000</option><option value="50000">$50,000</option><option
-                value="100000">$100,000</option><option value="200000">$200,000</option><option
-                value="300000">$300,000</option><option value="400000">$400,000</option><option
-                value="500000">$500,000</option><option value="600000">$600,000</option><option
-                value="700000">$700,000</option><option value="800000">$800,000</option><option
-                value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option
-                value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option>		</select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select price-for-others">
-                    <label for="select-max-price">
-                        Max Price </label>
-                    <span class="rh_prop_search__selectwrap">
-		<select name="max-price" id="select-max-price" class="rh_select2">
-			<option value="any" selected="selected">Any</option><option value="5000">$5,000</option><option
-                value="10000">$10,000</option><option value="50000">$50,000</option><option
-                value="100000">$100,000</option><option value="200000">$200,000</option><option
-                value="300000">$300,000</option><option value="400000">$400,000</option><option
-                value="500000">$500,000</option><option value="600000">$600,000</option><option
-                value="700000">$700,000</option><option value="800000">$800,000</option><option
-                value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option
-                value="2000000">$2,000,000</option><option value="2500000">$2,500,000</option><option value="5000000">$5,000,000</option><option
-                value="10000000">$10,000,000</option>		</select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
-                    <label for="select-min-price-for-rent">
-                        Min Price </label>
-                    <span class="rh_prop_search__selectwrap">
-	    <select name="min-price" id="select-min-price-for-rent" class="rh_select2" disabled="disabled">
-	        <option value="any" selected="selected">Any</option><option value="500">$500</option><option value="1000">$1,000</option><option
-                value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option
-                value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option
-                value="15000">$15,000</option><option value="20000">$20,000</option><option
-                value="25000">$25,000</option><option value="30000">$30,000</option><option
-                value="40000">$40,000</option><option value="50000">$50,000</option><option
-                value="75000">$75,000</option><option value="100000">$100,000</option>	    </select>
-	</span>
-                </div>
-
-                <div class="rh_prop_search__option rh_prop_search__select price-for-rent hide-fields">
-                    <label for="select-max-price-for-rent">
-                        Max Price </label>
-                    <span class="rh_prop_search__selectwrap">
-	    <select name="max-price" id="select-max-price-for-rent" class="rh_select2" disabled="disabled">
-	        <option value="any" selected="selected">Any</option><option value="1000">$1,000</option><option
-                value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option
-                value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option
-                value="15000">$15,000</option><option value="20000">$20,000</option><option
-                value="25000">$25,000</option><option value="30000">$30,000</option><option
-                value="40000">$40,000</option><option value="50000">$50,000</option><option
-                value="75000">$75,000</option><option value="100000">$100,000</option><option
-                value="150000">$150,000</option>	    </select>
-	</span>
-                </div>
-                <div class="rh_prop_search__option">
-                    <label for="min-area">
-		<span class="label">
-			Min Area	    </span>
-                        <span class="unit">
-			(sq ft)	    </span>
-                    </label>
-                    <input type="text" name="min-area" id="min-area" pattern="[0-9]+"
-                           value=""
-                           placeholder="Any"
-                           title="Only provide digits!"/>
-                </div>
-
-                <div class="rh_prop_search__option">
-                    <label for="max-area">
-		<span class="label">
-			Max Area	    </span>
-                        <span class="unit">
-			(sq ft)		</span>
-                    </label>
-                    <input type="text" name="max-area" id="max-area" pattern="[0-9]+"
-                           value=""
-                           placeholder="Any"
-                           title="Only provide digits!"/>
-                </div>
-
-            </div>
-            <!-- /.rh_prop_search__dropdown -->
-
-        </div>
-        <!-- /.rh_prop_search__fields -->
-
-        <div class="rh_prop_search__buttons">
-
-            <div class="rh_prop_search__btnWrap clearfix">
-
-                <div class="rh_prop_search__advance">
-                    <a href="#" id="rh_prop_search__advance">
-                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <style>
-                                    .icon-search-plus{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}
-                                </style>
-                            </defs>
-                            <g data-name="137-Zoom" id="_137-Zoom">
-                                <circle class="icon-search-plus" cx="12" cy="12" r="11"/>
-                                <line class="icon-search-plus" x1="20" x2="31" y1="20" y2="31"/>
-                                <line id="rh_icon__search" class="icon-search-plus" x1="12" x2="12" y1="6" y2="18"/>
-                                <line class="icon-search-plus" x1="18" x2="6" y1="12" y2="12"/>
-                            </g>
-                        </svg>
-                    </a>
-                </div>
-                <div class="rh_prop_search__searchBtn">
-                    <button class="rh_btn rh_btn__prop_search" type="submit">
-                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <style>.icon-search{fill:none;stroke:#fff;stroke-linejoin:round;stroke-width:2px;}
-                                </style>
-                            </defs>
-                            <g data-name="32-Search" id="_32-Search">
-                                <circle class="icon-search" cx="12" cy="12" r="11"/>
-                                <line class="icon-search" x1="20" x2="31" y1="20" y2="31"/>
-                            </g>
-                        </svg>
-                        <span>
-				Search			</span>
-                    </button>
-                </div>
-
-            </div>
-            <!-- /.rh_prop_search__btnWrap -->
-        </div>
-        <!-- /.rh_prop_search__buttons -->
-
-    </form>
-    <!-- /.rh_prop_search__form -->
-
-</section>
-<!-- /.rh_prop_search -->
+{% include 'searchSidebar.html' %}
 
 <section class="rh_section rh_wrap--padding rh_wrap--topPadding">
 
@@ -276,7 +45,7 @@
                 </div>
             </div>
             <div id="property-featured-image" class="clearfix only-for-print">
-                <img src="{{house.image_url.url}}" alt="Villa in Coral Gables"/></div>
+                <img src="{{house.image_url.url}}" alt="Villa in Coral Gables" /></div>
 
             <div class="rh_property__wrap rh_property--padding">
                 <div class="rh_property__main">
@@ -297,10 +66,9 @@
                                 <div id="share-button-title" class="hide">Share</div>
                                 <div class="share-this"></div>
 
-                                <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                      method="post" class="add-to-favorite-form">
-                                    <input type="hidden" name="property_id" value="101"/>
-                                    <input type="hidden" name="action" value="add_to_favorite"/>
+                                <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
+                                    <input type="hidden" name="property_id" value="101" />
+                                    <input type="hidden" name="action" value="add_to_favorite" />
                                 </form>
                                 <span class="favorite-placeholder highlight__red hide">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
@@ -313,7 +81,7 @@
 								Added to Favorite							</p>
                             <!-- /.label -->
 						</span>
-					</span>
+                                </span>
                                 <a href="#" class="favorite add-to-favorite">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
                                         <path class="rh_svg"
@@ -357,8 +125,7 @@
                             <div class="rh_property__meta">
                                 <h4>Bedrooms</h4>
                                 <div>
-                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                         viewBox="0 0 24 24">
+                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                         <defs>
                                         </defs>
                                         <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
@@ -372,8 +139,7 @@
                             <div class="rh_property__meta">
                                 <h4>Bathrooms</h4>
                                 <div>
-                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24"
-                                         viewBox="0 0 23.69 24">
+                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
                                         <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
                                               transform="translate(-1196.31 -593)"/>
                                     </svg>
@@ -385,8 +151,7 @@
                             <div class="rh_property__meta">
                                 <h4>Garage</h4>
                                 <div>
-                                    <svg class="rh_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                                    <svg class="rh_svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<path d="M16.277,11H7.722c-0.513,0-0.941,0.315-1.104,0.757L5,16.25v6C5,22.662,5.351,23,5.778,23h0.778
 		c0.427,0,0.778-0.338,0.778-0.75V21.5h9.333v0.75c0,0.412,0.35,0.75,0.777,0.75h0.778C18.649,23,19,22.662,19,22.25v-6
@@ -408,8 +173,7 @@
                             <div class="rh_property__meta">
                                 <h4>Area</h4>
                                 <div>
-                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g>
 	<circle cx="2" cy="2" r="2"/>
 </g>
@@ -433,8 +197,7 @@
                             <div class="rh_property__meta">
                                 <h4>Year Built</h4>
                                 <div>
-                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+                                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
 <g class="rh_svg">
 	<path d="M20,2h-1V1c0-0.552-0.447-1-1-1s-1,0.448-1,1v1H7V1c0-0.552-0.447-1-1-1S5,0.448,5,1v1H4C1.794,2,0,3.794,0,6v14
 		c0,2.206,1.794,4,4,4h16c2.206,0,4-1.794,4-4V6C24,3.794,22.206,2,20,2z M22,20c0,1.104-0.896,2-2,2H4c-1.104,0-2-0.896-2-2V6
@@ -461,7 +224,8 @@
                         <!-- /.rh_property__heading -->
 
                         <div class="rh_content">
-                            <p>{{house.discription}}</p></div>
+                            <p>{{house.discription}}</p>
+                        </div>
                         <!-- /.rh_content -->
 
                         <h4 class="rh_property__heading rh_property__additional_details">Additional Details</h4>
@@ -498,224 +262,216 @@
                         <div class="rh_property__features_wrap">
                             <h4 class="rh_property__heading">Features</h4>
                             <ul class="rh_property__features arrow-bullet-list">
-                                <li class="rh_property__feature" id="rh_property__feature_17"><a
-                                        href="../../property-feature/2-stories/index.html">2 Stories</a></li>
-                                <li class="rh_property__feature" id="rh_property__feature_19"><a
-                                        href="../../property-feature/bike-path/index.html">Bike Path</a></li>
-                                <li class="rh_property__feature" id="rh_property__feature_20"><a
-                                        href="../../property-feature/central-cooling/index.html">Central Cooling</a>
+                                <li class="rh_property__feature" id="rh_property__feature_17"><a href="../../property-feature/2-stories/index.html">2 Stories</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_19"><a href="../../property-feature/bike-path/index.html">Bike Path</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_20"><a href="../../property-feature/central-cooling/index.html">Central Cooling</a>
                                 </li>
-                                <li class="rh_property__feature" id="rh_property__feature_32"><a
-                                        href="../../property-feature/jog-path/index.html">Jog Path</a></li>
-                                <li class="rh_property__feature" id="rh_property__feature_34"><a
-                                        href="../../property-feature/lawn/index.html">Lawn</a></li>
-                                <li class="rh_property__feature" id="rh_property__feature_43"><a
-                                        href="../../property-feature/swimming-pool/index.html">Swimming Pool</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_32"><a href="../../property-feature/jog-path/index.html">Jog Path</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_34"><a href="../../property-feature/lawn/index.html">Lawn</a></li>
+                                <li class="rh_property__feature" id="rh_property__feature_43"><a href="../../property-feature/swimming-pool/index.html">Swimming Pool</a></li>
                             </ul>
                         </div>
 
                         <div class="rh_property__video">
-                            <h4 class="rh_property__heading">Property Video</h4>            <a
-                                href="{{housedetails.video}}" class="pretty-photo">
-                            <div class="play-btn"></div>
-                            <img src="{{house.image_url.url}}"
-                                 alt="Villa in Coral Gables"> </a>
+                            <h4 class="rh_property__heading">Property Video</h4>
+                            <a href="{{housedetails.video}}" class="pretty-photo">
+                                <div class="play-btn"></div>
+                                <img src="{{house.image_url.url}}" alt="Villa in Coral Gables"> </a>
                         </div>
                         <div class="rh_property__map_wrap">
                             <h4 class="rh_property__heading">Property on Map</h4>
                             <div id="property_map"></div>
-                            <script async defer
-                                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuxwopJTfSvqu4jurlUSnxyyYvCR69ME">
+                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuxwopJTfSvqu4jurlUSnxyyYvCR69ME">
                             </script>
                             <script>
-	            /* Property Detail Page - Google Map for Property Location */
+                                /* Property Detail Page - Google Map for Property Location */
 
-	            function initialize_property_map() {
+                                function initialize_property_map() {
 
-	                var propertyMarkerInfo = {"title":"Villa in Coral Gables","price":"$825,000 ","lat":"25.637835760899435","lang":"-80.30060203710934","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-02-exterior-244x163.jpg","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"}
-	                var url = propertyMarkerInfo.icon;
-	                var size = new google.maps.Size( 42, 57 );
+                                    var propertyMarkerInfo = { 
+                                        "title": "Villa in Coral Gables", 
+                                        "price": "$825,000 ", 
+                                        "lat": "25.637835760899435", 
+                                        "lang": "-80.30060203710934", 
+                                        "thumb": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-02-exterior-244x163.jpg", 
+                                        "icon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png", 
+                                        "retinaIcon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png" 
+                                    }
+                                    var url = propertyMarkerInfo.icon;
+                                    var size = new google.maps.Size(42, 57);
 
-	                // retina
-	                if( window.devicePixelRatio > 1.5 ) {
-	                    if ( propertyMarkerInfo.retinaIcon ) {
-	                        url = propertyMarkerInfo.retinaIcon;
-	                        size = new google.maps.Size( 83, 113 );
-	                    }
-	                }
+                                    // retina
+                                    if (window.devicePixelRatio > 1.5) {
+                                        if (propertyMarkerInfo.retinaIcon) {
+                                            url = propertyMarkerInfo.retinaIcon;
+                                            size = new google.maps.Size(83, 113);
+                                        }
+                                    }
 
-	                var image = {
-	                    url: url,
-	                    size: size,
-	                    scaledSize: new google.maps.Size( 42, 57 ),
-	                    origin: new google.maps.Point( 0, 0 ),
-	                    anchor: new google.maps.Point( 21, 56 )
-	                };
+                                    var image = {
+                                        url: url,
+                                        size: size,
+                                        scaledSize: new google.maps.Size(42, 57),
+                                        origin: new google.maps.Point(0, 0),
+                                        anchor: new google.maps.Point(21, 56)
+                                    };
 
-	                var propertyLocation = new google.maps.LatLng( propertyMarkerInfo.lat, propertyMarkerInfo.lang );
-	                var propertyMapOptions = {
-	                    center: propertyLocation,
-	                    zoom: 15,
-	                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-	                    scrollwheel: false,
-	                    styles : [
-			            	{
-				                "featureType": "landscape",
-				                "stylers": [
-				                    {
-				                        "hue": "#FFBB00"
-				                    },
-				                    {
-				                        "saturation": 43.400000000000006
-				                    },
-				                    {
-				                        "lightness": 37.599999999999994
-				                    },
-				                    {
-				                        "gamma": 1
-				                    }
-				                ]
-				            },
-			                {
-			                    "featureType": "road.highway",
-			                    "stylers": [
-			                        {
-			                            "hue": "#FFC200"
-			                        },
-			                        {
-			                            "saturation": -61.8
-			                        },
-			                        {
-			                            "lightness": 45.599999999999994
-			                        },
-			                        {
-			                            "gamma": 1
-			                        }
-			                    ]
-			                },
-			                {
-			                    "featureType": "road.arterial",
-			                    "stylers": [
-			                        {
-			                            "hue": "#FF0300"
-			                        },
-			                        {
-			                            "saturation": -100
-			                        },
-			                        {
-			                            "lightness": 51.19999999999999
-			                        },
-			                        {
-			                            "gamma": 1
-			                        }
-			                    ]
-			                },
-			                {
-			                    "featureType": "road.local",
-			                    "stylers": [
-			                        {
-			                            "hue": "#FF0300"
-			                        },
-			                        {
-			                            "saturation": -100
-			                        },
-			                        {
-			                            "lightness": 52
-			                        },
-			                        {
-			                            "gamma": 1
-			                        }
-			                    ]
-			                },
-			                {
-			                    "featureType": "water",
-			                    "stylers": [
-			                        {
-			                            "hue": "#0078FF"
-			                        },
-			                        {
-			                            "saturation": -13.200000000000003
-			                        },
-			                        {
-			                            "lightness": 2.4000000000000057
-			                        },
-			                        {
-			                            "gamma": 1
-			                        }
-			                    ]
-			                },
-			                {
-			                    "featureType": "poi",
-			                    "stylers": [
-			                        {
-			                            "hue": "#00FF6A"
-			                        },
-			                        {
-			                            "saturation": -1.0989010989011234
-			                        },
-			                        {
-			                            "lightness": 11.200000000000017
-			                        },
-			                        {
-			                            "gamma": 1
-			                        }
-			                    ]
-			                }
-			            ]
-	                };
-	                var propertyMap = new google.maps.Map(document.getElementById("property_map"), propertyMapOptions);
-	                var propertyMarker = new google.maps.Marker({
-	                    position: propertyLocation,
-	                    map: propertyMap,
-	                    icon: image
-	                });
+                                    var propertyLocation = new google.maps.LatLng(propertyMarkerInfo.lat, propertyMarkerInfo.lang);
+                                    var propertyMapOptions = {
+                                        center: propertyLocation,
+                                        zoom: 15,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                        scrollwheel: false,
+                                        styles: [{
+                                                "featureType": "landscape",
+                                                "stylers": [{
+                                                        "hue": "#FFBB00"
+                                                    },
+                                                    {
+                                                        "saturation": 43.400000000000006
+                                                    },
+                                                    {
+                                                        "lightness": 37.599999999999994
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "stylers": [{
+                                                        "hue": "#FFC200"
+                                                    },
+                                                    {
+                                                        "saturation": -61.8
+                                                    },
+                                                    {
+                                                        "lightness": 45.599999999999994
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.arterial",
+                                                "stylers": [{
+                                                        "hue": "#FF0300"
+                                                    },
+                                                    {
+                                                        "saturation": -100
+                                                    },
+                                                    {
+                                                        "lightness": 51.19999999999999
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.local",
+                                                "stylers": [{
+                                                        "hue": "#FF0300"
+                                                    },
+                                                    {
+                                                        "saturation": -100
+                                                    },
+                                                    {
+                                                        "lightness": 52
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "water",
+                                                "stylers": [{
+                                                        "hue": "#0078FF"
+                                                    },
+                                                    {
+                                                        "saturation": -13.200000000000003
+                                                    },
+                                                    {
+                                                        "lightness": 2.4000000000000057
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "stylers": [{
+                                                        "hue": "#00FF6A"
+                                                    },
+                                                    {
+                                                        "saturation": -1.0989010989011234
+                                                    },
+                                                    {
+                                                        "lightness": 11.200000000000017
+                                                    },
+                                                    {
+                                                        "gamma": 1
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    };
+                                    var propertyMap = new google.maps.Map(document.getElementById("property_map"), propertyMapOptions);
+                                    var propertyMarker = new google.maps.Marker({
+                                        position: propertyLocation,
+                                        map: propertyMap,
+                                        icon: image
+                                    });
 
-	                /* Info Box */
-	                var boxText = document.createElement("div");
-	                boxText.className = 'map-info-window';
-	                var innerHTML = "";
-	                if ( propertyMarkerInfo.thumb ) {
-	                    innerHTML += '<img class="prop-thumb" src="' + propertyMarkerInfo.thumb + '" alt="' + propertyMarkerInfo.title + '"/>';
-	                }
-	                innerHTML += '<h5 class="prop-title">' + propertyMarkerInfo.title + '</h5>';
-	                if ( propertyMarkerInfo.price ) {
-	                    innerHTML += '<p><span class="price">' + propertyMarkerInfo.price + '</span></p>';
-	                }
-	                innerHTML += '<div class="arrow-down"></div>';
-	                boxText.innerHTML = innerHTML;
+                                    /* Info Box */
+                                    var boxText = document.createElement("div");
+                                    boxText.className = 'map-info-window';
+                                    var innerHTML = "";
+                                    if (propertyMarkerInfo.thumb) {
+                                        innerHTML += '<img class="prop-thumb" src="' + propertyMarkerInfo.thumb + '" alt="' + propertyMarkerInfo.title + '"/>';
+                                    }
+                                    innerHTML += '<h5 class="prop-title">' + propertyMarkerInfo.title + '</h5>';
+                                    if (propertyMarkerInfo.price) {
+                                        innerHTML += '<p><span class="price">' + propertyMarkerInfo.price + '</span></p>';
+                                    }
+                                    innerHTML += '<div class="arrow-down"></div>';
+                                    boxText.innerHTML = innerHTML;
 
-	                var myOptions = {
-	                    content: boxText,
-	                    disableAutoPan: true,
-	                    maxWidth: 0,
-	                    alignBottom: true,
-	                    pixelOffset: new google.maps.Size( -122, -48 ),
-	                    zIndex: null,
-	                    closeBoxMargin: "0 0 -16px -16px",
-	                    closeBoxURL: "http://realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/map/close.png",
-	                    infoBoxClearance: new google.maps.Size( 1, 1 ),
-	                    isHidden: false,
-	                    pane: "floatPane",
-	                    enableEventPropagation: false
-	                };
+                                    var myOptions = {
+                                        content: boxText,
+                                        disableAutoPan: true,
+                                        maxWidth: 0,
+                                        alignBottom: true,
+                                        pixelOffset: new google.maps.Size(-122, -48),
+                                        zIndex: null,
+                                        closeBoxMargin: "0 0 -16px -16px",
+                                        closeBoxURL: "http://realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/map/close.png",
+                                        infoBoxClearance: new google.maps.Size(1, 1),
+                                        isHidden: false,
+                                        pane: "floatPane",
+                                        enableEventPropagation: false
+                                    };
 
-	                var infoBox = new InfoBox( myOptions );
+                                    var infoBox = new InfoBox(myOptions);
 
-	                google.maps.event.addListener( propertyMarker, 'click', function(){
-	                    var scale = Math.pow( 2, propertyMap.getZoom() );
-	                    var offsety = ( (150/scale) || 0 );
-	                    var projection = propertyMap.getProjection();
-	                    var markerPosition = propertyMarker.getPosition();
-	                    var markerScreenPosition = projection.fromLatLngToPoint( markerPosition );
-	                    var pointHalfScreenAbove = new google.maps.Point( markerScreenPosition.x, markerScreenPosition.y - offsety );
-	                    var aboveMarkerLatLng = projection.fromPointToLatLng( pointHalfScreenAbove );
-	                    propertyMap.setCenter( aboveMarkerLatLng );
-	                    infoBox.open( propertyMap, propertyMarker );
-	                });
-	            }
+                                    google.maps.event.addListener(propertyMarker, 'click', function() {
+                                        var scale = Math.pow(2, propertyMap.getZoom());
+                                        var offsety = ((150 / scale) || 0);
+                                        var projection = propertyMap.getProjection();
+                                        var markerPosition = propertyMarker.getPosition();
+                                        var markerScreenPosition = projection.fromLatLngToPoint(markerPosition);
+                                        var pointHalfScreenAbove = new google.maps.Point(markerScreenPosition.x, markerScreenPosition.y - offsety);
+                                        var aboveMarkerLatLng = projection.fromPointToLatLng(pointHalfScreenAbove);
+                                        propertyMap.setCenter(aboveMarkerLatLng);
+                                        infoBox.open(propertyMap, propertyMarker);
+                                    });
+                                }
 
-	            window.onload = initialize_property_map();
-
+                                window.onload = initialize_property_map();
                             </script>
 
 
@@ -725,587 +481,50 @@
                     </div>
                     <!-- /.rh_property__content -->
 
-                    <section class="rh_property__similar_properties">
-                        <h3 class="rh_property__heading">Similar Properties</h3>
-                        <div class="rh_property__container">
-
-                            <article
-                                    class="rh_prop_card rh_prop_card--similar post-94 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-laundry-room property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
-
-                                <div class="rh_prop_card__wrap">
-
-                                    <figure class="rh_prop_card__thumbnail">
-                                        <a href="../villa-on-hollywood-boulevard/index.html">
-                                            <img width="680" height="510"
-                                                 src="../../wp-content/uploads/2015/07/property-03-exterior-680x510.jpg"
-                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
-                                                 alt=""
-                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-400x300.jpg 400w"
-                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
-
-                                        <div class="rh_overlay"></div>
-                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                            <a href="../villa-on-hollywood-boulevard/index.html">View Property</a>
-                                        </div>
-                                        <!-- /.rh_overlay__contents -->
 
 
-                                        <div class="rh_prop_card__btns">
-                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                                  method="post" class="add-to-favorite-form">
-                                                <input type="hidden" name="property_id" value="94"/>
-                                                <input type="hidden" name="action" value="add_to_favorite"/>
-                                            </form>
-                                            <span class="favorite-placeholder highlight__red hide"
-                                                  data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                                            <a href="#" class="favorite add-to-favorite"
-                                               data-tooltip="Add to favorites">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-                                                    <path class="rh_svg"
-                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                                          transform="translate(-1077 -1922)"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <!-- /.rh_prop_card__btns -->
-                                    </figure>
-                                    <!-- /.rh_prop_card__thumbnail -->
-
-                                    <div class="rh_prop_card__details">
-
-                                        <h3>
-                                            <a href="../villa-on-hollywood-boulevard/index.html">Villa on Hollywood
-                                                Boulevard</a>
-                                        </h3>
-                                        <p class="rh_prop_card__excerpt">The very best waterfront location in Harbor
-                                            Islands complete with&hellip;</p>
-                                        <!-- /.rh_prop_card__excerpt -->
-
-                                        <div class="rh_prop_card__meta_wrap">
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bedrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                         height="24" viewBox="0 0 24 24">
-                                                        <defs>
-                                                        </defs>
-                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                              transform="translate(-1108 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">3</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bathrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
-                                                         height="24" viewBox="0 0 23.69 24">
-                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                              transform="translate(-1196.31 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">4</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Area</h4>
-                                                <div>
-                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">
-								4530							</span>
-                                                    <span class="label">
-									Sq Ft								</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__meta_wrap -->
-
-                                        <div class="rh_prop_card__priceLabel">
-
-                                            <h4 class="rh_prop_card__status">
-                                                For Sale </h4>
-                                            <!-- /.rh_prop_card__type -->
-                                            <p class="rh_prop_card__price">
-                                                $740,000 </p>
-                                            <!-- /.rh_prop_card__price -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__priceLabel -->
-
-                                    </div>
-                                    <!-- /.rh_prop_card__details -->
-
-                                </div>
-                                <!-- /.rh_prop_card__wrap -->
-
-                            </article>
-                            <!-- /.rh_prop_card -->
-
-                            <article
-                                    class="rh_prop_card rh_prop_card--similar post-91 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-marble-floors property-feature-swimming-pool property-type-villa property-city-miami property-status-for-rent">
-
-                                <div class="rh_prop_card__wrap">
-
-                                    <figure class="rh_prop_card__thumbnail">
-                                        <a href="../villa-on-grand-avenue/index.html">
-                                            <img width="680" height="510"
-                                                 src="../../wp-content/uploads/2015/07/property-05-exterior-680x510.jpg"
-                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
-                                                 alt=""
-                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-400x300.jpg 400w"
-                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
-
-                                        <div class="rh_overlay"></div>
-                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                            <a href="../villa-on-grand-avenue/index.html">View Property</a>
-                                        </div>
-                                        <!-- /.rh_overlay__contents -->
-
-
-                                        <div class="rh_prop_card__btns">
-                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                                  method="post" class="add-to-favorite-form">
-                                                <input type="hidden" name="property_id" value="91"/>
-                                                <input type="hidden" name="action" value="add_to_favorite"/>
-                                            </form>
-                                            <span class="favorite-placeholder highlight__red hide"
-                                                  data-tooltip="Added to favorites">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-					</span>
-                                            <a href="#" class="favorite add-to-favorite"
-                                               data-tooltip="Add to favorites">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-                                                    <path class="rh_svg"
-                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                                          transform="translate(-1077 -1922)"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <!-- /.rh_prop_card__btns -->
-                                    </figure>
-                                    <!-- /.rh_prop_card__thumbnail -->
-
-                                    <div class="rh_prop_card__details">
-
-                                        <h3>
-                                            <a href="../villa-on-grand-avenue/index.html">Villa on Grand Avenue</a>
-                                        </h3>
-                                        <p class="rh_prop_card__excerpt">Spacious and fabulous home in prime location.
-                                            This executive style&hellip;</p>
-                                        <!-- /.rh_prop_card__excerpt -->
-
-                                        <div class="rh_prop_card__meta_wrap">
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bedrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                         height="24" viewBox="0 0 24 24">
-                                                        <defs>
-                                                        </defs>
-                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                              transform="translate(-1108 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">4</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bathrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
-                                                         height="24" viewBox="0 0 23.69 24">
-                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                              transform="translate(-1196.31 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">4</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Area</h4>
-                                                <div>
-                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">
-								9350							</span>
-                                                    <span class="label">
-									Sq Ft								</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__meta_wrap -->
-
-                                        <div class="rh_prop_card__priceLabel">
-
-                                            <h4 class="rh_prop_card__status">
-                                                For Rent </h4>
-                                            <!-- /.rh_prop_card__type -->
-                                            <p class="rh_prop_card__price">
-                                                $4,750 Monthly </p>
-                                            <!-- /.rh_prop_card__price -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__priceLabel -->
-
-                                    </div>
-                                    <!-- /.rh_prop_card__details -->
-
-                                </div>
-                                <!-- /.rh_prop_card__wrap -->
-
-                            </article>
-                            <!-- /.rh_prop_card -->
-                        </div>
-                        <!-- /.rh_property__container -->
-                    </section>
-                    <!-- /.rh_property__similar -->
-
-                    <section class="rh_property__comments">
-                    </section>
-                    <!-- /.rh_property__comments -->
                 </div>
                 <!-- /.rh_property__main -->
 
                 <div class="rh_property__sidebar">
                     <aside class="rh_sidebar">
                         <section class="widget rh_property_agent ">
-                            <a class="agent-image" href="../../agent/nathan-james/index.html">
-                                <img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-3-210x210.jpg"
+                            <a class="agent-image" href="{% url 'agent:details' house.user.userprofile.slug %}">
+                                <img width="210" height="210" src="{{ house.user.userprofile.avatar.url }}"
                                      class="attachment-agent-image size-agent-image wp-post-image" alt=""
-                                     srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-3.jpg 220w"
                                      sizes="(max-width: 210px) 100vw, 210px"/> </a>
-                            <h3 class="rh_property_agent__title">Agent Nathan James</h3>
+                            <h3 class="rh_property_agent__title">Agent {{house.user.first_name}} {{house.user.last_name}}</h3>
                             <div class="rh_property_agent__agent_info">
+                                {% for item in house.user.userphone.all %}
                                 <p class="contact office">
-                                    Office : <span class="value">1-222-333-4444</span>
+                                    {{item.phone.type}} : <span class="value">{{item.body}}</span>
                                 </p>
-                                <p class="contact mobile">
-                                    Mobile : <span class="value">1-234-456-7893</span>
-                                </p>
-                                <p class="contact fax">
-                                    Fax : <span class="value">1-333-444-5555</span>
-                                </p>
-                                <p class="contact whatsapp">
-                                    WhatsApp : <span class="value">1-234-456-7894</span>
-                                </p>
+                                {% endfor %}
                                 <p class="contact email">
-                                    Email : <a
-                                        href="mailto:r&#111;b&#111;t&#064;ins&#112;ir&#121;&#116;&#104;em&#101;&#115;&#046;&#099;&#111;&#109;"
-                                        class="value">robo&#116;&#064;i&#110;&#115;piryt&#104;&#101;me&#115;.c&#111;&#109;</a>
+                                    Email : <a href="mailto:{{ house.user.email }}" class="value">{{ house.user.email }}</a>
                                 </p>
                             </div>
-                            <a class="rh_btn rh_btn--primary rh_property_agent__link"
-                               href="../../agent/nathan-james/index.html">View My Listings</a>
-
-                            <div class="rh_property_agent__enquiry_form">
-                                <form id="agent-form-id57" class="rh_widget_form agent-form" method="post"
-                                      action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
-                                    <p class="rh_widget_form__row">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" placeholder="Name" class="required"
-                                               title="* Please provide your name"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="email">Email</label>
-                                        <input type="text" name="email" placeholder="Email" class="required"
-                                               title="* Please provide valid email address"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="phone">Phone</label>
-                                        <input type="text" name="phone" placeholder="Phone" class="required"
-                                               title="* Please provide valid phone number"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="message">Message</label>
-                                        <textarea cols="40" rows="6" type="text" name="message" placeholder="Message"
-                                                  class="required" title="* Please provide your message"></textarea>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-
-                                    <input type="hidden" name="nonce" value="dda96e7baf"/>
-                                    <input type="hidden" name="target"
-                                           value="&#114;&#111;&#098;&#111;t&#064;in&#115;&#112;&#105;ryt&#104;e&#109;&#101;&#115;.c&#111;&#109;">
-                                    <input type="hidden" name="action" value="send_message_to_agent"/>
-                                    <input type="hidden" name="property_title" value="Villa in Coral Gables"/>
-                                    <input type="hidden" name="property_permalink"
-                                           value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
-
-                                    <input type="submit" value="Send Message" name="submit"
-                                           class="rh_btn rh_btn--primary rh_widget_form__submit">
-
-                                    <span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
-</span>
-
-                                    <div class="error-container"></div>
-                                    <!-- /.error-container -->
-                                    <div class="message-container"></div>
-                                    <!-- /.message-container -->
-
-                                </form>
-                            </div>
-                            <!-- /.rh_property_agent__enquiry_form -->
-
-                            <script type="text/javascript">
-					( function( $ ) {
-						"use strict";
-
-						if ( jQuery().validate && jQuery().ajaxSubmit ) {
-
-							var agentForm = $('#agent-form-id57');
-							var submitButton = agentForm.find( '.rh_widget_form__submit' ),
-								ajaxLoader = agentForm.find( '#ajax-loader' ),
-								messageContainer = agentForm.find( '.message-container' ),
-								errorContainer = agentForm.find( '.error-container' );
-
-							// Property detail page form
-							agentForm.validate( {
-								errorLabelContainer: errorContainer,
-								submitHandler : function( form ) {
-									$( form ).ajaxSubmit( {
-										beforeSubmit: function() {
-											submitButton.attr('disabled','disabled');
-											ajaxLoader.fadeIn('fast');
-											messageContainer.fadeOut('fast');
-											errorContainer.fadeOut('fast');
-										},
-										success: function( ajax_response, statusText, xhr, $form) {
-											var response = $.parseJSON ( ajax_response );
-											ajaxLoader.fadeOut('fast');
-											submitButton.removeAttr('disabled');
-											if ( response.success ) {
-												$form.resetForm();
-												messageContainer.html( '<p>' + response.message + '</p>' ).fadeIn('fast');
-
-												// call reset function if it exists
-												if ( typeof inspiryResetReCAPTCHA == 'function' ) {
-													inspiryResetReCAPTCHA();
-												}
-
-											} else {
-												errorContainer.html( '<p>' + response.message + '</p>' ).fadeIn('fast');
-											}
-										}
-									} );
-								}
-							} );
-						}
-					} )( jQuery );
-
-                            </script>
+                            <a class="rh_btn rh_btn--primary rh_property_agent__link" href="{% url 'agent:details' house.user.userprofile.slug %}">View My Listings</a>
                         </section>
-                        <section class="widget rh_property_agent multiple-agent">
-                            <a class="agent-image" href="../../agent/melissa-william/index.html">
-                                <img width="210" height="210" src="../../wp-content/uploads/2015/07/agent-2-210x210.jpg"
-                                     class="attachment-agent-image size-agent-image wp-post-image" alt=""
-                                     srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-210x210.jpg 210w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2-150x150.jpg 150w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/agent-2.jpg 220w"
-                                     sizes="(max-width: 210px) 100vw, 210px"/> </a>
-                            <h3 class="rh_property_agent__title">Agent Melissa William</h3>
-                            <div class="rh_property_agent__agent_info">
-                                <p class="contact office">
-                                    Office : <span class="value">1-222-333-4444</span>
-                                </p>
-                                <p class="contact mobile">
-                                    Mobile : <span class="value">1-234-456-7892</span>
-                                </p>
-                                <p class="contact fax">
-                                    Fax : <span class="value">1-333-444-5555</span>
-                                </p>
-                                <p class="contact whatsapp">
-                                    WhatsApp : <span class="value">1-234-456-7895</span>
-                                </p>
-                                <p class="contact email">
-                                    Email : <a
-                                        href="mailto:r&#111;bot&#064;&#105;ns&#112;&#105;&#114;y&#116;h&#101;&#109;&#101;s&#046;c&#111;&#109;"
-                                        class="value">
-                                    &#114;o&#098;ot&#064;&#105;ns&#112;&#105;ryt&#104;emes.c&#111;m</a>
-                                </p>
-                            </div>
-                            <a class="rh_btn rh_btn--primary rh_property_agent__link"
-                               href="../../agent/melissa-william/index.html">View My Listings</a>
-
-                            <div class="rh_property_agent__enquiry_form">
-                                <form id="agent-form-id54" class="rh_widget_form agent-form" method="post"
-                                      action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
-                                    <p class="rh_widget_form__row">
-                                        <label for="name">Name</label>
-                                        <input type="text" name="name" placeholder="Name" class="required"
-                                               title="* Please provide your name"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="email">Email</label>
-                                        <input type="text" name="email" placeholder="Email" class="required"
-                                               title="* Please provide valid email address"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="phone">Phone</label>
-                                        <input type="text" name="phone" placeholder="Phone" class="required"
-                                               title="* Please provide valid phone number"/>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-                                    <p class="rh_widget_form__row">
-                                        <label for="message">Message</label>
-                                        <textarea cols="40" rows="6" type="text" name="message" placeholder="Message"
-                                                  class="required" title="* Please provide your message"></textarea>
-                                    </p>
-                                    <!-- /.rh_widget_form__row -->
-
-                                    <input type="hidden" name="nonce" value="dda96e7baf"/>
-                                    <input type="hidden" name="target"
-                                           value="&#114;&#111;bot&#064;&#105;&#110;&#115;p&#105;&#114;&#121;t&#104;&#101;&#109;&#101;s&#046;&#099;&#111;m">
-                                    <input type="hidden" name="action" value="send_message_to_agent"/>
-                                    <input type="hidden" name="property_title" value="Villa in Coral Gables"/>
-                                    <input type="hidden" name="property_permalink"
-                                           value="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/"/>
-
-                                    <input type="submit" value="Send Message" name="submit"
-                                           class="rh_btn rh_btn--primary rh_widget_form__submit">
-
-                                    <span id="ajax-loader"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF" /><g><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
-</span>
-
-                                    <div class="error-container"></div>
-                                    <!-- /.error-container -->
-                                    <div class="message-container"></div>
-                                    <!-- /.message-container -->
-
-                                </form>
-                            </div>
-                            <!-- /.rh_property_agent__enquiry_form -->
-
-                            <script type="text/javascript">
-					( function( $ ) {
-						"use strict";
-
-						if ( jQuery().validate && jQuery().ajaxSubmit ) {
-
-							var agentForm = $('#agent-form-id54');
-							var submitButton = agentForm.find( '.rh_widget_form__submit' ),
-								ajaxLoader = agentForm.find( '#ajax-loader' ),
-								messageContainer = agentForm.find( '.message-container' ),
-								errorContainer = agentForm.find( '.error-container' );
-
-							// Property detail page form
-							agentForm.validate( {
-								errorLabelContainer: errorContainer,
-								submitHandler : function( form ) {
-									$( form ).ajaxSubmit( {
-										beforeSubmit: function() {
-											submitButton.attr('disabled','disabled');
-											ajaxLoader.fadeIn('fast');
-											messageContainer.fadeOut('fast');
-											errorContainer.fadeOut('fast');
-										},
-										success: function( ajax_response, statusText, xhr, $form) {
-											var response = $.parseJSON ( ajax_response );
-											ajaxLoader.fadeOut('fast');
-											submitButton.removeAttr('disabled');
-											if ( response.success ) {
-												$form.resetForm();
-												messageContainer.html( '<p>' + response.message + '</p>' ).fadeIn('fast');
-
-												// call reset function if it exists
-												if ( typeof inspiryResetReCAPTCHA == 'function' ) {
-													inspiryResetReCAPTCHA();
-												}
-
-											} else {
-												errorContainer.html( '<p>' + response.message + '</p>' ).fadeIn('fast');
-											}
-										}
-									} );
-								}
-							} );
-						}
-					} )( jQuery );
-
-                            </script>
-                        </section>
-                        <section id="mortgage-calculator-2" class="widget clearfix widget_mortgage-calculator"><h3
-                                class="title">Mortgage Calculator</h3>
+                        <section id="mortgage-calculator-2" class="widget clearfix widget_mortgage-calculator">
+                            <h3 class="title">Mortgage Calculator</h3>
                             <div class="mc-wrapper clearfx">
                                 <form id="mc-form" action="#mc-form">
                                     <p>
                                         <label for="mc-total-amount">Total Amount</label>
-                                        <input type="number" name="mc_total_amount_label" id="mc-total-amount" min="1"
-                                               class="required" placeholder="$" value="825000"/>
+                                        <input type="number" name="mc_total_amount_label" id="mc-total-amount" min="1" class="required" placeholder="$" value="{{house.price}}" />
                                     </p>
                                     <p>
                                         <label for="mc-down-payment">Down Payment</label>
-                                        <input type="number" name="mc_down_payment_label" id="mc-down-payment" min="1"
-                                               class="required" placeholder="$">
+                                        <input type="number" name="mc_down_payment_label" id="mc-down-payment" min="1" class="required" placeholder="$">
                                     </p>
                                     <p>
                                         <label for="mc-interest-rate">Interest %age</label>
-                                        <input type="number" name="mc_interest_rate_label" id="mc-interest-rate" min="1"
-                                               class="required" placeholder="%">
+                                        <input type="number" name="mc_interest_rate_label" id="mc-interest-rate" min="1" class="required" placeholder="%">
                                     </p>
                                     <p>
                                         <label for="mc-mortgage-period">Number of Years</label>
-                                        <input type="number" name="mc_mortgage_period_label" id="mc-mortgage-period"
-                                               class="required" placeholder="Years">
+                                        <input type="number" name="mc_mortgage_period_label" id="mc-mortgage-period" class="required" placeholder="Years">
                                     </p>
                                     <p>
                                         <input type="submit" id="mc-submit" value="Calculate Mortgage">
@@ -1317,310 +536,7 @@
                             </div>
 
                         </section>
-                        <section id="featured_properties_widget-5" class="widget clearfix Featured_Properties_Widget">
-                            <h3 class="title">Featured Properties</h3>
-                            <article
-                                    class="rh_prop_card rh_prop_card--block post-42 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-heating property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-lawn property-feature-marble-floors property-feature-swimming-pool property-type-single-family property-city-miami property-status-for-sale">
 
-                                <div class="rh_prop_card__wrap">
-
-                                    <div class="rh_label rh_label__featured_widget">
-                                        <div class="rh_label__wrap">
-                                            Featured <span></span>
-                                        </div>
-                                    </div>
-                                    <!-- /.rh_label -->
-
-                                    <figure class="rh_prop_card__thumbnail">
-                                        <a href="../home-in-coral-gables/index.html">
-                                            <img width="680" height="510"
-                                                 src="../../wp-content/uploads/2015/07/property-08-exterior-680x510.jpg"
-                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
-                                                 alt=""
-                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-400x300.jpg 400w"
-                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
-
-                                        <div class="rh_overlay"></div>
-                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                            <a href="../home-in-coral-gables/index.html">View Property</a>
-                                        </div>
-                                        <!-- /.rh_overlay__contents -->
-
-
-                                        <div class="rh_prop_card__btns">
-                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                                  method="post" class="add-to-favorite-form">
-                                                <input type="hidden" name="property_id" value="42"/>
-                                                <input type="hidden" name="action" value="add_to_favorite"/>
-                                            </form>
-                                            <span href="#" class="favorite-placeholder highlight__red hide"
-                                                  data-tooltip="Added to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-											</span>
-                                            <a href="#" class="favorite add-to-favorite"
-                                               data-tooltip="Add to favorites">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-                                                    <path class="rh_svg"
-                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                                          transform="translate(-1077 -1922)"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <!-- /.rh_prop_card__btns -->
-                                    </figure>
-                                    <!-- /.rh_prop_card__thumbnail -->
-
-                                    <div class="rh_prop_card__details">
-
-                                        <h3>
-                                            <a href="../home-in-coral-gables/index.html">Home in Coral Gables</a>
-                                        </h3>
-                                        <p class="rh_prop_card__excerpt">Elegant retreat in a quiet Coral Gables
-                                            setting. This home&hellip;</p>
-                                        <!-- /.rh_prop_card__excerpt -->
-
-                                        <div class="rh_prop_card__meta_wrap">
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bedrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                         height="24" viewBox="0 0 24 24">
-                                                        <defs>
-                                                        </defs>
-                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                              transform="translate(-1108 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">4</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bathrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
-                                                         height="24" viewBox="0 0 23.69 24">
-                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                              transform="translate(-1196.31 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">4.5</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Area</h4>
-                                                <div>
-                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">
-														3800													</span>
-                                                    <span class="label">
-															Sq Ft														</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__meta_wrap -->
-
-                                        <div class="rh_prop_card__priceLabel">
-
-                                            <h4 class="rh_prop_card__status">
-                                                <figcaption class="for-sale">For Sale</figcaption>
-                                            </h4>
-                                            <!-- /.rh_prop_card__type -->
-                                            <p class="rh_prop_card__price">
-                                                $850,000 </p>
-                                            <!-- /.rh_prop_card__price -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__priceLabel -->
-
-                                    </div>
-                                    <!-- /.rh_prop_card__details -->
-
-                                </div>
-                                <!-- /.rh_prop_card__wrap -->
-
-                            </article>
-                            <!-- /.rh_prop_card -->
-
-                            <article
-                                    class="rh_prop_card rh_prop_card--block post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale">
-
-                                <div class="rh_prop_card__wrap">
-
-                                    <div class="rh_label rh_label__featured_widget">
-                                        <div class="rh_label__wrap">
-                                            Featured <span></span>
-                                        </div>
-                                    </div>
-                                    <!-- /.rh_label -->
-
-                                    <figure class="rh_prop_card__thumbnail">
-                                        <a href="../home-in-merrick-way/index.html">
-                                            <img width="680" height="510"
-                                                 src="../../wp-content/uploads/2017/06/property-01-exterior-680x510.jpg"
-                                                 class="attachment-modern-property-child-slider size-modern-property-child-slider wp-post-image"
-                                                 alt=""
-                                                 srcset="http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-680x510.jpg 680w, http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-400x300.jpg 400w"
-                                                 sizes="(max-width: 680px) 100vw, 680px"/> </a>
-
-                                        <div class="rh_overlay"></div>
-                                        <div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
-                                            <a href="../home-in-merrick-way/index.html">View Property</a>
-                                        </div>
-                                        <!-- /.rh_overlay__contents -->
-
-
-                                        <div class="rh_prop_card__btns">
-                                            <form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php"
-                                                  method="post" class="add-to-favorite-form">
-                                                <input type="hidden" name="property_id" value="45"/>
-                                                <input type="hidden" name="action" value="add_to_favorite"/>
-                                            </form>
-                                            <span href="#" class="favorite-placeholder highlight__red hide"
-                                                  data-tooltip="Added to favorites">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-  <path class="rh_svg"
-        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-        transform="translate(-1077 -1922)"/>
-</svg>
-											</span>
-                                            <a href="#" class="favorite add-to-favorite"
-                                               data-tooltip="Add to favorites">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 21">
-                                                    <path class="rh_svg"
-                                                          d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                                          transform="translate(-1077 -1922)"/>
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <!-- /.rh_prop_card__btns -->
-                                    </figure>
-                                    <!-- /.rh_prop_card__thumbnail -->
-
-                                    <div class="rh_prop_card__details">
-
-                                        <h3>
-                                            <a href="../home-in-merrick-way/index.html">Home in Merrick Way</a>
-                                        </h3>
-                                        <p class="rh_prop_card__excerpt">Enchanting three bedroom, three bath home with
-                                            spacious one bedroom,&hellip;</p>
-                                        <!-- /.rh_prop_card__excerpt -->
-
-                                        <div class="rh_prop_card__meta_wrap">
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bedrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                         height="24" viewBox="0 0 24 24">
-                                                        <defs>
-                                                        </defs>
-                                                        <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z"
-                                                              transform="translate(-1108 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">3</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Bathrooms</h4>
-                                                <div>
-                                                    <svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69"
-                                                         height="24" viewBox="0 0 23.69 24">
-                                                        <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z"
-                                                              transform="translate(-1196.31 -593)"/>
-                                                    </svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">3</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                            <div class="rh_prop_card__meta">
-                                                <h4>Area</h4>
-                                                <div>
-                                                    <svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
-<g>
-	<circle cx="2" cy="2" r="2"/>
-</g>
-<g>
-	<circle cx="2" cy="22" r="2"/>
-</g>
-<g>
-	<circle cx="22" cy="2" r="2"/>
-</g>
-<rect x="1" y="1" width="2" height="22"/>
-<rect x="1" y="1" width="22" height="2"/>
-<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
-	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
-</svg>
-                                                    <!-- <img src="php" alt="" /> -->
-                                                    <span class="figure">
-														4300													</span>
-                                                    <span class="label">
-															Sq Ft														</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.rh_prop_card__meta -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__meta_wrap -->
-
-                                        <div class="rh_prop_card__priceLabel">
-
-                                            <h4 class="rh_prop_card__status">
-                                                <figcaption class="for-sale">For Sale</figcaption>
-                                            </h4>
-                                            <!-- /.rh_prop_card__type -->
-                                            <p class="rh_prop_card__price">
-                                                $540,000 </p>
-                                            <!-- /.rh_prop_card__price -->
-
-                                        </div>
-                                        <!-- /.rh_prop_card__priceLabel -->
-
-                                    </div>
-                                    <!-- /.rh_prop_card__details -->
-
-                                </div>
-                                <!-- /.rh_prop_card__wrap -->
-
-                            </article>
-                            <!-- /.rh_prop_card -->
-                        </section>
                     </aside>
                     <!-- /.rh_sidebar -->
                 </div>

@@ -43,7 +43,7 @@ class Phone(models.Model):
 
 class UserPhone(models.Model):
     body = models.CharField(max_length=40)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='userphone', on_delete=models.CASCADE)
     phone = models.ForeignKey(Phone, on_delete=models.CASCADE, unique=False)
 
     class Meta:

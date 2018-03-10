@@ -1,8 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from django.contrib.gis.db import models as gismodel
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from django.db  import IntegrityError
+# from location_field.models.plain import PlainLocationField
 # from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
 
@@ -17,7 +19,7 @@ class House(models.Model):
     bathrooms = models.SmallIntegerField(blank=True, null=True)
     area = models.SmallIntegerField(blank=True, null=True)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='house', on_delete=models.CASCADE)
 
     class Meta:
         db_table = "house"
@@ -32,7 +34,7 @@ class House(models.Model):
 
 
 class HouseImage(models.Model):
-    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    house = models.ForeignKey(House, related_name='houseimage', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     image_url = models.ImageField()
 
@@ -41,7 +43,7 @@ class HouseImage(models.Model):
 
 
 class HouseDetails(models.Model):
-    house = models.OneToOneField(House, unique=True)
+    house = models.OneToOneField(House,  related_name='housedetails', unique=True)
     text = models.TextField()
     garage = models.SmallIntegerField()
     year_built = models.DateField()
@@ -61,3 +63,6 @@ class HouseVisited(models.Model):
 
 
 
+class HouseLocation(models.Model):
+    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    location = gismodel.PointField(blank=True, null=True)
