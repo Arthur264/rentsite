@@ -70,12 +70,16 @@
                     // loginAjaxLoader.fadeOut( 100 );
                     loginButton.removeAttr('disabled');
                     if (response.success) {
-                        loginMessage.html(response.message).fadeIn(200);
-                        if (window.location.href == response.redirect) {
-                            window.location.reload(true);
-                        } else {
-                            window.location.replace(response.redirect);
+                     var list = document.createElement("ul");
+                        for (var prop in response.message) {
+                            for (var i = 0; i < response.message[prop].length; i++) {
+                                var li = document.createElement("li");
+                                li.innerHTML = response.message[prop][i];
+                                list.appendChild(li)
+                            }
                         }
+                        loginMessage.html(list).fadeIn(200);
+                        window.location.reload(true);
                     } else {
                         loginError.html(response.message).fadeIn(200);
 
@@ -117,6 +121,7 @@
                     if (response.success) {
                         registerMessage.html(response.message).fadeIn('fast');
                         $form.resetForm();
+                        window.location.reload(true);
                     } else {
                         var list = document.createElement("ul");
                         for (var prop in response.message) {

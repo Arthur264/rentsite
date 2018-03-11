@@ -76,4 +76,5 @@ class FavoritesView(View):
 class PopularView(View):
     def get(self, request):
         popular = HouseVisited.objects.values('house').annotate(Count('house')).order_by()
-        return render(request, "houseTemplate.html", {'object_list': popular[:2]})
+        house = House.objects.filter(pk__in=[popular[0]["house"], popular[1]["house"]])
+        return render(request, "houseTemplate.html", {'card': house})

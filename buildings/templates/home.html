@@ -578,7 +578,7 @@
             <div class="rh_agent__wrap">
 
                 <div class="rh_agent__thumbnail">
-                    <a href="agent/nathan-james/index.html">
+                    <a href="{% url 'agent:details' agent.user.userprofile.slug %}">
                         <img width="210" height="210" src="{{agent.avatar.url }}"
                              class="attachment-agent-image size-agent-image " alt=""/> </a>
                 </div>
@@ -586,18 +586,17 @@
 
                 <div class="rh_agent__details">
 
-                    <h3><a href="agent/nathan-james/index.html">{{agent.user.first_name}} {{agent.user.last_name}}</a></h3>
-
-                    <p class="rh_agent__phone">1-234-456-7893</p>
+                    <h3><a href="{% url 'agent:details' agent.user.userprofile.slug %}">{{agent.user.first_name}} {{agent.user.last_name}}</a></h3>
+                    <p class="rh_agent__phone">{{agent.user.userphone.all.0.body}}   </p>
                     <!-- /.rh_agent__phone -->
 
-                    <a href="mailto:&#114;o&#098;ot&#064;&#105;ns&#112;&#105;r&#121;t&#104;&#101;&#109;es.&#099;om"
+                    <a href="mailto:{{agent.user.email}}"
                        class="rh_agent__email">
                        {{agent.user.email}}              </a>
                     <!-- /.rh_agent__email -->
 
                     <div class="rh_agent__listed">
-                        <p class="figure">4</p>
+                        <p class="figure">{{agent.user.house.all|length}}   </p>
                         <!-- /.figure -->
                         <p class="heading">Listed Properties</p>
                         <!-- /.heading -->
@@ -605,7 +604,7 @@
                     <!-- /.rh_agent__listed -->
 
                     <span class="rh_agent__arrow">
-				<a href="agent/nathan-james/index.html">
+				<a href="{% url 'agent:details' agent.user.userprofile.slug %}">
 					<svg class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          width="71" height="71" viewBox="0 0 71 71">
   <defs>

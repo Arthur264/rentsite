@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
-from .models import HouseDetails, House
-from mapwidgets.widgets import GooglePointFieldWidget
+from .models import HouseDetails, House, HouseLocation
+from mapwidgets.widgets import GooglePointFieldWidget, GoogleStaticOverlayMapWidget
 from django import forms
 
 
@@ -12,11 +12,10 @@ class UserForms(forms.ModelForm):
         fields = ['username', 'email', 'password']
 
 
-class CityAdminForm(forms.ModelForm):
+class CityForm(forms.ModelForm):
     class Meta:
-        model = House
-        fields = ("title")
+        model = HouseLocation
+        fields = ("location",)
         widgets = {
-            'title': GooglePointFieldWidget,
-            # 'city_hall': GooglePointFieldWidget,
+            'location': GooglePointFieldWidget
         }
