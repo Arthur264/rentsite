@@ -1,10 +1,12 @@
 class AppRouter(object):
     def db_for_read(self, model, **hints):
+        print("test1")
         if model._meta.model_name  == 'HouseLocation':
             return 'location'
         return 'default'
 
     def db_for_write(self, model, **hints):
+        print("test2")
         if model._meta.model_name  == 'HouseLocation':
             return 'location'
         return 'default'

@@ -112,7 +112,8 @@ DATABASES = {
         'URL': 'postgis://dell:123@localhost/location'
     }
 }
-DATABASE_ROUTERS = ['c9_django.geoRouter']
+
+DATABASE_ROUTERS = ['c9_django.geoRouter.AppRouter']
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
