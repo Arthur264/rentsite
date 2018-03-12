@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'agents',
     'profile',
     'news',
+    'gallery',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,7 +74,8 @@ TEMPLATES = [
             PROJECT_DIR.parent.child('templates'),
             Path(BASE_DIR).child('authentication').child('templates'),
             Path(BASE_DIR).child('properties').child('templates'),
-            Path(BASE_DIR).child('agents').child('templates')
+            Path(BASE_DIR).child('agents').child('templates'),
+            Path(BASE_DIR).child('gallery').child('templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {

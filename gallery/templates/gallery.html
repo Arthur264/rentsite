@@ -1,135 +1,69 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<section class="rh_banner rh_banner__image" style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
+<section class="rh_banner rh_banner__image"
+         style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
 
-		<div class="rh_banner__cover"></div>
-		<!-- /.rh_banner__cover -->
+    <div class="rh_banner__cover"></div>
+    <!-- /.rh_banner__cover -->
 
-		<div class="rh_banner__wrap">
+    <div class="rh_banner__wrap">
 
-			<h2 class="rh_banner__title">
-				Properties Gallery			</h2>
-			<!-- /.rh_banner__title -->
-
-
-		</div>
-		<!-- /.rh_banner__wrap -->
-
-	</section>
-	<!-- /.rh_banner -->
-		{% include 'searchSidebar.html' %}
-<section class="rh_section rh_wrap--padding rh_wrap--topPadding">
-
-	<div class="rh_page">
-
-		<div class="rh_page__head">
-
-			<h2 class="rh_page__title">
-								<p class="title">Gallery 3 Columns</p>
-			</h2>
-			<!-- /.rh_page__title -->
-
-			<div id="filter-by" class="rh_page__gallery_filters">
-				<a href="#" data-filter="rh_gallery__item" class="active">All</a>
-				<a href="../property-status/for-rent/index.html" data-filter="for-rent" title="View all Properties having For Rent status">For Rent</a><a href="../property-status/for-sale/index.html" data-filter="for-sale" title="View all Properties having For Sale status">For Sale</a>			</div>
-			<!-- /.rh_page__gallery_filters -->
-
-		</div>
-		<!-- /.rh_page__head -->
+        <h2 class="rh_banner__title">
+            Properties Gallery </h2>
+        <!-- /.rh_banner__title -->
 
 
-
-
-		<div class="rh_gallery">
-			<div class="rh_gallery__wrap isotope">
-									<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-sale  post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2017/06/property-01-exterior.jpg" title="Home in Merrick Way">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/home-in-merrick-way/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2017/06/property-01-exterior-680x510.jpg" alt="Home in Merrick Way">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/home-in-merrick-way/index.html">Home in Merrick Way</a></h5>
-					</div>
-										<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-sale  post-101 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-bike-path property-feature-central-cooling property-feature-jog-path property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2015/07/property-02-exterior.jpg" title="Villa in Coral Gables">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/villa-in-coral-gables/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2015/07/property-02-exterior-680x510.jpg" alt="Villa in Coral Gables">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/villa-in-coral-gables/index.html">Villa in Coral Gables</a></h5>
-					</div>
-										<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-sale  post-94 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-laundry-room property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2015/07/property-03-exterior.jpg" title="Villa on Hollywood Boulevard">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/villa-on-hollywood-boulevard/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2015/07/property-03-exterior-680x510.jpg" alt="Villa on Hollywood Boulevard">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/villa-on-hollywood-boulevard/index.html">Villa on Hollywood Boulevard</a></h5>
-					</div>
-										<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-rent  post-98 property type-property status-publish has-post-thumbnail hentry property-type-shop property-city-miami property-status-for-rent" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2015/07/property-04-exterior.jpg" title="Traditional Food Restaurant">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/traditional-food-restaurant/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2015/07/property-04-exterior-680x510.jpg" alt="Traditional Food Restaurant">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/traditional-food-restaurant/index.html">Traditional Food Restaurant</a></h5>
-					</div>
-										<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-rent  post-91 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-marble-floors property-feature-swimming-pool property-type-villa property-city-miami property-status-for-rent" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2015/07/property-05-exterior.jpg" title="Villa on Grand Avenue">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/villa-on-grand-avenue/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2015/07/property-05-exterior-680x510.jpg" alt="Villa on Grand Avenue">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/villa-on-grand-avenue/index.html">Villa on Grand Avenue</a></h5>
-					</div>
-										<div class="rh_gallery__item isotope-item rh_gallery--3-columns for-rent  post-87 property type-property status-publish has-post-thumbnail hentry property-type-office property-city-doral property-status-for-rent" >
-												<figure>
-							<div class="media_container">
-								<a class="swipebox zoom" rel=&quot;gallery_real_homes&quot; href="../wp-content/uploads/2015/07/property-06-exterior.jpg" title="Office Space at Northwest 107th">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-zoom.png">
-								</a>
-								<a class="link" href="../property/office-space-at-northwest-107th/index.html">
-									<img src="../wp-content/themes/realhomes/assets/modern/images/icons/icon-link.png">
-								</a>
-							</div>
-							<img class="img-border" src="../wp-content/uploads/2015/07/property-06-exterior-680x510.jpg" alt="Office Space at Northwest 107th">						</figure>
-						<h5 class="item-title entry-title"><a href="../property/office-space-at-northwest-107th/index.html">Office Space at Northwest 107th</a></h5>
-					</div>
-								</div>
-			<!-- /.rh_gallery__wrap isotope -->
-		</div>
-		<!-- /.rh_gallery -->
-
-		<div class='rh_pagination'><a href='index.html' class='rh_pagination__btn current' >1</a> <a href='page/2/index.html' class='rh_pagination__btn'>2</a> </div>
-	</div>
-	<!-- /.rh_page rh_page__main -->
+    </div>
+    <!-- /.rh_banner__wrap -->
 
 </section>
-<!-- /.rh_sectio
+<!-- /.rh_banner -->
+{% include 'searchSidebar.html' %}
+<section class="rh_section rh_wrap--padding rh_wrap--topPadding">
+    <div class="rh_page">
+        <div class="rh_page__head">
+            <h2 class="rh_page__title">
+                <p class="title">Gallery</p>
+            </h2>
+            <!-- /.rh_page__title -->
+
+            <div id="filter-by" class="rh_page__gallery_filters">
+                <a href="#" data-filter="rh_gallery__item" class="active">All</a>
+                <a href="../property-status/for-rent/index.html" data-filter="for-rent"
+                   title="View all Properties having For Rent status">For Rent</a><a
+                    href="../property-status/for-sale/index.html" data-filter="for-sale"
+                    title="View all Properties having For Sale status">For Sale</a></div>
+            <!-- /.rh_page__gallery_filters -->
+        </div>
+        <!-- /.rh_page__head -->
+        <div class="rh_gallery">
+            <div class="rh_gallery__wrap isotope">
+                {% for item in object_list %}
+                <div class="rh_gallery__item isotope-item rh_gallery--3-columns for-sale">
+                    <figure>
+                        <div class="media_container">
+                            <a class="swipebox zoom" rel=&quot;gallery_real_homes&quot;
+                               href="{{item.houseimage.all.0.image_url.url}}"
+                               title="{{item.title}}">
+                                <img src="{% static 'img/icons/icon-zoom.png' %}">
+                            </a>
+                            <a class="link" href="{% url 'house:details' item.slug %}">
+                                <img src="{% static 'img/icons/icon-link.png' %}">
+                            </a>
+                        </div>
+                        <img class="img-border" src="{{item.houseimage.all.0.image_url.url}}"
+                             alt="{{house.title}}"></figure>
+                    <h5 class="item-title entry-title"><a href="{% url 'house:details' item.slug %}">{{item.title}}</a></h5>
+                </div>
+                {% endfor%}
+            </div>
+            <!-- /.rh_gallery -->
+
+            <div class='rh_pagination'><a href='index.html' class='rh_pagination__btn current'>1</a> <a
+                    href='page/2/index.html' class='rh_pagination__btn'>2</a></div>
+        </div>
+        <!-- /.rh_page rh_page__main -->
+
+</section>
 {% endblock %}
