@@ -10,10 +10,17 @@ from django.db  import IntegrityError
 
 
 class House(models.Model):
+    FORRENT = 'FR'
+    FORSILE = 'RS'
+    STATUS_CHOICES = (
+        (FORRENT, 'For Rent'),
+        (FORSILE, 'For Sale')
+    )
     title = models.CharField(max_length=200)
     discription = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     image_url = models.ImageField()
+    status = models.CharField(max_length=2, choices=STATUS_CHOICES, default=FORRENT)
     price = models.IntegerField()
     bedrooms = models.SmallIntegerField(blank=True, null=True)
     bathrooms = models.SmallIntegerField(blank=True, null=True)

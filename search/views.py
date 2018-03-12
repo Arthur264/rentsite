@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from buildings.models import House
 
-# Create your views here.
+
+class IndexView(ListView):
+    template_name = 'search.html'
+
+    def get_queryset(self):
+        print (self.request.GET)
+        return House.objects.all()
