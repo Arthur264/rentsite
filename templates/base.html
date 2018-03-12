@@ -39,6 +39,7 @@
         window.token = "{{ csrf_token }}"
 
 
+
     </script>
 </head>
 
@@ -75,22 +76,20 @@
                     <div class="menu-main-menu-container">
                         <ul id="menu-main-menu" class="rh_menu__main clearfix">
                             <li><a href="{% url 'house:index' %}">Home</a></li>
-                            <li><a href="{% url 'properties:index' %}">Properties</a>
-                            </li>
-                            <li><a href="news/index.html">News</a></li>
-                            <li><a href="{% url 'agent:index'%}">Agents</a></li>
-                            <li><a href="gallery-3-columns/index.html">Gallery</a>
-                            </li>
+                            <li><a href="{% url 'properties:index' %}">Properties</a></li>
+                            <li><a href="{% url 'news:index' %}">News</a></li>
+                            <li><a href="{% url 'agent:index' %}">Agents</a></li>
+                            <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
                             <li><a href="contact/index.html">Contact</a></li>
                         </ul>
                     </div>
                     <div class="menu-main-menu-container">
                         <ul class="rh_menu__responsive clearfix">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="list-layout/index.html">Properties</a></li>
-                            <li><a href="news/index.html">News</a></li>
-                            <li><a href="our-agents/index.html">Agents</a></li>
-                            <li><a href="gallery-3-columns/index.html">Gallery</a></li>
+                            <li><a href="{% url 'house:index' %}">Home</a></li>
+                            <li><a href="{% url 'properties:index' %}">Properties</a></li>
+                            <li><a href="{% url 'news:index' %}">News</a></li>
+                            <li><a href="{% url 'agent:index' %}">Agents</a></li>
+                            <li><a href="{% url 'gallery:index' %}">Gallery</a></li>
                             <li><a href="contact/index.html">Contact</a></li>
                         </ul>
                     </div>
@@ -158,7 +157,7 @@
                                         <p class="rh_user__msg">Welcome</p>
                                         <!-- /.rh_user__msg -->
                                         <h3 class="rh_user__name">
-                                            test123 </h3>
+                                            {{user.username}} </h3>
                                     </div>
                                     <!-- /.rh_user__details -->
                                 </div>
@@ -166,7 +165,7 @@
 
                                 <div class="rh_modal__dashboard">
 
-                                    <a href="http://realhomes-modern.inspirythemes.biz/edit-profile/"
+                                    <a href="{% url 'profile:index' %}"
                                        class="rh_modal__dash_link">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
                                              viewBox="0 0 12 16">
@@ -176,6 +175,7 @@
         fill: #bec4cc;
         fill-rule: evenodd;
       }
+
 
                                                 </style>
                                             </defs>
@@ -195,6 +195,7 @@
         fill-rule: evenodd;
       }
 
+
                                                 </style>
                                             </defs>
                                             <path d="M1167.01,221a1.959,1.959,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,221Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,221Zm-5.99,6a1.96,1.96,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,227Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,227Z"
@@ -212,6 +213,7 @@
         fill: #bec4cc;
         fill-rule: evenodd;
       }
+
 
                                                 </style>
                                             </defs>
@@ -380,8 +382,6 @@
                 <a title="Real Homes" href="index.html">
                     <img src="{% static 'img/logo.png'%}" alt="Real Homes">
                 </a>
-                <p class="tag-line"><span class="separator">/</span><span
-                        class="text">Simply #1 Real Estate Theme</span></p>
             </div>
             <!-- /.rh_footer__logo -->
         </div>

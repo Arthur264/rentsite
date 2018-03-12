@@ -813,6 +813,19 @@
                 }
             })
         })();
+        (function(){
+            $('#commentform').validate({
+                    submitHandler: function(form) {
+                        $(form).ajaxSubmit({
+                            beforeSubmit: function() {
+
+                            },
+                            success: function(ajax_response, statusText, xhr, $form) {
+                            }
+                        });
+                    }
+             });
+        })();
     });
 
     $(window).load(function() {

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="rh_banner rh_banner__image"
+         style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
+
+    <div class="rh_banner__cover"></div>
+    <!-- /.rh_banner__cover -->
+
+    <div class="rh_banner__wrap">
+
+        <h2 class="rh_banner__title">
+            News </h2>
+        <!-- /.rh_banner__title -->
+
+
+    </div>
+    <!-- /.rh_banner__wrap -->
+
+</section>
+{% include 'searchSidebar.html' %}
+
+<section class="rh_section rh_section--flex rh_wrap--padding rh_wrap--topPadding">
+    <div class="rh_page rh_page__listing_page rh_page__news rh_page__main">
+        <div class="rh_blog rh_blog__listing rh_blog__single">
+            <article class="rh_blog__post">
+                <div class="listing-slider">
+                    <ul class="slides">
+                        {% for image in news.newsimage_set.all %}
+                        <li><a href="{{image.image.url}}" title="{{image.title}}" class="swipebox"><img
+                                src="{{image.image.url}}" alt="Gallery Post"/></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="entry-header blog-post-entry-header">
+                    <h1 class="entry-title">{{news.title}}</h1>
+                    <div class="entry-meta blog-post-entry-meta">
+                        By <p class="vcard fn">{{news.user.first_name}} {{news.user.last_name}}</p> Posted in <a
+                            href="../category/luxury/index.html">Luxury</a>
+                        On
+                        <time class="entry-date published" datetime="2015-07-13T19:57:19+00:00">
+                            {{item.create_date|date:"M j, Y"}}
+                        </time>
+                    </div>
+                </div>
+                <div class="rh_content entry-content">
+                    {{news.text}}
+                </div>
+
+            </article>
+            <section id="comments">
+                <div id="respond" class="comment-respond">
+                    <h3 id="reply-title" class="comment-reply-title">Leave a Reply
+                        <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
+                                  style="display:none;">Cancel reply</a></small>
+                    </h3>
+                    {% include 'commentsnews.html' with news_id=news.pk %}
+                </div><!-- #respond -->
+
+            </section><!-- end of comments -->
+
+        </div>
+        <!-- /.rh_blog rh_blog__listing -->
+    </div>
+    <!-- /.rh_page rh_page__main -->
+    <div class="rh_page rh_page__sidebar">
+        <!-- Sidebar -->
+        <aside class="rh_sidebar">
+            <section id="ajax-aside" class="widget clearfix Featured_Properties_Widget">
+                <h3 class="title">Featured Properties</h3>
+
+            </section>
+            <section id="search-2" class="widget clearfix widget_search">
+                <form role="search" method="get" id="searchform" class="searchform"
+                      action="http://realhomes-modern.inspirythemes.biz/">
+                    <div>
+                        <label class="screen-reader-text" for="s">Search for:</label>
+                        <input type="text" value="" name="s" id="s"/>
+                        <input type="submit" id="searchsubmit" value="Search"/>
+                    </div>
+                </form>
+            </section>
+            <section id="categories-2" class="widget clearfix widget_categories"><h3 class="title">Categories</h3>
+                <ul>
+                    <li class="cat-item cat-item-3"><a href="../category/comfort/index.html">Comfort</a>
+                    </li>
+                    <li class="cat-item cat-item-4"><a href="../category/luxury/index.html">Luxury</a>
+                    </li>
+                    <li class="cat-item cat-item-5"><a href="../category/market-trends/index.html">Market Trends</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <!-- End Sidebar -->
+    </div>
+    <!-- /.rh_page rh_page__sidebar -->
+</section>
+<!-- /.rh_section rh_wrap rh_wrap--padding -->
+{% endblock %}

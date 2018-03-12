@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'authentication',
     'agents',
     'profile',
+    'news',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
