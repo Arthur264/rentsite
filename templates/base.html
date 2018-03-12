@@ -100,7 +100,7 @@
                     <!-- /.rh_menu__user_phone -->
                     <div class="rh_menu__user_profile">
                         {% if user.is_authenticated %}
-                        <img class="avatar" src="{% static 'img/man.png' %}" alt="">
+                        <img class="avatar" src="{{ user.userprofile.avatar.url}}" alt="">
                         {% else %}
                         <svg version="1.1" class="user-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
 <g>
@@ -150,7 +150,7 @@
                                 {% if user.is_authenticated %}
                                 <div class="rh_user">
                                     <div class="rh_user__avatar">
-                                        <img src="http://www.gravatar.com/avatar/8d04fbd04f1bc73df9380182c8274029?s=150">
+                                        <img src="{{ user.userprofile.avatar.url}}">
                                     </div>
                                     <!-- /.rh_user__avatar -->
                                     <div class="rh_user__details">
@@ -232,7 +232,7 @@
                                         <span>Compare</span>
                                     </a>
 
-                                    <a href="http://realhomes-modern.inspirythemes.biz/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Frealhomes-modern.inspirythemes.biz&amp;_wpnonce=3417f4527f"
+                                    <a href="{% url 'auth:logout' %}"
                                        class="rh_modal__dash_link">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.996 511.996" style="enable-background:new 0 0 511.996 511.996;" xml:space="preserve">
 <g>
@@ -284,8 +284,6 @@
 
                                 </div>
                                 <!-- /.rh_modal__dashboard -->
-
-                                <!--{% include "logout.html" %}-->
                                 {% else %}
                                 <div class="rh_modal__login_wrap modal">
                                     <h3>Login</h3>

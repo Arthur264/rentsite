@@ -57,7 +57,7 @@ class FavoritesView(View):
     def get(self, request):
         try:
             favorite = UserFavorites.objects.filter(user_id=int(request.user.id))
-            return render(request, "cardTemplate.html", {'favorites': favorite})
+            return render(request, "card2Template.html", {'favorites': favorite})
         except Exception as e:
             return HttpResponse(e)
 

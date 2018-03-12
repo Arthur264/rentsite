@@ -66,7 +66,7 @@
                     // loginAjaxLoader.fadeIn( 200 );
                 },
                 success: function(ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON(ajax_response);
+                    var response = ajax_response;
                     // loginAjaxLoader.fadeOut( 100 );
                     loginButton.removeAttr('disabled');
                     if (response.success) {
@@ -79,7 +79,7 @@
                             }
                         }
                         loginMessage.html(list).fadeIn(200);
-                        window.location.reload(true);
+                        location.reload();
                     } else {
                         loginError.html(response.message).fadeIn(200);
 
@@ -115,13 +115,13 @@
                     registerError.fadeOut('fast');
                 },
                 success: function(ajax_response, statusText, xhr, $form) {
-                    var response = $.parseJSON(JSON.stringify(ajax_response));
+                    var response = $.parseJSON(ajax_response);
                     // registerAjaxLoader.fadeOut('fast');
                     registerButton.removeAttr('disabled');
                     if (response.success) {
                         registerMessage.html(response.message).fadeIn('fast');
                         $form.resetForm();
-                        window.location.reload(true);
+                        location.reload();
                     } else {
                         var list = document.createElement("ul");
                         for (var prop in response.message) {

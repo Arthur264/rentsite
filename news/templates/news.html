@@ -1,24 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<section class="rh_banner rh_banner__image"
-         style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
-
-    <div class="rh_banner__cover"></div>
-    <!-- /.rh_banner__cover -->
-
-    <div class="rh_banner__wrap">
-
-        <h2 class="rh_banner__title">
-            News </h2>
-        <!-- /.rh_banner__title -->
-
-
-    </div>
-    <!-- /.rh_banner__wrap -->
-
-</section>
-{% include 'searchSidebar.html' %}
+{% include 'banner.html' %}
 <section class="rh_section rh_section--flex rh_wrap--padding rh_wrap--topPadding">
     <div class="rh_page rh_page__listing_page rh_page__news rh_page__main">
         <div class="rh_blog rh_blog__listing">
@@ -36,24 +19,36 @@
                 </div>
 
                 <div class="entry-header blog-post-entry-header">
-                    <h2 class="entry-title"><a href="{% url 'news:details' item.slug %}" rel="bookmark">{{item.title}}</a></h2>
+                    <h2 class="entry-title"><a href="{% url 'news:details' item.slug %}"
+                                               rel="bookmark">{{item.title}}</a></h2>
                     <div class="entry-meta blog-post-entry-meta">
-                        By <p class="vcard fn">{{item.user.first_name}} {{item.user.last_name}}</p> Posted in <a href="../category/luxury/index.html">Luxury</a>
+                        By <p class="vcard fn">{{item.user.first_name}} {{item.user.last_name}}</p> Posted in <a
+                            href="../category/luxury/index.html">Luxury</a>
                         On
-                        <time class="entry-date published" datetime="2015-07-13T19:57:19+00:00">{{item.create_date|date:"M j, Y"}}</time>
+                        <time class="entry-date published" datetime="2015-07-13T19:57:19+00:00">
+                            {{item.create_date|date:"M j, Y"}}
+                        </time>
                     </div>
                 </div>
 
                 <div class="entry-summary">
                     <p>{{item.text|truncatewords:"50"}}</p>
-                    <a href="{% url 'news:details' item.slug %}" rel="bookmark" class="rh_btn rh_btn--primary read-more">Read
+                    <a href="{% url 'news:details' item.slug %}" rel="bookmark"
+                       class="rh_btn rh_btn--primary read-more">Read
                         More</a>
                 </div>
 
             </article>
             {% endfor %}
-            <div class='rh_pagination'><a href='index.html' class='rh_pagination__btn current'>1</a> <a
-                    href='page/2/index.html' class='rh_pagination__btn'>2</a></div>
+            <div class='rh_pagination'>
+                {% if object_list.has_previous %}
+                <a href='?page={{object_list.previous_page_number}}' class='rh_pagination__btn'>{{object_list.previous_page_number}}</a>
+                {% endif %}
+                <a href='{{object_list.number}}' class='rh_pagination__btn current'>{{object_list.number}}</a>
+                {% if object_list.has_next %}
+                <a href='?page={{object_list.next_page_number}}' class='rh_pagination__btn'>{{object_list.next_page_number}}</a>
+                {% endif %}
+            </div>
         </div>
         <!-- /.rh_blog rh_blog__listing -->
     </div>

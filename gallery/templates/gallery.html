@@ -54,14 +54,24 @@
                         </div>
                         <img class="img-border" src="{{item.houseimage.all.0.image_url.url}}"
                              alt="{{house.title}}"></figure>
-                    <h5 class="item-title entry-title"><a href="{% url 'house:details' item.slug %}">{{item.title}}</a></h5>
+                    <h5 class="item-title entry-title"><a href="{% url 'house:details' item.slug %}">{{item.title}}</a>
+                    </h5>
                 </div>
                 {% endfor%}
             </div>
             <!-- /.rh_gallery -->
 
-            <div class='rh_pagination'><a href='index.html' class='rh_pagination__btn current'>1</a> <a
-                    href='page/2/index.html' class='rh_pagination__btn'>2</a></div>
+            <div class='rh_pagination'>
+                {% if object_list.number > 1 %}
+                    {% if object_list.has_previous %}
+                        <a href='?page={{object_list.previous_page_number}}' class='rh_pagination__btn'>{{object_list.previous_page_number}}</a>
+                    {% endif %}
+                        <a href='{{object_list.number}}' class='rh_pagination__btn current'>{{object_list.number}}</a>
+                    {% if object_list.has_next %}
+                        <a href='?page={{object_list.next_page_number}}' class='rh_pagination__btn'>{{object_list.next_page_number}}</a>
+                    {% endif %}
+                {% endif %}
+            </div>
         </div>
         <!-- /.rh_page rh_page__main -->
 

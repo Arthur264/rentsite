@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView, View
 from news.models import News
 from .forms import CommentForm
 from django.http import JsonResponse
-
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 # Create your views here.
 
@@ -11,7 +11,15 @@ class IndexView(ListView):
     model = News
 
     def get_queryset(self):
-        return News.objects.all()
+        news_list = News.objects.all()
+        pagination = Paginator(news_list, 3)
+        try:
+            result = pagination.page(self.request.GET.get('page'))
+        except PageNotAnInteger:
+            result = pagination.page(1)
+        except EmptyPage:
+            result = pagination.page(pagination.num_pages)
+        return result
 
 
 class DetailsView(DetailView):

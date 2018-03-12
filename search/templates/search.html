@@ -1,0 +1,1179 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="rh_section rh_section--flex rh_section__map_listing">
+
+		<div class="rh_page rh_page__listing_map">
+				<script type="text/javascript">
+	    function initializePropertiesMap() {
+
+	        /* Properties Array */
+	        var properties = [{"title":"Home in Merrick Way","price":"$540,000 ","lat":"25.74980637611135","lng":"-80.25448590517044","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2017\/06\/property-01-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/home-in-merrick-way\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Villa in Coral Gables","price":"$825,000 ","lat":"25.637835760899435","lng":"-80.30060203710934","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-02-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/villa-in-coral-gables\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Villa on Grand Avenue","price":"$4,750 Monthly","lat":"25.72802015218848","lng":"-80.24511233547366","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-05-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/villa-on-grand-avenue\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Home in Coral Gables","price":"$850,000 ","lat":"25.73491877312138","lng":"-80.26216732800293","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-08-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/home-in-coral-gables\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Villa on Hollywood Boulevard","price":"$740,000 ","lat":"25.894316988462336","lng":"-80.16078008496095","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-03-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/villa-on-hollywood-boulevard\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Traditional Food Restaurant","price":"$2,600 Monthly","lat":"25.700738224160272","lng":"-80.39857271191408","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-04-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/traditional-food-restaurant\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Office Space at Northwest 107th","price":"$3,100 Monthly","lat":"25.812737357339955","lng":"-80.36944902380372","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-06-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/office-space-at-northwest-107th\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Condo on Biscayne Boulevard","price":"$3,250 Monthly","lat":"25.776659790319005","lng":"-80.18716036773674","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-07-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/condo-on-biscayne-boulevard\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Luxury Apartment","price":"$2,500 Monthly","lat":"25.770909496429454","lng":"-80.21440297365189","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/apartment-01-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/apartments-building-having-15-apartments\/luxury-apartment\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Building Having 15 Apartments","price":"$6,950,000 ","lat":"25.7688919","lng":"-80.21421320000002","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-09-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/apartments-building-having-15-apartments\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Single Home at Florida 5, Pinecrest","price":"$580,000 ","lat":"25.6683125","lng":"-80.32267689999998","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-10-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/single-home-at-florida-5-pinecrest\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"},{"title":"Shop at Southwest 186th Street","price":"$3,200 Monthly","lat":"25.596675","lng":"-80.35622799999999","thumb":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-11-exterior-244x163.jpg","url":"http:\/\/realhomes-modern.inspirythemes.biz\/property\/shop-at-southwest-186th-street\/","icon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png","retinaIcon":"http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"}];
+
+	        /* Map Center Location - From Theme Options */
+	        var location_center = new google.maps.LatLng(properties[0].lat,properties[0].lng);
+
+	        var mapOptions = {
+	            zoom: 12,
+	            maxZoom: 16,
+	            scrollwheel: false,
+				scaleControl:false,
+				streetViewControl:true,
+				streetViewControlOptions: {
+										position: google.maps.ControlPosition.LEFT_CENTER
+									},
+				fullscreenControl:true,
+				fullscreenControlOptions: {
+					position: google.maps.ControlPosition.TOP_LEFT
+				},
+				zoomControl:true,
+			    zoomControlOptions: {
+				    					position: google.maps.ControlPosition.LEFT_CENTER
+				    			    },
+				mapTypeControl:true,
+				mapTypeControlOptions: {
+										position: google.maps.ControlPosition.RIGHT_CENTER,
+										style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
+				},
+	            styles : [
+	            	{
+		                "featureType": "landscape",
+		                "stylers": [
+		                    {
+		                        "hue": "#FFBB00"
+		                    },
+		                    {
+		                        "saturation": 43.400000000000006
+		                    },
+		                    {
+		                        "lightness": 37.599999999999994
+		                    },
+		                    {
+		                        "gamma": 1
+		                    }
+		                ]
+		            },
+	                {
+	                    "featureType": "road.highway",
+	                    "stylers": [
+	                        {
+	                            "hue": "#FFC200"
+	                        },
+	                        {
+	                            "saturation": -61.8
+	                        },
+	                        {
+	                            "lightness": 45.599999999999994
+	                        },
+	                        {
+	                            "gamma": 1
+	                        }
+	                    ]
+	                },
+	                {
+	                    "featureType": "road.arterial",
+	                    "stylers": [
+	                        {
+	                            "hue": "#FF0300"
+	                        },
+	                        {
+	                            "saturation": -100
+	                        },
+	                        {
+	                            "lightness": 51.19999999999999
+	                        },
+	                        {
+	                            "gamma": 1
+	                        }
+	                    ]
+	                },
+	                {
+	                    "featureType": "road.local",
+	                    "stylers": [
+	                        {
+	                            "hue": "#FF0300"
+	                        },
+	                        {
+	                            "saturation": -100
+	                        },
+	                        {
+	                            "lightness": 52
+	                        },
+	                        {
+	                            "gamma": 1
+	                        }
+	                    ]
+	                },
+	                {
+	                    "featureType": "water",
+	                    "stylers": [
+	                        {
+	                            "hue": "#0078FF"
+	                        },
+	                        {
+	                            "saturation": -13.200000000000003
+	                        },
+	                        {
+	                            "lightness": 2.4000000000000057
+	                        },
+	                        {
+	                            "gamma": 1
+	                        }
+	                    ]
+	                },
+	                {
+	                    "featureType": "poi",
+	                    "stylers": [
+	                        {
+	                            "hue": "#00FF6A"
+	                        },
+	                        {
+	                            "saturation": -1.0989010989011234
+	                        },
+	                        {
+	                            "lightness": 11.200000000000017
+	                        },
+	                        {
+	                            "gamma": 1
+	                        }
+	                    ]
+	                }
+	            ]
+	        };
+
+	        var map = new google.maps.Map(document.getElementById("listing-map"), mapOptions);
+
+	        var oms = new OverlappingMarkerSpiderfier( map, {
+	            markersWontMove: true,
+	            markersWontHide: true,
+	            keepSpiderfied: true,
+	            circleSpiralSwitchover: Infinity,
+	            nearbyDistance: 50
+	        } );
+
+	        var bounds = new google.maps.LatLngBounds();
+
+	        /* Loop to generate marker and infowindow based on properties array */
+	        var markers = new Array();
+
+	        for (var i=0; i < properties.length; i++) {
+
+	            var url = properties[i].icon;
+	            var size = new google.maps.Size( 42, 57 );
+	            if( window.devicePixelRatio > 1.5 ) {
+	                if ( properties[i].retinaIcon ) {
+	                    url = properties[i].retinaIcon;
+	                    size = new google.maps.Size( 83, 113 );
+	                }
+	            }
+
+	            var image = {
+	                url: url,
+	                size: size,
+	                scaledSize: new google.maps.Size( 42, 57 ),
+	                origin: new google.maps.Point( 0, 0 ),
+	                anchor: new google.maps.Point( 21, 56 )
+	            };
+
+	            markers[i] = new google.maps.Marker({
+	                position: new google.maps.LatLng(properties[i].lat,properties[i].lng),
+	                map: map,
+	                // icon: properties[i].icon,
+	                icon: image,
+	                title: properties[i].title,
+	                animation: google.maps.Animation.DROP,
+	                visible: true
+	            });
+
+	            bounds.extend(markers[i].getPosition());
+
+	            var boxText = document.createElement("div");
+	            boxText.className = 'map-info-window';
+
+	            var innerHTML = "";
+	            if ( properties[i].thumb ) {
+	                innerHTML += '<a class="thumb-link" href="' + properties[i].url + '">' +
+	                            '<img class="prop-thumb" src="' + properties[i].thumb + '" alt="' + properties[i].title + '"/>' +
+	                            '</a>';
+	            }
+
+	            innerHTML += '<h5 class="prop-title"><a class="title-link" href="' + properties[i].url + '">' + properties[i].title + '</a></h5>';
+
+	            if ( properties[i].price ) {
+	                innerHTML += '<p><span class="price">' + properties[i].price + '</span></p>';
+	            }
+
+	            innerHTML += '<div class="arrow-down"></div>';
+
+	            boxText.innerHTML = innerHTML;
+
+
+	            var myOptions = {
+	                content: boxText,
+	                disableAutoPan: true,
+	                maxWidth: 0,
+	                alignBottom: true,
+	                pixelOffset: new google.maps.Size( -122, -48 ),
+	                zIndex: null,
+	                closeBoxMargin: "0 0 -16px -16px",
+	                closeBoxURL: "http://realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/map/close.png",
+	                infoBoxClearance: new google.maps.Size( 1, 1 ),
+	                isHidden: false,
+	                pane: "floatPane",
+	                enableEventPropagation: false
+	            };
+
+	            var ib = new InfoBox( myOptions );
+	            attachInfoBoxToMarker( map, markers[i], ib );
+
+	            oms.addMarker( markers[i] );
+	        }
+
+	        map.fitBounds(bounds);
+
+	        /* Marker Clusters */
+	        var markerClustererOptions = {
+	            ignoreHidden: true,
+	            maxZoom: 14,
+	            styles: [{
+	                textColor: '#ffffff',
+	                url: "http://realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/map/cluster-icon.png",
+	                height: 48,
+	                width: 48
+	            }]
+	        };
+
+	        var markerClusterer = new MarkerClusterer( map, markers, markerClustererOptions );
+
+	        /* Close previously opened infoBox */
+	        var openedWindows = new Array();
+	        var closeOpenedWindows = function() {
+	            while ( 0 < openedWindows.length ) {
+	                var windowToClose = openedWindows.pop();
+	                windowToClose.close();
+	            }
+	        };
+
+	        function attachInfoBoxToMarker( map, marker, infoBox ) {
+	            google.maps.event.addListener( marker, 'click', function() {
+	                closeOpenedWindows();
+	                var scale = Math.pow( 2, map.getZoom() );
+	                var offsety = ( (100/scale) || 0 );
+	                var projection = map.getProjection();
+	                var markerPosition = marker.getPosition();
+	                var markerScreenPosition = projection.fromLatLngToPoint( markerPosition );
+	                var pointHalfScreenAbove = new google.maps.Point( markerScreenPosition.x, markerScreenPosition.y - offsety );
+	                var aboveMarkerLatLng = projection.fromPointToLatLng( pointHalfScreenAbove );
+	                map.setCenter( aboveMarkerLatLng );
+	                infoBox.open( map, marker );
+	                openedWindows.push(infoBox);
+	            } );
+	        }
+	    }
+
+	    google.maps.event.addDomListener( window, 'load', initializePropertiesMap );
+
+	</script>
+
+	<div id="map-head">
+		<div id="listing-map"></div>
+	</div>
+	<!-- End Map Head -->
+			</div>
+		<!-- /.rh_page rh_page__listing_map -->
+
+		<div class="rh_page rh_page__map_properties">
+
+			<div class="rh_page__head">
+
+				<h2 class="rh_page__title">
+										<span class="sub">12</span>
+					<span class="title">
+						Results		    		</span>
+				</h2>
+				<!-- /.rh_page__title -->
+
+				<div class="rh_page__controls">
+
+<div class="rh_sort_controls">
+		<select name="sort-properties" id="sort-properties" class="rh_select2">
+	    <option value="default">Default Order</option>
+	    <option value="price-asc" >Price Low to High</option>
+	    <option value="price-desc" >Price High to Low</option>
+	    <option value="date-asc" >Date Old to New</option>
+	    <option value="date-desc" selected>Date New to Old</option>
+	</select>
+</div>
+<!-- /.rh_sort_controls -->
+				</div>
+				<!-- /.rh_page__controls -->
+
+			</div>
+			<!-- /.rh_page__head -->
+
+
+<section class="rh_compare rh_compare__section rh_compare--map_variation">
+
+	<h4 class="title">Compare Properties</h4>
+
+	<div class="rh_compare__carousel">
+
+
+	</div>
+
+	<a href="http://realhomes-modern.inspirythemes.biz/compare-properties/" class="rh_compare__submit rh_btn rh_btn--primary">Compare</a>
+	<!-- .compare-submit -->
+
+</section>
+<!-- .rh_compare_section -->
+
+			<div class="rh_page__listing">
+
+
+<article class="rh_list_card post-45 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-home-theater property-feature-lawn property-feature-marble-floors property-type-single-family property-city-miami property-status-for-sale">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+							<div class="rh_label rh_label__list">
+					<div class="rh_label__wrap">
+						Featured						<span></span>
+					</div>
+				</div>
+				<!-- /.rh_label -->
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-merrick-way/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2017/06/property-01-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-merrick-way/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<span class="favorite-placeholder highlight__red" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="45" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-merrick-way/">Home in Merrick Way</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+ <defs>
+  </defs>
+  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">3</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
+  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">3</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									4300								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Sale						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$540,000 						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+
+<article class="rh_list_card post-101 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-bike-path property-feature-central-cooling property-feature-jog-path property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+							<div class="rh_label rh_label__list">
+					<div class="rh_label__wrap">
+						Featured						<span></span>
+					</div>
+				</div>
+				<!-- /.rh_label -->
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-02-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<span class="favorite-placeholder highlight__red" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="101" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/villa-in-coral-gables/">Villa in Coral Gables</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+ <defs>
+  </defs>
+  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">3</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
+  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">3.5</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									3500								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Sale						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$825,000 						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+
+<article class="rh_list_card post-91 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-marble-floors property-feature-swimming-pool property-type-villa property-city-miami property-status-for-rent">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+							<div class="rh_label rh_label__list">
+					<div class="rh_label__wrap">
+						Featured						<span></span>
+					</div>
+				</div>
+				<!-- /.rh_label -->
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-grand-avenue/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-05-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-grand-avenue/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
+						<input type="hidden" name="property_id" value="91"/>
+						<input type="hidden" name="action" value="add_to_favorite"/>
+					</form>
+					<span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+					<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</a>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="91" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-grand-avenue/">Villa on Grand Avenue</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+ <defs>
+  </defs>
+  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">4</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
+  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">4</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									9350								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Rent						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$4,750 Monthly						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+
+<article class="rh_list_card post-42 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-heating property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-home-theater property-feature-laundry-room property-feature-lawn property-feature-marble-floors property-feature-swimming-pool property-type-single-family property-city-miami property-status-for-sale">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+							<div class="rh_label rh_label__list">
+					<div class="rh_label__wrap">
+						Featured						<span></span>
+					</div>
+				</div>
+				<!-- /.rh_label -->
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-coral-gables/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-08-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-coral-gables/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
+						<input type="hidden" name="property_id" value="42"/>
+						<input type="hidden" name="action" value="add_to_favorite"/>
+					</form>
+					<span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+					<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</a>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="42" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/home-in-coral-gables/">Home in Coral Gables</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+ <defs>
+  </defs>
+  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">4</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
+  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">4.5</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									3800								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Sale						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$850,000 						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+
+<article class="rh_list_card post-94 property type-property status-publish has-post-thumbnail hentry property-feature-2-stories property-feature-central-cooling property-feature-dual-sinks property-feature-electric-range property-feature-fire-place property-feature-laundry-room property-feature-lawn property-feature-swimming-pool property-type-villa property-city-miami property-status-for-sale">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-hollywood-boulevard/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-03-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-hollywood-boulevard/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
+						<input type="hidden" name="property_id" value="94"/>
+						<input type="hidden" name="action" value="add_to_favorite"/>
+					</form>
+					<span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+					<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</a>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="94" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/villa-on-hollywood-boulevard/">Villa on Hollywood Boulevard</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+ <defs>
+  </defs>
+  <path d="M1111.91,600.993h16.17a2.635,2.635,0,0,1,2.68,1.773l1.21,11.358a2.456,2.456,0,0,1-2.61,2.875h-18.73a2.46,2.46,0,0,1-2.61-2.875l1.21-11.358A2.635,2.635,0,0,1,1111.91,600.993Zm0.66-7.994h3.86c1.09,0,2.57.135,2.57,1l0.01,3.463c0.14,0.838-1.72,1.539-2.93,1.539h-4.17c-1.21,0-2.07-.7-1.92-1.539l0.37-3.139A2.146,2.146,0,0,1,1112.57,593Zm11,0h3.86a2.123,2.123,0,0,1,2.2,1.325l0.38,3.139c0.14,0.838-.72,1.539-1.93,1.539h-5.17c-1.21,0-2.07-.7-1.92-1.539L1121,594C1121,593.1,1122.48,593,1123.57,593Z" transform="translate(-1108 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">3</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" xmlns="http://www.w3.org/2000/svg" width="23.69" height="24" viewBox="0 0 23.69 24">
+  <path d="M1204,601a8,8,0,0,1,16,0v16h-2V601a6,6,0,0,0-12,0v1h-2v-1Zm7,6a6,6,0,0,0-12,0h12Zm-6,2a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,609Zm0,5a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0v-1A1,1,0,0,1,1205,614Zm4.94-5.343a1,1,0,0,1,1.28.6l0.69,0.878a1,1,0,0,1-1.88.685l-0.69-.879A1,1,0,0,1,1209.94,608.657Zm2.05,4.638a1,1,0,0,1,1.28.6l0.35,0.94a1.008,1.008,0,0,1-.6,1.282,1,1,0,0,1-1.28-.6l-0.35-.939A1.008,1.008,0,0,1,1211.99,613.295Zm-11.93-4.638a1,1,0,0,1,.6,1.282l-0.69.879a1,1,0,1,1-1.87-.682l0.68-.88A1,1,0,0,1,1200.06,608.657Zm-2.05,4.639a1,1,0,0,1,.6,1.281l-0.34.941a1,1,0,0,1-1.88-.683l0.34-.94A1,1,0,0,1,1198.01,613.3Z" transform="translate(-1196.31 -593)"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">4</span>
+							</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									4530								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Sale						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$740,000 						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+
+<article class="rh_list_card post-98 property type-property status-publish has-post-thumbnail hentry property-type-shop property-city-miami property-status-for-rent">
+
+	<div class="rh_list_card__wrap">
+
+		<figure class="rh_list_card__map_thumbnail">
+
+			<a href="http://realhomes-modern.inspirythemes.biz/property/traditional-food-restaurant/">
+														<div class="post_thumbnail" style="background: url('http://realhomes-modern.inspirythemes.biz/wp-content/uploads/2015/07/property-04-exterior-400x300.jpg') 50% 50% no-repeat; background-size: cover;"></div>
+					<!-- /.post_thumbnail -->
+							</a>
+
+			<div class="rh_overlay"></div>
+			<div class="rh_overlay__contents rh_overlay__fadeIn-bottom">
+				<a href="http://realhomes-modern.inspirythemes.biz/property/traditional-food-restaurant/">View Property</a>
+			</div>
+			<!-- /.rh_overlay__contents -->
+
+			<div class="rh_list_card__btns">
+									<form action="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php" method="post" class="add-to-favorite-form">
+						<input type="hidden" name="property_id" value="98"/>
+						<input type="hidden" name="action" value="add_to_favorite"/>
+					</form>
+					<span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+					<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+</svg>
+					</a>
+
+<span class="add-to-compare-span">
+			<span class="compare-placeholder highlight hide" data-tooltip="Added to compare">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</span>
+		<a class="add-to-compare" data-tooltip="Add to compare" data-property-id="98" href="http://realhomes-modern.inspirythemes.biz/wp-admin/admin-ajax.php">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M1144,1942l-8,1v3l-7-5,7-5v3l8,1A1,1,0,0,1,1144,1942Zm-22-14,8,1v3l7-5-7-5v3l-8,1A1,1,0,0,0,1122,1928Z" transform="translate(-1121 -1922)"/>
+</svg>
+		</a>
+		</span>
+			</div>
+			<!-- /.rh_list_card__btns -->
+		</figure>
+		<!-- /.rh_list_card__thumbnail -->
+
+		<div class="rh_list_card__map_wrap">
+
+			<div class="rh_list_card__map_details">
+
+				<h3>
+					<a href="http://realhomes-modern.inspirythemes.biz/property/traditional-food-restaurant/">Traditional Food Restaurant</a>
+				</h3>
+
+				<div class="rh_list_card__meta_wrap">
+
+
+
+											<div class="rh_list_card__meta">
+							<div>
+								<svg class="rh_svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<g>
+	<circle cx="2" cy="2" r="2"/>
+</g>
+<g>
+	<circle cx="2" cy="22" r="2"/>
+</g>
+<g>
+	<circle cx="22" cy="2" r="2"/>
+</g>
+<rect x="1" y="1" width="2" height="22"/>
+<rect x="1" y="1" width="22" height="2"/>
+<path opacity="0.5" d="M23,20.277V1h-2v19.277C20.7,20.452,20.452,20.7,20.277,21H1v2h19.277c0.347,0.596,0.984,1,1.723,1
+	c1.104,0,2-0.896,2-2C24,21.262,23.596,20.624,23,20.277z"/>
+</svg>
+								<!-- <img src="php" alt="" /> -->
+								<span class="figure">
+									950								</span>
+																	<span class="label">
+										Sq Ft									</span>
+															</div>
+						</div>
+						<!-- /.rh_list_card__meta -->
+
+				</div>
+				<!-- /.rh_list_card__meta_wrap -->
+
+				<div class="rh_list_card__priceLabel">
+
+					<div class="rh_list_card__price">
+						<h4 class="status">
+							For Rent						</h4>
+						<!-- /.rh_prop_card__type -->
+
+						<p class="price">
+							$2,600 Monthly						</p>
+						<!-- /.price -->
+					</div>
+					<!-- /.rh_list_card__price -->
+
+				</div>
+				<!-- /.rh_list_card__priceLabel -->
+
+			</div>
+			<!-- /.rh_list_card__map_details -->
+
+		</div>
+		<!-- /.rh_list_card__map_wrap -->
+
+	</div>
+	<!-- /.rh_list_card__wrap -->
+
+</article>
+<!-- /.rh_list_card -->
+			</div>
+			<!-- /.rh_page__listing -->
+
+			<div class='rh_pagination'><a href='http://realhomes-modern.inspirythemes.biz/properties-search/?location=miami' class='rh_pagination__btn current' >1</a> <a href='http://realhomes-modern.inspirythemes.biz/properties-search/page/2/?location=miami' class='rh_pagination__btn'>2</a> </div>
+		</div>
+		<!-- /.rh_page rh_page__map_properties -->
+
+	</section>
+	<!-- /.rh_section rh_wrap rh_wrap--padding -->
+
+
+{% endblock %}
