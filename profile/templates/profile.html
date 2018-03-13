@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 {% include 'banner.html' with title='Profile'%}
-<!-- /.rh_banner -->
-
 <section class="rh_section rh_wrap rh_wrap--padding rh_wrap--topPadding">
 
     <div class="rh_page">
@@ -10,13 +8,14 @@
         <div class="rh_page__head">
 
             <h2 class="rh_page__title">
-                <span class="title">Favorites</span>
+                <span class="sub">Edit</span>
+                <span class="title">Profile</span>
             </h2>
             <!-- /.rh_page__title -->
 
             <div class="rh_page__nav">
 
-                <a href="../edit-profile/index.html" class="rh_page__nav_item">
+                <a href="{% url 'profile:index' %}" class="rh_page__nav_item active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
                         <defs>
                             <style>
@@ -25,6 +24,7 @@
         fill-rule: evenodd;
       }
 
+
                             </style>
                         </defs>
                         <path d="M1181,190a1,1,0,0,0,1-1v-4a4,4,0,0,0-4-4h-4a4,4,0,0,0-4,4v4a1,1,0,0,0,1,1h0a1.035,1.035,0,0,0,1-1,46.313,46.313,0,0,1,1-5h0v6h6v-6h0l1,5a0.979,0.979,0,0,0,1,1h0Zm-4.99-16a2.951,2.951,0,0,1,3,2.981,3.115,3.115,0,0,1-3,3.018A3,3,0,1,1,1176.01,174Z"
@@ -32,23 +32,7 @@
                     </svg>
                     <p>Profile</p>
                 </a>
-                <a href="../my-properties/index.html" class="rh_page__nav_item">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10">
-                        <defs>
-                            <style>
-      .cls-1 {
-        fill: #bec4cc;
-        fill-rule: evenodd;
-      }
-
-                            </style>
-                        </defs>
-                        <path d="M1167.01,221a1.959,1.959,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,221Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,221Zm-5.99,6a1.96,1.96,0,0,1,1.99,1.988,2.066,2.066,0,0,1-1.99,2.012A2,2,0,1,1,1167.01,227Zm5.99,0h6a2,2,0,0,1,0,4h-6A2,2,0,0,1,1173,227Z"
-                              transform="translate(-1165 -221)"/>
-                    </svg>
-                    <p>My Properties</p>
-                </a>
-                <a href="index.html" class="rh_page__nav_item active">
+                <a href="{% url 'profile:favorites' %}" class="rh_page__nav_item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
                         <defs>
                             <style>
@@ -56,6 +40,7 @@
         fill: #bec4cc;
         fill-rule: evenodd;
       }
+
 
                             </style>
                         </defs>
@@ -69,20 +54,143 @@
             <!-- /.rh_page__nav -->
 
         </div>
-        <!-- /.rh_page__head -->
+        <!-- /.rh_page__wrap -->
+        <div class="rh_form">
 
+            <form id="inspiry-edit-user" enctype="multipart/form-data" class="rh_form__form" novalidate="novalidate">
 
-        <div class="rh_page__favorites">
+                <div class="rh_form__row">
 
-            <div class="rh_alert-wrapper">
-                <h4 class="no-results">You have no property in favorites!</h4>
-            </div>
+                    <div class="rh_form__item rh_form__user_profile user-profile-img-wrapper">
+
+                        <div id="user-profile-img">
+
+                            <div class="profile-thumb">
+                            </div>
+
+                        </div><!-- end of user profile image -->
+
+                        <div class="profile-img-controls" style="position: relative;">
+
+                            <a id="select-profile-image" class="rh_btn rh_btn--secondary" href="javascript:;"
+                               style="position: relative; z-index: 1;">Upload New Picture</a>
+                            <a id="remove-profile-image" class="rh_btn rh_btn--profileDelete"
+                               href="#remove-profile-image">Delete</a>
+
+                            <p class="field-description">
+                                Profile image should have minimum width of 128px and minimum height of 128px. Make sure
+                                to save changes after changing the image. </p>
+
+                            <div id="errors-log"></div>
+
+                            <div id="html5_1c8fsgkjg89l6po1h6e1ene1h353_container" class="moxie-shim moxie-shim-html5"
+                                 style="position: absolute; top: 0px; left: 0px; width: 177px; height: 43px; overflow: hidden; z-index: 0;">
+                                <input id="html5_1c8fsgkjg89l6po1h6e1ene1h353" type="file"
+                                       style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+                                       accept="image/jpeg,.jpg,.jpeg,image/gif,.gif,image/png,.png"></div>
+                        </div><!-- end of profile image controls -->
+
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                </div>
+                <!-- /.rh_form__row -->
+
+                <div class="rh_form__row">
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="first-name">First Name</label>
+                        <input name="first-name" type="text" id="first-name" placeholder="Enter your first name"
+                               value="{{user.first_name}}" autofocus="" class="valid" aria-invalid="false">
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="last-name">Last Name</label>
+                        <input name="last-name" type="text" id="last-name" placeholder="Enter your last name"
+                               value="{{user.last_name}}">
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="user-name">Username *</label>
+                        <input class="required" name="user-name" type="text" id="user-name"
+                               placeholder="Enter your display name" value="{{user.username}}" required=""
+                               aria-required="true">
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="email">Email *</label>
+                        <input class="required" name="email" type="email" id="email"
+                               placeholder="Enter your email address" value="{{user.email}}" required=""
+                               aria-required="true">
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="pass1">Password</label>
+                        <input name="pass1" type="password" id="pass1">
+                        <p class="note">Note: Fill it only if you want to change your password</p>
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="pass2">Confirm Password</label>
+                        <input name="pass2" type="password" id="pass2">
+                    </div>
+                    <!-- /.rh_form__item -->
+
+                    <div class="rh_form__item rh_form--1-column rh_form--columnAlign">
+                        <label for="description">Biographical Information</label>
+                        <textarea name="description" id="description" rows="5" cols="30"></textarea>
+                    </div>
+                    <!-- /.rh_form__item rh_form--columnAlign -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="mobile-number">Mobile Number</label>
+                        <input name="mobile-number" type="text" id="mobile-number" value="">
+                    </div>
+                    <!-- /.rh_form__item rh_form--columnAlign -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="office-number">Office Number</label>
+                        <input name="office-number" type="text" id="office-number" value="">
+                    </div>
+                    <!-- /.rh_form__item rh_form--columnAlign -->
+
+                    <div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+                        <label for="fax-number">Fax Number</label>
+                        <input name="fax-number" type="text" id="fax-number" value="">
+                    </div>
+                    <!-- /.rh_form__item rh_form--columnAlign -->
+                </div>
+                <div class="rh_form__row">
+
+                    <div class="rh_form__item rh_form__submit rh_form--3-column">
+                        <button id="update-user" class="rh_btn rh_btn--primary">Save Changes</button>
+                        <span id="form-loader">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32px" height="32px" viewBox="0 0 128 128" xml:space="preserve"><rect x="0" y="0" width="100%" height="100%" fill="#FFFFFF"></rect><g transform="rotate(264 64 64)"><path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#1ea69a" fill-opacity="1"></path><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="1000ms" repeatCount="indefinite"></animateTransform></g></svg>
+								</span>
+                    </div>
+                    <!-- /.rh_form__form -->
+
+                </div>
+                <!-- /.rh_form__row -->
+
+                <div class="rh_form__row rh_form--columnAlign">
+                    <p id="form-message"></p>
+                    <ul id="form-errors"></ul>
+                </div>
+                <!-- /.rh_form__row -->
+
+            </form>
+
         </div>
-        <!-- /.rh_page__favorites -->
-
-
     </div>
     <!-- /.rh_page -->
 
 </section>
+<!-- /.rh_section rh_wrap rh_wrap--padding -->
+
 {% endblock %}
