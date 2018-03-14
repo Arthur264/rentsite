@@ -34,8 +34,8 @@ class HouseAdmin(admin.ModelAdmin):
             return list()
         return super(HouseAdmin, self).get_inline_instances(request, obj)
         
-    def get_form(self, request, obj=None, **kwargs):
-        self.form = CityForm
-        return super(HouseAdmin, self).get_form(request, obj, **kwargs)
+    # def get_form(self, request, obj=None, **kwargs):
+    #     self.form = CityForm
+    #     return super(HouseAdmin, self).get_form(request, obj, **kwargs)
 
 admin.site.register(House, HouseAdmin)

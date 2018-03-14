@@ -16,6 +16,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userprofile',
             name='user_role',
-            field=models.ForeignKey(blank=True, default='Users', null=True, on_delete=django.db.models.deletion.CASCADE, to='authentication.Role'),
+            field=models.ForeignKey(blank=True, default='1', null=True, on_delete=django.db.models.deletion.CASCADE, to='authentication.Role'),
         ),
     ]
