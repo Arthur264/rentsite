@@ -71,8 +71,8 @@ class HouseVisited(models.Model):
 
 
 class HouseLocation(models.Model):
-    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    house = models.IntegerField()
     location = gismodel.PointField(blank=True, null=True)
 
     class Meta:
-        db_table = 'houses_location'
+        db_table = 'location'
