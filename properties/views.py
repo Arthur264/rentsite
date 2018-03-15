@@ -2,7 +2,7 @@ from django.views.generic import DeleteView, ListView, View, TemplateView
 from buildings.models import House
 from django.shortcuts import render
 from django.http import JsonResponse
-from authentication.models import UserFavorites
+from buildings.models import HouseFavorites
 from buildings.templatetags.filter import price
 from django.utils.datastructures import MultiValueDictKeyError
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -17,7 +17,7 @@ class IndexView(TemplateView):
 class Card(View):
     def get(self, request):
         if int(request.GET['json']) == 0:
-            userfavorites = UserFavorites.objects.filter(user_id=int(request.user.id)).values_list('house_id',
+            userfavorites = HouseFavorites.objects.filter(user_id=int(request.user.id)).values_list('house_id',
                                                                                                    flat=True)
             try:
                 sortby = request.GET['sortby']

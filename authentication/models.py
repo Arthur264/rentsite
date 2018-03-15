@@ -50,10 +50,3 @@ class UserPhone(models.Model):
         db_table = "user_phone"
 
 
-class UserFavorites(models.Model):
-    user = models.ForeignKey(User, related_name='userfavorites', on_delete=models.CASCADE)
-    house = models.ForeignKey(House, related_name='userfavorites', on_delete=models.CASCADE)
-
-    class Meta:
-        unique_together = ('user', 'house')
-        db_table = "user_favorites"

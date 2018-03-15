@@ -1,0 +1,401 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'banner.html' with title='Profile'%}
+<section class="rh_section rh_wrap rh_wrap--padding rh_wrap--topPadding">
+
+    <div class="rh_page">
+
+        <div class="rh_page__head">
+
+            <h2 class="rh_page__title">
+                <span class="title">Create</span>
+            </h2>
+            <!-- /.rh_page__title -->
+
+            <div class="rh_page__nav">
+
+                <a href="{% url 'profile:index' %}" class="rh_page__nav_item active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
+                        <defs>
+                            <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+
+                            </style>
+                        </defs>
+                        <path d="M1181,190a1,1,0,0,0,1-1v-4a4,4,0,0,0-4-4h-4a4,4,0,0,0-4,4v4a1,1,0,0,0,1,1h0a1.035,1.035,0,0,0,1-1,46.313,46.313,0,0,1,1-5h0v6h6v-6h0l1,5a0.979,0.979,0,0,0,1,1h0Zm-4.99-16a2.951,2.951,0,0,1,3,2.981,3.115,3.115,0,0,1-3,3.018A3,3,0,1,1,1176.01,174Z"
+                              transform="translate(-1170 -174)"/>
+                    </svg>
+                    <p>Profile</p>
+                </a>
+                <a href="{% url 'profile:favorites' %}" class="rh_page__nav_item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
+                        <defs>
+                            <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+
+                            </style>
+                        </defs>
+                        <path d="M1172.32,262.318a4.5,4.5,0,0,1,6.36,6.364L1172,275l-6.68-6.318a4.5,4.5,0,0,1,6.36-6.364A0.425,0.425,0,0,0,1172.32,262.318Z"
+                              transform="translate(-1164 -261)"/>
+                    </svg>
+                    <p>Favorites</p>
+                </a>
+                <a href="{% url 'profile:create' %}" class="rh_page__nav_item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">
+                        <defs>
+                            <style>
+      .cls-1 {
+        fill: #bec4cc;
+        fill-rule: evenodd;
+      }
+
+
+                            </style>
+                        </defs>
+                        <path d="M1172.32,262.318a4.5,4.5,0,0,1,6.36,6.364L1172,275l-6.68-6.318a4.5,4.5,0,0,1,6.36-6.364A0.425,0.425,0,0,0,1172.32,262.318Z"
+                              transform="translate(-1164 -261)"/>
+                    </svg>
+                    <p>Create</p>
+                </a>
+            </div>
+            <!-- /.rh_page__nav -->
+
+        </div>
+        <!-- /.rh_page__wrap -->
+       <div class="rh_form">
+
+		<form id="submit-property-form" class="rh_form__form" enctype="multipart/form-data" method="post" novalidate="novalidate">
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--1-column rh_form--columnAlign">
+	<label for="inspiry_property_title">Property Title</label>
+	<input id="inspiry_property_title" name="inspiry_property_title" type="text" class="required" value="" title="* Please provide property title!" placeholder="Enter property title" autofocus="" required="" aria-required="true">
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--1-column rh_form--columnAlign">
+	<label for="description">Property Description</label>
+	<div id="wp-description-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel="stylesheet" id="dashicons-css" href="http://realhomes-modern.inspirythemes.biz/wp-includes/css/dashicons.min.css?ver=4.9.4" type="text/css" media="all">
+<link rel="stylesheet" id="editor-buttons-css" href="http://realhomes-modern.inspirythemes.biz/wp-includes/css/editor.min.css?ver=4.9.4" type="text/css" media="all">
+<div id="wp-description-editor-tools" class="wp-editor-tools hide-if-no-js"><div class="wp-editor-tabs"><button type="button" id="description-tmce" class="wp-switch-editor switch-tmce" data-wp-editor-id="description">Visual</button>
+<button type="button" id="description-html" class="wp-switch-editor switch-html" data-wp-editor-id="description">Text</button>
+</div>
+</div>
+<div id="wp-description-editor-container" class="wp-editor-container"><div id="qt_description_toolbar" class="quicktags-toolbar"><input type="button" id="qt_description_strong" class="ed_button button button-small" aria-label="Bold" value="b"><input type="button" id="qt_description_em" class="ed_button button button-small" aria-label="Italic" value="i"><input type="button" id="qt_description_link" class="ed_button button button-small" aria-label="Insert link" value="link"><input type="button" id="qt_description_block" class="ed_button button button-small" aria-label="Blockquote" value="b-quote"><input type="button" id="qt_description_del" class="ed_button button button-small" aria-label="Deleted text (strikethrough)" value="del"><input type="button" id="qt_description_ins" class="ed_button button button-small" aria-label="Inserted text" value="ins"><input type="button" id="qt_description_img" class="ed_button button button-small" aria-label="Insert image" value="img"><input type="button" id="qt_description_ul" class="ed_button button button-small" aria-label="Bulleted list" value="ul"><input type="button" id="qt_description_ol" class="ed_button button button-small" aria-label="Numbered list" value="ol"><input type="button" id="qt_description_li" class="ed_button button button-small" aria-label="List item" value="li"><input type="button" id="qt_description_code" class="ed_button button button-small" aria-label="Code" value="code"><input type="button" id="qt_description_more" class="ed_button button button-small" aria-label="Insert Read More tag" value="more"><input type="button" id="qt_description_close" class="ed_button button button-small" title="Close all open tags" value="close tags"></div><div id="mceu_24" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; width: 100%;"><div id="mceu_24-body" class="mce-container-body mce-stack-layout"><div id="mceu_25" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group"><div id="mceu_25-body" class="mce-container-body mce-stack-layout"><div id="mceu_26" class="mce-container mce-toolbar mce-stack-layout-item mce-first" role="toolbar"><div id="mceu_26-body" class="mce-container-body mce-flow-layout"><div id="mceu_27" class="mce-container mce-flow-layout-item mce-first mce-last mce-btn-group" role="group"><div id="mceu_27-body"><div id="mceu_0" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-first mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_0" role="button" aria-haspopup="true"><button id="mceu_0-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Paragraph</span> <i class="mce-caret"></i></button></div><div id="mceu_1" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Bold"><button id="mceu_1-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_2" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Italic"><button id="mceu_2-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div id="mceu_3" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Bulleted list"><button id="mceu_3-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button></div><div id="mceu_4" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Numbered list"><button id="mceu_4-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-numlist"></i></button></div><div id="mceu_5" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Blockquote"><button id="mceu_5-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-blockquote"></i></button></div><div id="mceu_6" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Align left"><button id="mceu_6-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_7" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Align center"><button id="mceu_7-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_8" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Align right"><button id="mceu_8-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_9" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Insert/edit link"><button id="mceu_9-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div><div id="mceu_10" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Insert Read More tag"><button id="mceu_10-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-wp_more"></i></button></div><div id="mceu_11" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Fullscreen"><button id="mceu_11-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-fullscreen"></i></button></div><div id="mceu_12" class="mce-widget mce-btn mce-last" tabindex="-1" role="button" aria-label="Toolbar Toggle"><button id="mceu_12-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-wp_adv"></i></button></div></div></div></div></div><div id="mceu_28" class="mce-container mce-toolbar mce-stack-layout-item mce-last" role="toolbar" style="display: none;"><div id="mceu_28-body" class="mce-container-body mce-flow-layout"><div id="mceu_29" class="mce-container mce-flow-layout-item mce-first mce-last mce-btn-group" role="group"><div id="mceu_29-body"><div id="mceu_13" class="mce-widget mce-btn mce-first" tabindex="-1" role="button" aria-label="Strikethrough"><button id="mceu_13-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div><div id="mceu_14" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Horizontal line"><button id="mceu_14-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hr"></i></button></div><div id="mceu_15" class="mce-widget mce-btn mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="Text color"><button role="presentation" hidefocus="1" type="button" tabindex="-1"><i class="mce-ico mce-i-forecolor"></i><span id="mceu_15-preview" class="mce-preview"></span></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_16" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Paste as text"><button id="mceu_16-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-pastetext"></i></button></div><div id="mceu_17" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Clear formatting"><button id="mceu_17-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-removeformat"></i></button></div><div id="mceu_18" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Special character"><button id="mceu_18-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-charmap"></i></button></div><div id="mceu_19" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Decrease indent"><button id="mceu_19-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-outdent"></i></button></div><div id="mceu_20" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Increase indent"><button id="mceu_20-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-indent"></i></button></div><div id="mceu_21" class="mce-widget mce-btn mce-disabled" tabindex="-1" role="button" aria-label="Undo" aria-disabled="true"><button id="mceu_21-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-undo"></i></button></div><div id="mceu_22" class="mce-widget mce-btn mce-disabled" tabindex="-1" role="button" aria-label="Redo" aria-disabled="true"><button id="mceu_22-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-redo"></i></button></div><div id="mceu_23" class="mce-widget mce-btn mce-last" tabindex="-1" role="button" aria-label="Keyboard Shortcuts"><button id="mceu_23-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-wp_help"></i></button></div></div></div></div></div></div></div><div id="mceu_30" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="description_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press Alt-Shift-H for help." style="width: 100%; height: 178px; display: block;"></iframe></div><div id="mceu_31" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><div id="mceu_31-body" class="mce-container-body mce-flow-layout"><div id="mceu_32" class="mce-path mce-flow-layout-item mce-first"><div class="mce-path-item">&nbsp;</div></div><div id="mceu_33" class="mce-flow-layout-item mce-last mce-resizehandle"><i class="mce-ico mce-i-resize"></i></div></div></div></div></div><textarea class="wp-editor-area" rows="5" autocomplete="off" cols="40" name="description" id="description" style="display: none;" aria-hidden="true"></textarea></div>
+</div>
+
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="type">Type</label>
+	<span class="selectwrap">
+	    <select name="type" id="type" class="rh_select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	        		        <option selected="selected" value="-1">None</option>
+		        <option value="22"> Commercial</option><option value="38">-  Office</option><option value="41">-  Shop</option><option value="40"> Residential</option><option value="45">-  Apartment</option><option value="46">-  Apartment Building</option><option value="47">-  Condominium</option><option value="42">-  Single Family</option><option value="44">-  Villa</option>	    </select><span class="select2 select2-container select2-container--default" dir="ltr"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-type-container"><span class="select2-selection__rendered" id="select2-type-container" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+	</span>
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="status">Status</label>
+	<span class="selectwrap">
+	    <select name="status" id="status" class="rh_select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+	        		        <option selected="selected" value="-1">None</option>
+		        <option value="28">For Rent</option><option value="29">For Sale</option>	    </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-status-container"><span class="select2-selection__rendered" id="select2-status-container" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+	</span>
+</div>
+<!-- /.rh_form__item -->
+	<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+		<label for="location">Main Location</label>
+	    <span class="selectwrap">
+	        <select name="location" id="location" class="rh_select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true"><option value="any" selected="selected">None</option><option value="miami">Miami</option><option value="little-havana">- Little Havana</option><option value="perrine">- Perrine</option><option value="doral">- Doral</option></select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-location-container"><span class="select2-selection__rendered" id="select2-location-container" title="None">None</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+	    </span>
+	</div>
+	<!-- /.rh_form__item -->
+	
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="bedrooms">Bedrooms</label>
+	<input id="bedrooms" name="bedrooms" type="text" value="" title="* Please provide the value in digits only!">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="bathrooms">Bathrooms</label>
+	<input id="bathrooms" name="bathrooms" type="text" value="" title="* Please provide the value in digits only!">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="garages">Garages</label>
+	<input id="garages" name="garages" type="text" value="" title="* Please provide the value in digits only!">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="property-id">Property ID</label>
+	<input id="property-id" name="property-id" type="text" value="RH-{ID}-property" title="Property ID" disabled="">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="price">Sale or Rent Price</label>
+	<input id="price" name="price" type="text" value="" title="* Please provide the value in digits only!">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="price-postfix">Price Postfix Text</label>
+	<input id="price-postfix" name="price-postfix" type="text" value="">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="size">Area</label>
+	<input id="size" name="size" type="text" value="" title="* Please provide the value in digits only!">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="area-postfix">Area Postfix Text</label>
+	<input id="area-postfix" name="area-postfix" type="text" value="Sq Ft">
+</div>
+<!-- /.rh_form__item -->
+
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign">
+	<label for="video-url">Virtual Tour Video URL</label>
+	<input id="video-url" name="video-url" type="text" value="" title="Virtual Tour Video URL">
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--2-column rh_form--columnAlign images-field-wrapper">
+			<div id="gallery-thumbs-container" class="clearfix ui-sortable"></div>
+		
+	<div id="drag-and-drop" style="position: relative;">
+		<div class="drag-drop-msg"><i class="fa fa-cloud-upload"></i>&nbsp;&nbsp;Drag and drop images here</div>
+		<div class="drag-or">or</div>
+		<div class="drag-btn" style="position: relative;">
+			<button id="select-images" class="rh_btn rh_btn--secondary" style="position: relative; z-index: 1;">
+				Browse Images			</button>
+		<div id="html5_1c8ls5215glhs9t13tp3kk1teh3_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 146px; height: 48px; overflow: hidden; z-index: 0;"><input id="html5_1c8ls5215glhs9t13tp3kk1teh3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="image/jpeg,.jpg,.jpeg,image/gif,.gif,image/png,.png"></div></div>
+	</div>
+	<div class="field-description">
+		<span class="note">Note: </span>
+		<span>
+			An image should have minimum width of 980px and minimum height of 735px (4:3 or 16:9 Aspect Ratio).<br>
+			You can mark an image as featured by clicking the star icon, otherwise first image will be considered featured image.		</span>
+	</div>
+	<div id="errors-log"></div>
+</div>
+<!-- /.rh_form__item -->
+	<div class="rh_form__item rh_form--relative rh_form--2-column rh_form--columnAlign address-map-fields-wrapper">
+		<div class="address-wrapper">
+			<label for="address">Address</label>
+			<input type="text" class="required ui-autocomplete-input" name="address" id="address" value="15421 Southwest 39th Terrace, Miami, FL 33185, USA" title="* Please provide a property address!" required="" autocomplete="off" aria-required="true">
+		</div>
+		<!-- /.address-wrapper -->
+		<div class="map-wrapper">
+			<button class="rh_btn rh_btn--secondary goto-address-button" type="button" value="address">Find Address</button>
+			<div class="map-canvas" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;http://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -203, -251);"><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -203, -251);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div></div></div><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -14px; top: -43px; z-index: 0;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -203, -251);"><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9061!3i13959!4i256!2m3!1e0!2sm!3i414113852!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=35085" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9060!3i13959!4i256!2m3!1e0!2sm!3i414113792!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=20519" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9060!3i13958!4i256!2m3!1e0!2sm!3i414112946!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=122213" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9061!3i13958!4i256!2m3!1e0!2sm!3i414113480!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=18044" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9062!3i13958!4i256!2m3!1e0!2sm!3i414113480!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=84662" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="" src="http://maps.google.com/maps/vt?pb=!1m5!1m4!1i15!2i9062!3i13959!4i256!2m3!1e0!2sm!3i414113852!3m14!2sen-US!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcy50OjV8cC5oOiNGRkJCMDB8cC5zOjQzLjQwMDAwMDAwMDAwMDAwNnxwLmw6MzcuNTk5OTk5OTk5OTk5OTk0fHAuZzoxLHMudDo0OXxwLmg6I0ZGQzIwMHxwLnM6LTYxLjh8cC5sOjQ1LjU5OTk5OTk5OTk5OTk5NHxwLmc6MSxzLnQ6NTB8cC5oOiNGRjAzMDB8cC5zOi0xMDB8cC5sOjUxLjE5OTk5OTk5OTk5OTk5fHAuZzoxLHMudDo1MXxwLmg6I0ZGMDMwMHxwLnM6LTEwMHxwLmw6NTJ8cC5nOjEscy50OjZ8cC5oOiMwMDc4RkZ8cC5zOi0xMy4yMDAwMDAwMDAwMDAwMDN8cC5sOjIuNDAwMDAwMDAwMDAwMDA1N3xwLmc6MSxzLnQ6MnxwLmg6IzAwRkY2QXxwLnM6LTEuMDk4OTAxMDk4OTAxMTIzNHxwLmw6MTEuMjAwMDAwMDAwMDAwMDE3fHAuZzox!4e0!23i1301875&amp;token=101703" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div><div style="z-index: 4; position: absolute; left: 50%; top: 50%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div class="gmnoprint" style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0.01; touch-action: none; left: -14px; top: -43px; z-index: 0;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" usemap="#gmimap0" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap0" id="gmimap0"><area href="javascript:void(0)" log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="" style="cursor: pointer; touch-action: none;"></map></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div></div><iframe frameborder="0" src="about:blank" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=25.730831,-80.444149&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 138px; top: 110px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 167px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 96px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" style="background: none; border: 0px; margin: 10px 14px; padding: 0px; position: absolute; cursor: pointer; user-select: none; width: 25px; height: 25px; overflow: hidden; top: 0px; right: 0px;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></button><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@25.7308309,-80.444149,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="55" style="margin: 10px; user-select: none; position: absolute; bottom: 69px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><button draggable="false" title="Zoom in" aria-label="Zoom in" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 28px; height: 27px; top: 0px; left: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div></button></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; display: none;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; top: 0px; cursor: pointer;"><img alt="" src="http://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; bottom: 26px; left: 0px;"><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Show street map" aria-label="Show street map" aria-pressed="true" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 22px; font-weight: 500;">Map</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 28px; text-align: left; display: none;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img alt="" src="http://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left; position: relative;"><div role="button" tabindex="0" title="Show satellite imagery" aria-label="Show satellite imagery" aria-pressed="false" draggable="false" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 40px; border-left: 0px;">Satellite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 28px; text-align: left; display: none;"><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img alt="" src="http://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div></div></div>
+			<input type="hidden" name="coordinates" class="map-coordinate" value="25.7308309,-80.44414899999998">
+		</div>
+	</div>
+	
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--1-column rh_form--columnAlign additional-details-fields-wrapper">
+
+	<div class="inspiry-details-wrapper">
+
+		
+		<label>Additional Details</label>
+
+		<!-- additional details container -->
+		<div id="inspiry-additional-details-container" class="ui-sortable">
+
+						        <div class="inspiry-detail inputs clearfix">
+				        <div class="inspiry-detail-control rh_form--align_start">
+					        <i class="sort-detail fa fa-bars ui-sortable-handle"></i>
+				        </div>
+				        <div class="inspiry-detail-title">
+					        <input type="text" name="detail-titles[]" value="" placeholder="Title">
+				        </div>
+				        <div class="inspiry-detail-value">
+					        <input type="text" name="detail-values[]" value="" placeholder="Value">
+				        </div>
+				        <div class="inspiry-detail-control rh_form--align_end">
+					        <a class="remove-detail" href="#"><i class="fa fa-trash"></i></a>
+				        </div>
+			        </div>
+			        
+		</div><!-- end of additional details container -->
+
+		<div class="inspiry-detail clearfix">
+			<div class="inspiry-detail-control">
+				<a class="add-detail" href="#"><i class="fa fa-plus"></i></a>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--1-column rh_form--columnAlign features-fields-wrapper">
+	<label>Features</label>
+	<ul class="features-checkboxes clearfix">
+		<li class="rh_checkbox"><label for="feature-1"><span class="rh_checkbox__title">2 Stories</span><input type="checkbox" name="features[]" id="feature-1" value="17"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-2"><span class="rh_checkbox__title">26' Ceilings</span><input type="checkbox" name="features[]" id="feature-2" value="18"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-3"><span class="rh_checkbox__title">Bike Path</span><input type="checkbox" name="features[]" id="feature-3" value="19"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-4"><span class="rh_checkbox__title">Central Cooling</span><input type="checkbox" name="features[]" id="feature-4" value="20"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-5"><span class="rh_checkbox__title">Central Heating</span><input type="checkbox" name="features[]" id="feature-5" value="21"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-6"><span class="rh_checkbox__title">Dual Sinks</span><input type="checkbox" name="features[]" id="feature-6" value="23"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-7"><span class="rh_checkbox__title">Electric Range</span><input type="checkbox" name="features[]" id="feature-7" value="24"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-8"><span class="rh_checkbox__title">Emergency Exit</span><input type="checkbox" name="features[]" id="feature-8" value="25"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-9"><span class="rh_checkbox__title">Fire Alarm</span><input type="checkbox" name="features[]" id="feature-9" value="26"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-10"><span class="rh_checkbox__title">Fire Place</span><input type="checkbox" name="features[]" id="feature-10" value="27"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-11"><span class="rh_checkbox__title">Home Theater</span><input type="checkbox" name="features[]" id="feature-11" value="30"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-12"><span class="rh_checkbox__title">Hurricane Shutters</span><input type="checkbox" name="features[]" id="feature-12" value="31"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-13"><span class="rh_checkbox__title">Jog Path</span><input type="checkbox" name="features[]" id="feature-13" value="32"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-14"><span class="rh_checkbox__title">Laundry Room</span><input type="checkbox" name="features[]" id="feature-14" value="33"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-15"><span class="rh_checkbox__title">Lawn</span><input type="checkbox" name="features[]" id="feature-15" value="34"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-16"><span class="rh_checkbox__title">Marble Floors</span><input type="checkbox" name="features[]" id="feature-16" value="35"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-17"><span class="rh_checkbox__title">Next to busy way</span><input type="checkbox" name="features[]" id="feature-17" value="37"><span class="rh_checkbox__indicator"></span></label></li><li class="rh_checkbox"><label for="feature-18"><span class="rh_checkbox__title">Swimming Pool</span><input type="checkbox" name="features[]" id="feature-18" value="43"><span class="rh_checkbox__indicator"></span></label></li>	</ul>
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--2-column rh_form--columnAlign agent-fields-wrapper">
+	<label>What to display in agent information box ?</label>
+	<div class="rh_agent_options">
+
+		<label for="agent_option_none">
+			<span class="title">None</span>
+			<span class="sub-title">( Agent information box will not be displayed )</span>
+			<input id="agent_option_none" type="radio" name="agent_display_option" value="none">
+		    <span class="control__indicator"></span>
+		</label>
+
+		<label for="agent_option_profile">
+			<span class="title">My profile information</span>
+			<span class="sub-title"><a href="http://realhomes-modern.inspirythemes.biz/edit-profile/" target="_blank">( Edit Profile Information )</a></span>			<input id="agent_option_profile" type="radio" name="agent_display_option" value="my_profile_info">
+		    <span class="control__indicator"></span>
+		</label>
+
+		<div class="rh_agent_options__wrap">
+			<label for="agent_option_agent">
+				<span class="title">Display an agent's information</span>
+				<input id="agent_option_agent" type="radio" name="agent_display_option" value="agent_info">
+			    <span class="control__indicator"></span>
+			</label>
+			<select name="agent_id[]" id="agent-selectbox" class="rh_select2 select2-hidden-accessible" multiple="" tabindex="-1" aria-hidden="true">
+				<option value="57">Nathan James</option><option value="54">Melissa William</option><option value="51">Alice Brian</option><option value="48">John David</option>			</select><span class="select2 select2-container select2-container--default" dir="ltr"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+		</div>
+		<!-- /.rh_agent_options__wrap -->
+	</div>
+
+			<label for="property_parent_id">Parent Property</label>
+		<select name="property_parent_id" class="rh_select2 select2-hidden-accessible" id="property_parent_id" tabindex="-1" aria-hidden="true">
+	<option value="">(no parent)</option>
+	<option class="level-0" value="35">Building Having 15 Apartments</option>
+	<option class="level-1" value="39">&nbsp;&nbsp;&nbsp;Luxury Apartment</option>
+	<option class="level-0" value="66">Condo on Biscayne Boulevard</option>
+	<option class="level-0" value="42">Home in Coral Gables</option>
+	<option class="level-0" value="45">Home in Merrick Way</option>
+	<option class="level-0" value="87">Office Space at Northwest 107th</option>
+	<option class="level-0" value="29">Shop at Southwest 186th Street</option>
+	<option class="level-0" value="32">Single Home at Florida 5, Pinecrest</option>
+	<option class="level-0" value="98">Traditional Food Restaurant</option>
+	<option class="level-0" value="101">Villa in Coral Gables</option>
+	<option class="level-0" value="91">Villa on Grand Avenue</option>
+	<option class="level-0" value="94">Villa on Hollywood Boulevard</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-property_parent_id-container"><span class="select2-selection__rendered" id="select2-property_parent_id-container" title="(no parent)">(no parent)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+		</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+					<div class="rh_form__item rh_form--1-column rh_form--columnAlign reviewer-message-field-wrapper">
+		<label for="message_to_reviewer">Message to the Reviewer</label>
+		<textarea name="message_to_reviewer" id="message_to_reviewer" cols="30" rows="3"></textarea>
+	</div>
+	
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--1-column rh_form--columnAlign featured-field-wrapper">
+	<div class="rh_checkbox rh_checkbox__featured">
+		<label for="featured">
+			<span class="rh_checkbox__title">Mark this property as featured property</span>
+			<input id="featured" name="featured" type="checkbox">
+			<span class="rh_checkbox__indicator"></span>
+		</label>
+	</div>
+	<!-- /.rh_checkbox -->
+</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+			</div>
+			<!-- /.rh_form__row -->
+
+			<div class="rh_form__row">
+
+				
+<div class="rh_form__item rh_form--3-column rh_form--columnAlign submit-field-wrapper">
+	<input type="hidden" id="property_nonce" name="property_nonce" value="1984afc33e"><input type="hidden" name="_wp_http_referer" value="/submit-property/">		<input type="hidden" name="action" value="add_property">
+		<input type="submit" value="Submit Property" class="rh_btn rh_btn--primary">
+		</div>
+<!-- /.rh_form__item -->
+
+			</div>
+			<!-- /.rh_form__row -->
+
+		</form>
+
+	</div>
+    </div>
+    <!-- /.rh_page -->
+
+</section>
+<!-- /.rh_section rh_wrap rh_wrap--padding -->
+
+{% endblock %}

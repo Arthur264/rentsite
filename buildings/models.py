@@ -4,7 +4,7 @@ from django.contrib.gis.db import models as gismodel
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from django.db  import IntegrityError
-from au
+
 # from location_field.models.plain import PlainLocationField
 # from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
@@ -41,7 +41,8 @@ class House(models.Model):
         super(House, self).save(*args, **kwargs)
         
     def get_favoriets(self):
-        result = 
+        result = HouseFavorites.objects.filter(house_id=int(self.id)).values_list('user_id', flat=True)
+        return result
 
 
 class HouseImage(models.Model):
@@ -80,3 +81,12 @@ class HouseLocation(models.Model):
 
     class Meta:
         db_table = 'location'
+
+
+class HouseFavorites(models.Model):
+    user = models.ForeignKey(User, related_name='housefavorites', on_delete=models.CASCADE)
+    house = models.ForeignKey(House, related_name='housefavorites', on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('user', 'house')
+        db_table = "house_favorites"

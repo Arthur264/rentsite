@@ -75,7 +75,7 @@
                             <a id="select-profile-image" class="rh_btn rh_btn--secondary" href="javascript:;"
                                style="position: relative; z-index: 1;">Upload New Picture</a>
                             <a id="remove-profile-image" class="rh_btn rh_btn--profileDelete"
-                               href="#remove-profile-image">Delete</a>
+                               href="{% url 'auth:delete' %}">Delete</a>
 
                             <p class="field-description">
                                 Profile image should have minimum width of 128px and minimum height of 128px. Make sure

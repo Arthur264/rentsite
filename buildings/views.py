@@ -1,6 +1,6 @@
 from helpers.objects import get_or_None, filter_or_None
-from .models import House, HouseImage, HouseDetails, HouseVisited
-from authentication.models import User, UserProfile, Role, UserFavorites
+from .models import House, HouseImage, HouseDetails, HouseVisited, HouseFavorites
+from authentication.models import User, UserProfile, Role
 from django.views.generic import CreateView, DeleteView, ListView, View, TemplateView, DetailView
 from django.http import HttpResponse, JsonResponse, QueryDict
 from django.db import IntegrityError
@@ -48,7 +48,7 @@ class DetailsViews(DetailView):
 class FavoritesView(View):
     def post(self, request):
         try:
-            favorite = UserFavorites(user_id=int(request.user.id), house_id=int(request.POST["house"]))
+            favorite = HouseFavorites(user_id=int(request.user.id), house_id=int(request.POST["house"]))
             favorite.save()
             return JsonResponse({'success': 1})
         except IntegrityError:
@@ -56,7 +56,7 @@ class FavoritesView(View):
 
     def get(self, request):
         try:
-            favorite = UserFavorites.objects.filter(user_id=int(request.user.id))
+            favorite = HouseFavorites.objects.filter(user_id=int(request.user.id))
             return render(request, "card2Template.html", {'favorites': favorite})
         except Exception as e:
             return HttpResponse(e)
@@ -65,7 +65,7 @@ class FavoritesView(View):
         try:
             params = QueryDict(request.body)
             print(params["house"], request.user.id)
-            favorite = UserFavorites.objects.get(user_id=int(request.user.id), house_id=int(params["house"]))
+            favorite = HouseFavorites.objects.get(user_id=int(request.user.id), house_id=int(params["house"]))
             favorite.delete()
             return JsonResponse({'success': 1})
         except Exception as e:

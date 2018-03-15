@@ -18,18 +18,31 @@
 		Property Status	</label>
 					<span class="rh_prop_search__selectwrap">
 		<select name="status" id="select-status" class="rh_select2">
-			<option value="" selected="selected">Any</option><option value="for-rent">For Rent</option><option value="for-sale">For Sale</option>		</select>
+			<option value="" selected="selected">Any</option>
+			<option value="FR">For Rent</option>
+			<option value="FS">For Sale</option>	
+		</select>
 	</span>
 				</div>
 
-				<div class="rh_prop_search__option rh_prop_search__select">
-					<label for="select-property-type">
-		Property Type	</label>
-					<span class="rh_prop_search__selectwrap">
-		<select name="type" id="select-property-type" class="rh_select2">
-			<option value="" selected="selected">Any</option><option value="commercial"> Commercial</option><option value="office">-  Office</option><option value="shop">-  Shop</option><option value="residential"> Residential</option><option value="apartment">-  Apartment</option><option value="apartment-building">-  Apartment Building</option><option value="condominium">-  Condominium</option><option value="single-family">-  Single Family</option><option value="villa">-  Villa</option>		</select>
-	</span>
-				</div>
+	<!--			<div class="rh_prop_search__option rh_prop_search__select">-->
+	<!--				<label for="select-property-type">-->
+	<!--	Year Build	</label>-->
+	<!--				<span class="rh_prop_search__selectwrap">-->
+	<!--	<select name="type" id="select-property-type" class="rh_select2">-->
+	<!--		<option value="" selected="selected">Any</option>-->
+	<!--		<option value="commercial"> Commercial</option>-->
+	<!--		<option value="office">-  Office</option>-->
+	<!--		<option value="shop">-  Shop</option>-->
+	<!--		<option value="residential"> Residential</option>-->
+	<!--		<option value="apartment">-  Apartment</option>-->
+	<!--		<option value="apartment-building">-  Apartment Building</option>-->
+	<!--		<option value="condominium">-  Condominium</option>-->
+	<!--		<option value="single-family">-  Single Family</option>-->
+	<!--		<option value="villa">-  Villa</option>	-->
+	<!--	</select>-->
+	<!--</span>-->
+	<!--			</div>-->
 			</div>
 			<!-- /.rh_prop_search__wrap -->
 
@@ -38,7 +51,7 @@
 				<div class="rh_prop_search__option">
 					<label for="property-id-txt">
 		Property ID	</label>
-					<input type="text" name="property-id" id="property-id-txt" value="" placeholder="Any" />
+					<input type="text" name="id" id="property-id-txt" value="" placeholder="Any" />
 				</div>
 
 				<div class="rh_prop_search__option rh_prop_search__select">
@@ -89,7 +102,7 @@
 					<label for="select-min-price-for-rent">
 		Min Price	</label>
 					<span class="rh_prop_search__selectwrap">
-	    <select name="min-price" id="select-min-price-for-rent" class="rh_select2" disabled="disabled">
+	    <select name="min_price" id="select-min-price-for-rent" class="rh_select2" disabled="disabled">
 	        <option value="" selected="selected">Any</option><option value="500">$500</option><option value="1000">$1,000</option><option value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="40000">$40,000</option><option value="50000">$50,000</option><option value="75000">$75,000</option><option value="100000">$100,000</option>	    </select>
 	</span>
 				</div>
@@ -98,7 +111,7 @@
 					<label for="select-max-price-for-rent">
 		Max Price	</label>
 					<span class="rh_prop_search__selectwrap">
-	    <select name="max-price" id="select-max-price-for-rent" class="rh_select2" disabled="disabled">
+	    <select name="max_price" id="select-max-price-for-rent" class="rh_select2" disabled="disabled">
 	        <option value="" selected="selected">Any</option><option value="1000">$1,000</option><option value="2000">$2,000</option><option value="3000">$3,000</option><option value="4000">$4,000</option><option value="5000">$5,000</option><option value="7500">$7,500</option><option value="10000">$10,000</option><option value="15000">$15,000</option><option value="20000">$20,000</option><option value="25000">$25,000</option><option value="30000">$30,000</option><option value="40000">$40,000</option><option value="50000">$50,000</option><option value="75000">$75,000</option><option value="100000">$100,000</option><option value="150000">$150,000</option>	    </select>
 	</span>
 				</div>
@@ -109,7 +122,7 @@
 		<span class="unit">
 			(sq ft)	    </span>
 	</label>
-					<input type="text" name="min-area" id="min-area" pattern="[0-9]+" value="" placeholder="Any" title="Only provide digits!" />
+					<input type="text" name="min_area" id="min-area" pattern="[0-9]+" value="" placeholder="Any" title="Only provide digits!" />
 				</div>
 
 				<div class="rh_prop_search__option">
@@ -119,7 +132,7 @@
 		<span class="unit">
 			(sq ft)		</span>
 	</label>
-					<input type="text" name="max-area" id="max-area" pattern="[0-9]+" value="" placeholder="Any" title="Only provide digits!" />
+					<input type="text" name="max_area" id="max-area" pattern="[0-9]+" value="" placeholder="Any" title="Only provide digits!" />
 				</div>
 
 			</div>

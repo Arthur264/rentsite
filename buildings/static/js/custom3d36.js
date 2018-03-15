@@ -752,8 +752,10 @@
                     sortby: "?"
                 },
                 success: function(data) {
-                    console.log(data);
-                    initializePropertiesMap(data);
+                    // console.log(data);
+                    if(typeof initializePropertiesMap === "function"){
+                        initializePropertiesMap(data);
+                    }
                 }
             })
         })();
@@ -813,6 +815,24 @@
                     $("#ajax-aside").html(data);
                 }
             })
+        })();
+        (function() {
+           if($(".rh_prop_search__form").length){
+                function getUrlParams(search) {
+                    let hashes = search.slice(search.indexOf('?') + 1).split('&')
+                    let params = {}
+                    hashes.map(hash => {
+                        let [key, val] = hash.split('=')
+                        params[key] = decodeURIComponent(val)
+                    })
+                
+                    return params
+                }
+                let search = getUrlParams(window.location.search)
+                for (let prop in search){
+                    $("input[name="+prop +"]").val(search[prop])
+                }
+           }
         })();
         (function(){
             $('#commentform').validate({

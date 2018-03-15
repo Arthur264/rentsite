@@ -1,16 +1,11 @@
-{% extends 'base.html' %} 
-{% load filter %}
-{% block content %} 
-{% include 'banner.html' %} 
-{% include 'searchSidebar.html' %}
+{% extends 'base.html' %} {% load filter %} {% block content %} {% include 'banner.html' %} {% include 'searchSidebar.html' %}
 <section class="rh_section rh_section--flex rh_section__map_listing">
 	<div class="rh_page rh_page__listing_map">
-		<!--{{object_list.filtermap}}-->
 		<script type="text/javascript">
-		console.log("test")
-		    var properties = JSON.parse({{object_list.filtermap|safe}})
-			
-			function initializePropertiesMap() {
+			// console.log("test")
+			// var properties = JSON.parse({{object_list.filtermap|safe}})
+			// console.log(properties)
+			function initializePropertiesMap(properties=[]) {
 				/* Map Center Location - From Theme Options */
 				var location_center = new google.maps.LatLng(properties[0].lat, properties[0].lng);
 
@@ -265,7 +260,7 @@
 				}
 			}
 
-			google.maps.event.addDomListener(window, 'load', initializePropertiesMap);
+			// google.maps.event.addDomListener(window, 'load', initializePropertiesMap);
 		</script>
 
 		<div id="map-head">
@@ -336,13 +331,23 @@
 							<a href="{% url 'house:details' item.slug %}">View Property</a>
 						</div>
 						<!-- /.rh_overlay__contents -->
-						
+
 						<div class="rh_list_card__btns">
+							{% if user.id in item.get_favoriets %}
 							<span class="favorite-placeholder highlight__red" data-tooltip="Added to favorites">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-  <path class="rh_svg" d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z" transform="translate(-1077 -1922)"/>
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
 </svg>
-					</span>
+					</span> {% else %}
+							<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+                            <path class="rh_svg"
+                                  d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                  transform="translate(-1077 -1922)"/>
+                        </svg>
+                    </a> {% endif %}
 						</div>
 						<!-- /.rh_list_card__btns -->
 					</figure>
@@ -440,9 +445,18 @@
 			{% endfor %}
 		</div>
 		<!-- /.rh_page__listing -->
-
-		<div class='rh_pagination'><a href='http://realhomes-modern.inspirythemes.biz/properties-search/?location=miami' class='rh_pagination__btn current'>1</a> <a href='http://realhomes-modern.inspirythemes.biz/properties-search/page/2/?location=miami' class='rh_pagination__btn'>2</a>			</div>
-	</div>
+		{% if card.number > 1 %}
+		 <div class='rh_pagination'>
+                {% if object_list.filter.has_previous %}
+                <a href='?page={{object_list.filter.previous_page_number}}' class='rh_pagination__btn'>{{object_list.filter.previous_page_number}}</a>
+                {% endif %}
+                <a href='{{object_list.filter.number}}' class='rh_pagination__btn current'>{{object_list.filter.number}}</a>
+                {% if object_list.has_next %}
+                <a href='?page={{object_list.filter.next_page_number}}' class='rh_pagination__btn'>{{object_list.filter.next_page_number}}</a>
+                {% endif %}
+            </div>
+		</div>
+		{% endif %}
 	<!-- /.rh_page rh_page__map_properties -->
 
 </section>

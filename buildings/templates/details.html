@@ -1,5 +1,4 @@
-{% extends 'base.html' %} {% load staticfiles %} {% load filter %} {% block content %}
-{% include 'banner.html' %}
+{% extends 'base.html' %} {% load staticfiles %} {% load filter %} {% block content %} {% include 'banner.html' %}
 <!-- /.rh_banner -->
 {% include 'searchSidebar.html' %}
 
@@ -70,30 +69,21 @@
                                     <input type="hidden" name="property_id" value="101" />
                                     <input type="hidden" name="action" value="add_to_favorite" />
                                 </form>
-                                <span class="favorite-placeholder highlight__red hide">
+                                {% if user.id in house.get_favoriets %}
+                                <span class="favorite-placeholder highlight__red" data-tooltip="Added to favorites">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
   <path class="rh_svg"
         d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
         transform="translate(-1077 -1922)"/>
 </svg>
-						<span class="rh_tooltip">
-							<p class="label">
-								Added to Favorite							</p>
-                            <!-- /.label -->
-						</span>
-                                </span>
-                                <a href="#" class="favorite add-to-favorite">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
-                                        <path class="rh_svg"
-                                              d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
-                                              transform="translate(-1077 -1922)"/>
-                                    </svg>
-                                    <span class="rh_tooltip">
-							<p class="label">
-								Favorite							</p>
-                                        <!-- /.label -->
-						</span>
-                                </a>
+					</span> {% else %}
+                                <a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+                            <path class="rh_svg"
+                                  d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                  transform="translate(-1077 -1922)"/>
+                        </svg>
+                    </a> {% endif %}
 
                                 <a href="javascript:window.print()" class="print">
                                     <svg height="24px" version="1.1" viewBox="0 0 16 16" width="24px"
@@ -278,7 +268,7 @@
                                 <div class="play-btn"></div>
                                 <img src="{{house.image_url.url}}" alt="Villa in Coral Gables"> </a>
                         </div>
-                         <div class="rh_property__map_wrap">
+                        <div class="rh_property__map_wrap">
                             <h4 class="rh_property__heading">Property on Map</h4>
                             <div id="property_map"></div>
                             <script>
@@ -286,14 +276,14 @@
 
                                 function initialize_property_map() {
 
-                                    var propertyMarkerInfo = { 
-                                        "title": "{{house.title}}", 
-                                        "price": " $ {{house.price|price}}", 
-                                        "lat": "{{house.houselocation.location.y}}", 
-                                        "lang": "{{house.houselocation.location.x}}", 
-                                        "thumb": "{{house.image_url.url}}", 
-                                        "icon": "{% static 'img/map/single-family-home-map-icon.png' %}", 
-                                        "retinaIcon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png" 
+                                    var propertyMarkerInfo = {
+                                        "title": "{{house.title}}",
+                                        "price": " $ {{house.price|price}}",
+                                        "lat": "{{house.houselocation.location.y}}",
+                                        "lang": "{{house.houselocation.location.x}}",
+                                        "thumb": "{{house.image_url.url}}",
+                                        "icon": "{% static 'img/map/single-family-home-map-icon.png' %}",
+                                        "retinaIcon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"
                                     }
                                     var url = propertyMarkerInfo.icon;
                                     var size = new google.maps.Size(42, 57);

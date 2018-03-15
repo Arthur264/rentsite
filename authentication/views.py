@@ -80,7 +80,12 @@ class Reset(View):
     def post(self):
         pass
 
-
+class Delete(View):
+    def get(self, request):
+        user = User.objects.get(id = request.user.id)
+        user.delete()
+        return redirect("house:index")
+    
 class Logout(View):
     def get(self, request):
         logout(request)
