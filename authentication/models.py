@@ -51,8 +51,8 @@ class UserPhone(models.Model):
 
 
 class UserFavorites(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    house = models.ForeignKey(House, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, related_name='userfavorites', on_delete=models.CASCADE)
+    house = models.ForeignKey(House, related_name='userfavorites', on_delete=models.CASCADE)
 
     class Meta:
         unique_together = ('user', 'house')

@@ -6,8 +6,7 @@ from authentication.models import UserFavorites
 from buildings.templatetags.filter import price
 from django.utils.datastructures import MultiValueDictKeyError
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
-
-
+from django.core.urlresolvers import reverse
 # Create your views here.
 
 
@@ -42,13 +41,11 @@ class Card(View):
                 obj = {}
                 obj['title'] = item.title
                 obj['price'] = '$' + price(item.price)
-                obj['lat'] = "25.637835760899435"
-                obj['lng'] = "-80.30060203710934"
+                obj['lat'] = item.houselocation.location.y
+                obj['lng'] =  item.houselocation.location.x
                 obj['thumb'] = item.image_url.url
-                obj['url'] = "http:\/\/realhomes-modern.inspirythemes.biz\/property\/shop-at-southwest-186th-street\/"
-                obj[
-                    "icon"] = "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png"
-                obj[
-                    "retinaIcon"] = "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"
+                obj['url'] = reverse('house:details' , kwargs={'slug': item.slug})
+                obj["icon"] = "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png"
+                obj["retinaIcon"] = "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png"
                 result.append(obj)
             return JsonResponse(result, safe=False)

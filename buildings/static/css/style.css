@@ -1608,7 +1608,7 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .infoBox>img{background:#fff;-webkit-transition:.2s all;transition:.2s all}
 .infoBox>img:hover{background:rgba(255,255,255,.8)}
 .infoBox .map-info-window{display:block;width:24.4rem;background:#fff;margin-bottom:2rem;border-bottom:3px solid #1ea69a}
-.infoBox .map-info-window .prop-thumb{width:100%}
+.infoBox .map-info-window .prop-thumb{width:100%; object-fit: cover; height: 150px;}
 .infoBox .map-info-window .prop-title{color:#1a1a1a;font-weight:500;font-size:1.5rem;margin:0;padding:1.5rem;line-height:1.5}
 .infoBox .map-info-window a{color:#1a1a1a;font-weight:500;font-size:1.5rem;line-height:1.5;-webkit-transition:.2s all linear;transition:.2s all linear}
 .infoBox .map-info-window a:hover{color:#1ea69a;-webkit-transition:.2s all linear;transition:.2s all linear}

@@ -752,7 +752,8 @@
                     sortby: "?"
                 },
                 success: function(data) {
-                    initializePropertiesMap(data)
+                    console.log(data);
+                    initializePropertiesMap(data);
                 }
             })
         })();

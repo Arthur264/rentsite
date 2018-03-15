@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'mapwidgets'
+    'mapwidgets',
+    'django_filters'
 ]
 
 MIDDLEWARE_CLASSES = [

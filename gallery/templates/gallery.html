@@ -1,25 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-<section class="rh_banner rh_banner__image"
-         style="background-repeat: no-repeat;background-position: center top;background-image: url('{% static 'img/banner.jpg' %}'); background-size: cover; ">
-
-    <div class="rh_banner__cover"></div>
-    <!-- /.rh_banner__cover -->
-
-    <div class="rh_banner__wrap">
-
-        <h2 class="rh_banner__title">
-            Properties Gallery </h2>
-        <!-- /.rh_banner__title -->
-
-
-    </div>
-    <!-- /.rh_banner__wrap -->
-
-</section>
-<!-- /.rh_banner -->
-{% include 'searchSidebar.html' %}
+{% include 'banner.html' %}
 <section class="rh_section rh_wrap--padding rh_wrap--topPadding">
     <div class="rh_page">
         <div class="rh_page__head">
@@ -44,7 +26,7 @@
                     <figure>
                         <div class="media_container">
                             <a class="swipebox zoom" rel=&quot;gallery_real_homes&quot;
-                               href="{{item.houseimage.all.0.image_url.url}}"
+                               href="{{item.image_url.url}}"
                                title="{{item.title}}">
                                 <img src="{% static 'img/icons/icon-zoom.png' %}">
                             </a>
@@ -52,7 +34,7 @@
                                 <img src="{% static 'img/icons/icon-link.png' %}">
                             </a>
                         </div>
-                        <img class="img-border" src="{{item.houseimage.all.0.image_url.url}}"
+                        <img class="img-border" src="{{item.image_url.url}}"
                              alt="{{house.title}}"></figure>
                     <h5 class="item-title entry-title"><a href="{% url 'house:details' item.slug %}">{{item.title}}</a>
                     </h5>

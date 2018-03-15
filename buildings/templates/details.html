@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% load staticfiles %} {% load filter %} {% block content %}
-<section class="rh_banner rh_banner__default"></section>
+{% include 'banner.html' %}
 <!-- /.rh_banner -->
 {% include 'searchSidebar.html' %}
 
@@ -278,23 +278,21 @@
                                 <div class="play-btn"></div>
                                 <img src="{{house.image_url.url}}" alt="Villa in Coral Gables"> </a>
                         </div>
-                        <div class="rh_property__map_wrap">
+                         <div class="rh_property__map_wrap">
                             <h4 class="rh_property__heading">Property on Map</h4>
                             <div id="property_map"></div>
-                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEuxwopJTfSvqu4jurlUSnxyyYvCR69ME">
-                            </script>
                             <script>
                                 /* Property Detail Page - Google Map for Property Location */
 
                                 function initialize_property_map() {
 
                                     var propertyMarkerInfo = { 
-                                        "title": "Villa in Coral Gables", 
-                                        "price": "$825,000 ", 
-                                        "lat": "25.637835760899435", 
-                                        "lang": "-80.30060203710934", 
-                                        "thumb": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/uploads\/2015\/07\/property-02-exterior-244x163.jpg", 
-                                        "icon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon.png", 
+                                        "title": "{{house.title}}", 
+                                        "price": " $ {{house.price|price}}", 
+                                        "lat": "{{house.houselocation.location.y}}", 
+                                        "lang": "{{house.houselocation.location.x}}", 
+                                        "thumb": "{{house.image_url.url}}", 
+                                        "icon": "{% static 'img/map/single-family-home-map-icon.png' %}", 
                                         "retinaIcon": "http:\/\/realhomes-modern.inspirythemes.biz\/wp-content\/themes\/realhomes\/assets\/modern\/images\/map\/single-family-home-map-icon@2x.png" 
                                     }
                                     var url = propertyMarkerInfo.icon;
