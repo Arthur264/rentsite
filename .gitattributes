@@ -3,3 +3,5 @@ buildings/static/* linguist-vendored
 templates/* linguist-vendored
 buildings/templates/* linguist-vendored
 news/templates/* linguist-vendored
+
+*.html	 diff=astextplain
