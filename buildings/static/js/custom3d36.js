@@ -413,10 +413,10 @@
         $(window).load(function() {
             if (jQuery().isotope) {
                 $(function() {
-
+                    console.log("dsufgdiub")
                     var container = $('.isotope'),
                         filterLinks = $('#filter-by a');
-
+                    console.log("ter")
                     /* to fix floating bugs due to variation in height */
                     setTimeout(function() {
                         container.isotope({

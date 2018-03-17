@@ -1204,7 +1204,7 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .rh_prop_search__form .rh_prop_search__buttons .rh_prop_search__searchBtn .rh_btn__prop_search{display:block;width:100%;margin:0;padding:3.7rem 0;cursor:pointer;-webkit-transition:.2s background linear;transition:.2s background linear}
 .rh_prop_search__form .rh_prop_search__buttons .rh_prop_search__searchBtn .rh_btn__prop_search:hover{background:#1c9d92;-webkit-transition:.2s background linear;transition:.2s background linear}
 .rh_prop_search__form .rh_prop_search__buttons .rh_prop_search__searchBtn .rh_btn__prop_search svg{display:inline-block;width:18px;height:18px;margin-right:.5rem}
-.home .rh_prop_search__buttons:after{content:'';background-image:url(../../../themes/realhomes/assets/modern/images/advance-search-arrow.png);background-size:contain;background-repeat:no-repeat;position:absolute;bottom:-4rem;left:-10.5rem;z-index:-9999;width:16rem;height:4rem}
+.home .rh_prop_search__buttons:after{content:'';background-image:url(/static/img/advance-search-arrow.png);background-size:contain;background-repeat:no-repeat;position:absolute;bottom:-4rem;left:-10.5rem;z-index:-9999;width:16rem;height:4rem}
 .select2-container--default .select2-selection--single .select2-selection__arrow b{border-color:#fff transparent transparent transparent}
 .rh_prop_search__active .select2-container--default .select2-selection--single{background:#1ea69a;color:#fff;-webkit-transition:.2s all linear;transition:.2s all linear}
 .rh_prop_search__active .select2-container--default .select2-selection--single .select2-selection__rendered{color:#fff;-webkit-transition:.2s all linear;transition:.2s all linear}
@@ -1328,7 +1328,7 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .rh_checkbox input[type=checkbox]{visibility:hidden;display:none}
 .rh_checkbox input[type=checkbox]:checked~.rh_checkbox__indicator:after{display:block}
 .rh_checkbox .rh_checkbox__indicator{position:absolute;top:0;left:0;width:25px;height:25px;background:#fff;border:1px solid rgba(128,128,128,.2);box-shadow:0 0 5px 2px rgba(0,0,0,.05)}
-.rh_checkbox .rh_checkbox__indicator:after{content:'';position:absolute;display:none;width:24px;height:24px;background:url(../../../themes/realhomes/assets/modern/images/icons/icon-tick.png) 50% 50% no-repeat}
+.rh_checkbox .rh_checkbox__indicator:after{content:'';position:absolute;display:none;width:24px;height:24px;background:url(/static/img/icons/icon-tick.png) 50% 50% no-repeat}
 .rh_checkbox #terms-error{padding:0 0 0 1rem}
 .rh_checkbox__featured{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:#f7f7f7;padding:1.5rem 2rem}
 .rh_checkbox__featured label{margin:0;padding:0 0 0 4rem}
@@ -1408,13 +1408,13 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .row-fluid .span4{-webkit-box-flex:1;-webkit-flex:1 1 33.3%;-ms-flex:1 1 33.3%;flex:1 1 33.3%;width:33.3%;padding:0 1rem}
 .row-fluid .span2{-webkit-box-flex:1;-webkit-flex:1 1 16.67%;-ms-flex:1 1 16.67%;flex:1 1 16.67%;width:16.67%;padding:0 1rem}
 .disc-list ul{padding:0;list-style-type:none}
-.disc-list ul li{background:url(../../../themes/realhomes/assets/modern/images/icons/icon-disc-small.png) 12px 12px no-repeat;padding:0 0 0 3rem}
+.disc-list ul li{background:url(/static/img/icons/icon-disc-small.png) 12px 12px no-repeat;padding:0 0 0 3rem}
 .small-arrow-list ul{padding:0;list-style-type:none}
-.small-arrow-list ul li{background:url(../../../themes/realhomes/assets/modern/images/icons/icon-arrow-small.png) 12px 9px no-repeat;padding:0 0 0 3rem}
+.small-arrow-list ul li{background:url(/static/img/icons/icon-arrow-small.png) 12px 9px no-repeat;padding:0 0 0 3rem}
 .tick-list ul{padding:0;list-style-type:none}
-.tick-list ul li{background:url(../../../themes/realhomes/assets/modern/images/icons/icon-tick-list.png) 8px 7px no-repeat;padding:0 0 0 3rem}
+.tick-list ul li{background:url(/static/img/icons/icon-tick-list.png) 8px 7px no-repeat;padding:0 0 0 3rem}
 .arrow-list ul{padding:0;list-style-type:none}
-.arrow-list ul li{background:url(../../../themes/realhomes/assets/modern/images/icons/icon-arrow.png) 9px 10px no-repeat;padding:0 0 0 3rem}
+.arrow-list ul li{background:url(/static/img/icons/icon-arrow.png) 9px 10px no-repeat;padding:0 0 0 3rem}
 .rh_tooltip{text-align:center;position:absolute;top:-55px;left:-38px;left:calc(100% - 63.5px)}
 .rh_tooltip .label{display:inline-block;width:100px;position:relative;background:#000;color:#fff;padding:1rem 0;opacity:0;visibility:hidden;-webkit-transition:.3s all linear;transition:.3s all linear}
 .rh_tooltip .label:after{content:'';position:absolute;bottom:-10px;left:42px;width:0;height:0;border:0 solid transparent;border-left-width:10px;border-right-width:10px;border-top:10px solid #000}
@@ -1636,8 +1636,8 @@ ul.rh_menu__main ul.sub-menu ul.sub-menu a:hover{background:0;color:#000}
 .rh_slide__desc .rh_slide_prop_price h4{font-size:1.3rem;font-weight:500;margin-top:0;margin-bottom:.5rem}
 .rh_slide__desc .rh_slide_prop_price span{font-size:2.4rem;color:#1ea69a}
 ul.flex-direction-nav a{width:45px;height:45px}
-ul.flex-direction-nav a.flex-prev:before{content:'';background:url(../../../themes/realhomes/assets/modern/images/icons/icon-arrow-left.png) 50% 50% no-repeat;width:45px;height:45px;background-size:cover}
-ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../themes/realhomes/assets/modern/images/icons/icon-arrow-right.png) 50% 50% no-repeat;width:45px;height:45px;background-size:cover}
+ul.flex-direction-nav a.flex-prev:before{content:'';background:url(/static/img/icons/icon-arrow-left.png) 50% 50% no-repeat;width:45px;height:45px;background-size:cover}
+ul.flex-direction-nav a.flex-next:before{content:'';background:url(/static/img/icons/icon-arrow-right.png) 50% 50% no-repeat;width:45px;height:45px;background-size:cover}
 .rh_section{display:block;text-align:center}
 .rh_section .rh_section__head{max-width:1440px;margin:0 auto}
 .rh_section .rh_section__head .rh_section__title{margin:0;font-weight:300;padding:0 0 1.5rem 0}
@@ -1716,7 +1716,7 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 .rh_testimonial .rh_testimonial__author{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative;z-index:999}
 .rh_testimonial .rh_testimonial__author .rh_testimonial__author_name{color:#fff;font-size:3rem;font-weight:500;padding:0 1rem 0 0}
 .rh_testimonial .rh_testimonial__author .rh_testimonial__author__link a{color:#fff;font-size:1.8rem;text-decoration:underline}
-.rh_testimonial__quote_bg{background:url(../../../themes/realhomes/assets/modern/images/icons/quote-left.png) 10% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 90% 100% no-repeat;position:absolute;top:0;left:0;width:100%;height:100%;height:calc(100% + -3rem);margin-top:1.5rem;opacity:.8;z-index:99999}
+.rh_testimonial__quote_bg{background:url(/static/img/icons/quote-left.png) 10% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 90% 100% no-repeat;position:absolute;top:0;left:0;width:100%;height:100%;height:calc(100% + -3rem);margin-top:1.5rem;opacity:.8;z-index:99999}
 .rh_section__cta{position:relative;z-index:999}
 .rh_section__cta:after{content:'';color:transparent;width:0;height:0;border-top-width:180px;border-bottom-width:0;border-right:1440px solid transparent;border-right:100vw solid transparent;position:absolute;bottom:-90px;left:0}
 .rh_cta{background-position:50%;background-size:cover;position:absolute;top:-90px;height:100%;height:calc(100% + 18rem);width:100%;z-index:-9999}
@@ -1917,7 +1917,7 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 .rh_page__contact .rh_blog{padding:2rem 0 0 0}
 .rh_page__content{display:block;background:#fff;padding:2rem 2rem 1px;margin-bottom:3rem;box-shadow:0 0 5px 2px rgba(0,0,0,.05)}
 #user-profile-img{margin-top:-4.5rem;margin-right:3rem}
-#user-profile-img .profile-thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:128px;height:128px;background:#fff url(../../../themes/realhomes/assets/modern/images/profile-img-placeholder.png) no-repeat center center;background-size:cover;margin:0 auto}
+#user-profile-img .profile-thumb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:128px;height:128px;background:#fff url(/static/img/profile-img-placeholder.png) no-repeat center center;background-size:cover;margin:0 auto}
 .profile-img-controls{text-align:center}
 .profile-img-controls a{padding:1.3rem 2rem;margin-right:1.5rem}
 .profile-img-controls .field-description{display:block;list-style-type:none;font-size:1.5rem;font-weight:500;line-height:1.5;padding:2rem 0 0 0;margin:0;text-align:left}
@@ -2094,13 +2094,13 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 #property-featured-image img{width:100%}
 #property-detail-flexslider .flexslider{margin:0;border:0}
 #property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev{background:#fff;width:40px;height:60px;opacity:1;left:2rem}
-#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-left-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
+#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev:before{background:url(/static/img/gallery-left-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
 #property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev:hover{background:#000}
-#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev:hover:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-left-arrow-hover.png) 50% 50% no-repeat}
+#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-prev:hover:before{background:url(/static/img/gallery-left-arrow-hover.png) 50% 50% no-repeat}
 #property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next{background:#fff;width:40px;height:60px;opacity:1;right:2rem}
-#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-right-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
+#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next:before{background:url(/static/img/gallery-right-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
 #property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next:hover{background:#000}
-#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next:hover:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-right-arrow-hover.png) 50% 50% no-repeat}
+#property-detail-flexslider .flexslider ul.flex-direction-nav a.flex-next:hover:before{background:url(/static/img/gallery-right-arrow-hover.png) 50% 50% no-repeat}
 .rh_property__id{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .rh_property__id .title{color:#1a1a1a}
 .rh_property__id .id{color:#1ea69a}
@@ -2135,7 +2135,7 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 .rh_property__features_wrap{display:block;margin-bottom:1rem}
 .rh_property__features_wrap .rh_property__features{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;list-style-type:none}
 .rh_property__features_wrap .rh_property__feature{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;position:relative;padding:0 2rem 2rem}
-.rh_property__features_wrap .rh_property__feature:before{content:'';display:inline-block;background:url(../../../themes/realhomes/assets/modern/images/icons/icon-tick.png) 50% 50% no-repeat;position:absolute;left:0;top:0;width:20px;height:20px}
+.rh_property__features_wrap .rh_property__feature:before{content:'';display:inline-block;background:url(/static/img/icons/icon-tick.png) 50% 50% no-repeat;position:absolute;left:0;top:0;width:20px;height:20px}
 .rh_property__features_wrap .rh_property__feature a{display:inline-block;margin-left:1rem;line-height:1.4;-webkit-transition:.1s all linear;transition:.1s all linear}
 .rh_property__features_wrap .rh_property__feature a:hover{-webkit-transition:.1s all linear;transition:.1s all linear}
 .rh_property__attachments_wrap{display:block;margin-bottom:1rem}
@@ -2157,7 +2157,7 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 .floor-plans-accordions .floor-plan-content img{display:block;margin:0 auto}
 .rh_property__video,.rh_property__virtual_tour{display:block;margin-bottom:3rem}
 .rh_property__video .pretty-photo,.rh_property__virtual_tour .pretty-photo{display:block;position:relative}
-.rh_property__video .pretty-photo .play-btn,.rh_property__virtual_tour .pretty-photo .play-btn{position:absolute;top:50%;left:50%;margin-top:-24px;margin-left:-24px;width:48px;height:48px;background:url(../../../themes/realhomes/assets/modern/images/play-btn.png) 50% 50% no-repeat;-webkit-transition:.2s all linear;transition:.2s all linear}
+.rh_property__video .pretty-photo .play-btn,.rh_property__virtual_tour .pretty-photo .play-btn{position:absolute;top:50%;left:50%;margin-top:-24px;margin-left:-24px;width:48px;height:48px;background:url(/static/img/play-btn.png) 50% 50% no-repeat;-webkit-transition:.2s all linear;transition:.2s all linear}
 .rh_property__video .pretty-photo .play-btn:hover,.rh_property__virtual_tour .pretty-photo .play-btn:hover{opacity:.9;-webkit-transition:.2s all linear;transition:.2s all linear}
 .rh_property__video iframe,.rh_property__virtual_tour iframe{height:400px}
 .rh_property__map_wrap{display:block;margin-bottom:3rem}
@@ -2170,13 +2170,13 @@ ul.flex-direction-nav a.flex-next:before{content:'';background:url(../../../them
 .rh_property__child_properties .flexslider:hover ul.flex-direction-nav a.flex-next{right:0;opacity:1}
 .rh_property__child_properties .flexslider ul.slides li{padding:0 0 .5rem 0}
 .rh_property__child_properties ul.flex-direction-nav a.flex-prev{background:#fff;width:40px;height:60px;opacity:1;left:0}
-.rh_property__child_properties ul.flex-direction-nav a.flex-prev:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-left-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
+.rh_property__child_properties ul.flex-direction-nav a.flex-prev:before{background:url(/static/img/gallery-left-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
 .rh_property__child_properties ul.flex-direction-nav a.flex-prev:hover{background:#000}
-.rh_property__child_properties ul.flex-direction-nav a.flex-prev:hover:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-left-arrow-hover.png) 50% 50% no-repeat}
+.rh_property__child_properties ul.flex-direction-nav a.flex-prev:hover:before{background:url(/static/img/gallery-left-arrow-hover.png) 50% 50% no-repeat}
 .rh_property__child_properties ul.flex-direction-nav a.flex-next{background:#fff;width:40px;height:60px;opacity:1;right:0}
-.rh_property__child_properties ul.flex-direction-nav a.flex-next:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-right-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
+.rh_property__child_properties ul.flex-direction-nav a.flex-next:before{background:url(/static/img/gallery-right-arrow.png) 50% 50% no-repeat;width:40px;height:60px}
 .rh_property__child_properties ul.flex-direction-nav a.flex-next:hover{background:#000}
-.rh_property__child_properties ul.flex-direction-nav a.flex-next:hover:before{background:url(../../../themes/realhomes/assets/modern/images/gallery-right-arrow-hover.png) 50% 50% no-repeat}
+.rh_property__child_properties ul.flex-direction-nav a.flex-next:hover:before{background:url(/static/img/gallery-right-arrow-hover.png) 50% 50% no-repeat}
 .rh_property__agent_detail{display:block;border-top:1px dashed rgba(128,128,128,.2);margin-top:2rem}
 .rh_property__agent_head{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-bottom:1rem}
 .rh_property__agent_head figure{margin:0;padding:0 2rem 0 0}
@@ -3974,7 +3974,7 @@ ul.rh_menu__main{display:none}
 .rh_testimonial .rh_testimonial__quote{font-size:3.2rem;margin-bottom:5rem}
 .rh_testimonial .rh_testimonial__author{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .rh_testimonial .rh_testimonial__author .rh_testimonial__author_name{font-size:3rem;padding:0 1rem 0 0}
-.rh_testimonial__quote_bg{display:block;background:url(../../../themes/realhomes/assets/modern/images/icons/quote-left.png) 5% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 95% 100% no-repeat}
+.rh_testimonial__quote_bg{display:block;background:url(/static/img/icons/quote-left.png) 5% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 95% 100% no-repeat}
 .rh_section__cta:after{bottom:-70px;border-right-width:100vw;border-top-width:140px}
 .rh_cta{top:-70px;height:calc(100% + 14rem)}
 .rh_cta__wrap .rh_cta__quote{font-size:3.2rem}
@@ -4315,7 +4315,7 @@ ul.rh_menu__main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;di
 .rh_testimonial .rh_testimonial__quote{font-size:3.2rem;margin-bottom:5rem}
 .rh_testimonial .rh_testimonial__author{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .rh_testimonial .rh_testimonial__author .rh_testimonial__author_name{font-size:3rem;padding:0 1rem 0 0}
-.rh_testimonial__quote_bg{display:block;background:url(../../../themes/realhomes/assets/modern/images/icons/quote-left.png) 5% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 95% 100% no-repeat}
+.rh_testimonial__quote_bg{display:block;background:url(/static/img/icons/quote-left.png) 5% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 95% 100% no-repeat}
 .rh_section__cta:after{bottom:-80px;border-right-width:100vw;border-top-width:160px}
 .rh_cta{top:-80px;height:calc(100% + 16rem)}
 .rh_cta__wrap .rh_cta__quote{font-size:3.2rem}
@@ -4657,7 +4657,7 @@ ul.rh_menu__main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;di
 .rh_testimonial .rh_testimonial__quote{font-size:3.6rem;margin-bottom:5rem}
 .rh_testimonial .rh_testimonial__author{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}
 .rh_testimonial .rh_testimonial__author .rh_testimonial__author_name{font-size:3rem;padding:0 1rem 0 0}
-.rh_testimonial__quote_bg{display:block;background:url(../../../themes/realhomes/assets/modern/images/icons/quote-left.png) 10% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 90% 100% no-repeat}
+.rh_testimonial__quote_bg{display:block;background:url(/static/img/icons/quote-left.png) 10% 0 no-repeat,url(//realhomes-modern.inspirythemes.biz/wp-content/themes/realhomes/assets/modern/images/icons/quote-right.png) 90% 100% no-repeat}
 .rh_section__cta:after{bottom:-90px;border-right-width:100vw;border-top-width:180px}
 .rh_cta{top:-90px;height:calc(100% + 18rem)}
 .rh_cta__wrap .rh_cta__quote{font-size:3.6rem}

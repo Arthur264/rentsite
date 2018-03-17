@@ -12,9 +12,9 @@
 
             <div id="filter-by" class="rh_page__gallery_filters">
                 <a href="#" data-filter="rh_gallery__item" class="active">All</a>
-                <a href="../property-status/for-rent/index.html" data-filter="for-rent"
+                <a href="#" data-filter="FR"
                    title="View all Properties having For Rent status">For Rent</a><a
-                    href="../property-status/for-sale/index.html" data-filter="for-sale"
+                    href="#" data-filter="RS"
                     title="View all Properties having For Sale status">For Sale</a></div>
             <!-- /.rh_page__gallery_filters -->
         </div>
@@ -22,7 +22,7 @@
         <div class="rh_gallery">
             <div class="rh_gallery__wrap isotope">
                 {% for item in object_list %}
-                <div class="rh_gallery__item isotope-item rh_gallery--3-columns for-sale">
+                <div class="rh_gallery__item isotope-item rh_gallery--3-columns {{item.status}}">
                     <figure>
                         <div class="media_container">
                             <a class="swipebox zoom" rel=&quot;gallery_real_homes&quot;

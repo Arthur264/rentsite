@@ -32,7 +32,7 @@ class HouseDetailsInline(admin.StackedInline):
 class HouseAdmin(admin.ModelAdmin):
     model = House
     inlines = (HouseDetailsInline,HouseMapInline, HouseImageInline)
-    fields = ('title', 'discription', 'image_url', 'price', 'bedrooms', 'bathrooms', 'area', 'user')
+    fields = ('title', 'discription', 'image_url', 'price', 'bedrooms', 'bathrooms', 'area','status', 'user')
     # On create field HouseImage not show.
     def get_inline_instances(self, request, obj=None):
         if not obj:

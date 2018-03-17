@@ -1,0 +1,28 @@
+<form action="{% url 'house:favorites' %}" method="post" class="add-to-favorite-form">
+    {% csrf_token %}
+    <input type="hidden" name="house" value="{{house.id}}" />
+</form>
+{% if user.id in house.get_favoriets %}
+<span class="favorite-placeholder highlight__red" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
+</svg>
+					</span> {% else %}
+<a href="#" class="favorite add-to-favorite" data-tooltip="Add to favorite">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+                            <path class="rh_svg"
+                                  d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+                                  transform="translate(-1077 -1922)"/>
+                        </svg>
+                    </a> 
+                    
+                    <span class="favorite-placeholder highlight__red hide" data-tooltip="Added to favorites">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 21">
+  <path class="rh_svg"
+        d="M1089.48,1923.98a6.746,6.746,0,0,1,9.54,9.54L1089,1943l-10.02-9.48a6.746,6.746,0,0,1,9.54-9.54A0.641,0.641,0,0,0,1089.48,1923.98Z"
+        transform="translate(-1077 -1922)"/>
+</svg>
+					</span>
+                    {% endif %}

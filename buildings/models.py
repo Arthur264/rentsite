@@ -4,7 +4,7 @@ from django.contrib.gis.db import models as gismodel
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from django.db  import IntegrityError
-
+import datetime
 # from location_field.models.plain import PlainLocationField
 # from mapwidgets.widgets import GooglePointFieldWidget
 # Create your models here.
