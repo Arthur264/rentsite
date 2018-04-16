@@ -3,5 +3,10 @@ buildings/static/* linguist-vendored
 templates/* linguist-vendored
 buildings/templates/* linguist-vendored
 news/templates/* linguist-vendored
+gallery/templates/* linguist-vendored
+properties/templates/* linguist-vendored
+search/templates/* linguist-vendored
+agents/templates/* linguist-vendored
+authentication/templates/email/* linguist-vendored
 
 *.html
