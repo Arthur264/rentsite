@@ -8,5 +8,6 @@ properties/templates/* linguist-vendored
 search/templates/* linguist-vendored
 agents/templates/* linguist-vendored
 authentication/templates/email/* linguist-vendored
-
+contact/templates/* linguist-vendored
+profile/templates/* linguist-vendored
 *.html
